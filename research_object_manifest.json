@@ -100,7 +100,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 70,
+    "file_count": 71,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -132,8 +132,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10635,
-      "sha256": "02f81c353236c7fb590bc7253c57217c0ceec47fbdcfbaa925ffeba009ccb700"
+      "bytes": 3138,
+      "sha256": "05314113b280cb163168d22d376ab73110cbafd3e3bb41264468c6384b353ed1"
     },
     {
       "path": "ROADMAP.md",
@@ -1125,6 +1125,11 @@
           "main_limitation"
         ]
       }
+    },
+    {
+      "path": "docs/data_catalog.md",
+      "bytes": 7145,
+      "sha256": "d66a9afe759c2d73cbfcef2add04d223ed9c674c5e9e8c4c57b10efe3ef34b24"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
