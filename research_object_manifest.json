@@ -1,0 +1,1275 @@
+{
+  "schema": "auditable-multimodal-research-object/1.0",
+  "release": {
+    "name": "Making Organizational Behavior Observable proposal prototype",
+    "version": "0.4.0-event-aligned-video",
+    "date": "2026-09-28",
+    "status": "proposal-stage derived-data research object"
+  },
+  "corpora": {
+    "earnings_calls": {
+      "calls": 286,
+      "executives": 12,
+      "eligible_answers": 3273,
+      "content_released": "derived measures only"
+    },
+    "bloomberg_interviews": {
+      "interviews": 30,
+      "source_hours": 8.6,
+      "speaker_transitions": 1178,
+      "sampled_frames": 360,
+      "event_aligned_transitions": 120,
+      "event_aligned_frames": 360,
+      "eligible_question_answer_pairs": 304,
+      "content_released": "source URLs and derived measures; no media or transcripts"
+    }
+  },
+  "pipeline_stages": [
+    {
+      "stage": "source selection",
+      "status": "documented in released manifest"
+    },
+    {
+      "stage": "audio extraction",
+      "status": "run; source media excluded"
+    },
+    {
+      "stage": "transcription and diarization",
+      "status": "run; exact model versions not recorded in sanitized snapshot"
+    },
+    {
+      "stage": "acoustic and interaction measurement",
+      "status": "derived tables released"
+    },
+    {
+      "stage": "sampled-frame observation",
+      "status": "derived tables released"
+    },
+    {
+      "stage": "shot detection and temporal alignment",
+      "status": "derived tables and sensitivity checks released"
+    },
+    {
+      "stage": "event-aligned composition measurement",
+      "status": "frozen specification, derived tables, and uncertainty audit released"
+    },
+    {
+      "stage": "construct specification",
+      "status": "working Measurement Recipe Studio released"
+    }
+  ],
+  "model_registry": [
+    {
+      "task": "structured sampled-frame observation",
+      "model": "gemini-3.8-flash",
+      "provenance_status": "captured in pilot run metadata",
+      "claim_boundary": "frame-level observable coding; not psychological ground truth"
+    },
+    {
+      "task": "speech transcription",
+      "model": "not recorded in this sanitized snapshot",
+      "provenance_status": "must be pinned before archival release",
+      "claim_boundary": "automatic transcript may omit or normalize disfluencies"
+    },
+    {
+      "task": "speaker diarization",
+      "model": "not recorded in this sanitized snapshot",
+      "provenance_status": "must be pinned before archival release",
+      "claim_boundary": "exclusive diarization does not reliably measure overlap or interruption duration"
+    }
+  ],
+  "known_limitations": [
+    "The release supports derived-data verification, not a credential-free full media rerun.",
+    "The repeated-speaker panel was selected for longitudinal coverage and setting variation, not population representativeness.",
+    "Automatic transcripts may omit or normalize disfluencies.",
+    "Exclusive diarization does not support reliable overlap or interruption-duration claims.",
+    "Pitch and intensity are partly functions of recording and production systems.",
+    "Time-spread frames and short event-aligned windows are not continuous visual tracking.",
+    "Camera cuts and framing characterize the produced interview, not only the focal person.",
+    "Exploratory associations are descriptive and do not identify causal effects."
+  ],
+  "prohibited_claims": [
+    "deception or lying",
+    "emotion",
+    "confidence",
+    "intent",
+    "personality",
+    "cultural typicality",
+    "editorial intention",
+    "causal effects from descriptive temporal coupling"
+  ],
+  "integrity": {
+    "algorithm": "SHA-256",
+    "file_count": 70,
+    "privacy_or_credential_findings": [],
+    "passes_release_scan": true
+  },
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 397,
+      "sha256": "a345d2eea6a5cfd9ceaea924c12be3066770086fff4c9e767e12b164abc755cb"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 284,
+      "sha256": "71b62b3e7397dbf13f3bc5ea87f092dc5c42ca48f1504aaa57aad9ec811e74f6"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1565,
+      "sha256": "cfb924e2f3e76a6af09055c09a5e83ebc6130325b301d86ffce6228f200f8d21"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 849,
+      "sha256": "3c657d2804384d1b7b51393615c2e13bf47ef91fdc1ecf95d2ad127edabd3a9a"
+    },
+    {
+      "path": "Makefile",
+      "bytes": 286,
+      "sha256": "f3260cb67c1076b59801305624cb843ef2e71a16c155fa2ab059548e4570b0f6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10635,
+      "sha256": "02f81c353236c7fb590bc7253c57217c0ceec47fbdcfbaa925ffeba009ccb700"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 1725,
+      "sha256": "0ed650039042c1e17479e5fdba18cc33e7f95590a5e769dbfb1c43228bf2fbb7"
+    },
+    {
+      "path": "data/derived/answer_level_organizational_variables.csv",
+      "bytes": 214446,
+      "sha256": "6d7a6923b19b2321dcd0fc24226479fda3e767a824a85b6ea4f18d6e344838b2",
+      "structure": {
+        "rows": 1260,
+        "column_count": 17,
+        "columns": [
+          "ticker",
+          "executive",
+          "call_id",
+          "year",
+          "quarter",
+          "source_segment_index",
+          "personal_baseline_deviation",
+          "transcript_visible_deviation",
+          "temporal_interaction_disruption",
+          "pitch_pattern_deviation",
+          "intensity_pattern_deviation",
+          "family_exclusion_support_count",
+          "priority_for_clip_review",
+          "acoustic_anchor",
+          "vocal_modulation_deviation",
+          "delivery_text_divergence",
+          "high_delivery_routine_text_example"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/answer_space_robustness.csv",
+      "bytes": 3300,
+      "sha256": "9f04c250fe6fdec6bc05fb6e31187d14cb3c4dc995f30030eeeb5d43c9ed1b5e",
+      "structure": {
+        "rows": 29,
+        "column_count": 11,
+        "columns": [
+          "analysis",
+          "specification",
+          "subgroup",
+          "predictor",
+          "n_turn_pairs",
+          "videos",
+          "minimum_question_words",
+          "minimum_answer_duration_seconds",
+          "within_video_spearman_rho",
+          "leave_one_video_out_min_rho",
+          "leave_one_video_out_max_rho"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/answer_space_within_video_associations.csv",
+      "bytes": 691,
+      "sha256": "041e988e28c8752ebb0b31bcd0afca1be0985c9bae6d7ebe9511b7af01ae8ce0",
+      "structure": {
+        "rows": 6,
+        "column_count": 7,
+        "columns": [
+          "predictor",
+          "within_video_spearman_rho",
+          "ci_low",
+          "ci_high",
+          "n_turn_pairs",
+          "videos",
+          "bootstrap_iterations"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/call_level_organizational_variables.csv",
+      "bytes": 19661,
+      "sha256": "4a40b0bf99dd1b9e7ea4e052a24d2090139ef5d8f7d4cea4c9ca65066e7c8fd0",
+      "structure": {
+        "rows": 118,
+        "column_count": 18,
+        "columns": [
+          "ticker",
+          "executive",
+          "call_id",
+          "year",
+          "quarter",
+          "eligible_answers",
+          "personal_baseline_deviation_median",
+          "personal_baseline_deviation_p90",
+          "temporal_interaction_disruption_p90",
+          "vocal_modulation_deviation_p90",
+          "delivery_text_divergence_median",
+          "delivery_text_divergence_p90",
+          "personal_baseline_deviation_p25",
+          "personal_baseline_deviation_p75",
+          "high_delivery_routine_text_answers",
+          "within_call_behavioral_volatility",
+          "high_delivery_routine_text_share",
+          "scripted_to_spontaneous_pitch_shift"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/editorial_response_by_transition.csv",
+      "bytes": 470,
+      "sha256": "baaaeca4380604a1a9dfc8a6fef46a26503a6c00d2ca353d180e7bf7dccdee9c",
+      "structure": {
+        "rows": 7,
+        "column_count": 5,
+        "columns": [
+          "role_transition",
+          "transition_count",
+          "camera_cut_within_2s_rate",
+          "median_absolute_edit_delay_seconds",
+          "videos"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/editorial_responsiveness_chance_adjusted.csv",
+      "bytes": 4348,
+      "sha256": "44e52c4e47782b677df969f9edba4953c19e21b4dbfc017f68d77f3c43bd670d",
+      "structure": {
+        "rows": 30,
+        "column_count": 13,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "visual_format",
+          "speaker_transition_count",
+          "cut_count",
+          "window_seconds",
+          "observed_edit_near_transition_rate",
+          "chance_expected_edit_near_transition_rate",
+          "chance_adjusted_editorial_responsiveness",
+          "chance_adjusted_responsiveness_z",
+          "circular_shift_empirical_p_one_sided",
+          "null_iterations"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/event_aligned_overall_rates.csv",
+      "bytes": 755,
+      "sha256": "c1a61574bfb4fead353d96947a745a076888e7be6e3068d0cca0f69e5529c4b7",
+      "structure": {
+        "rows": 8,
+        "column_count": 6,
+        "columns": [
+          "measure",
+          "successes",
+          "events",
+          "rate",
+          "ci95_low",
+          "ci95_high"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/event_aligned_production_measures.csv",
+      "bytes": 70893,
+      "sha256": "a0c4a02cff647e1cdd603b6ff3922fd97719e09a84b808de7b9ff09155f2048f",
+      "structure": {
+        "rows": 120,
+        "column_count": 69,
+        "columns": [
+          "event_id",
+          "candidate_id",
+          "video_id",
+          "title",
+          "visual_format",
+          "event_index_within_video",
+          "turn_index",
+          "role_transition",
+          "current_role_group",
+          "person_count_entry",
+          "person_count_pre",
+          "person_count_settled",
+          "shot_type_entry",
+          "shot_type_pre",
+          "shot_type_settled",
+          "camera_context_entry",
+          "camera_context_pre",
+          "camera_context_settled",
+          "focused_single_entry",
+          "focused_single_pre",
+          "focused_single_settled",
+          "multi_person_entry",
+          "multi_person_pre",
+          "multi_person_settled",
+          "composition_class_entry",
+          "composition_class_pre",
+          "composition_class_settled",
+          "composition_signature_entry",
+          "composition_signature_pre",
+          "composition_signature_settled",
+          "uncertain_entry",
+          "uncertain_pre",
+          "uncertain_settled",
+          "fine_grained_change_pre_entry",
+          "fine_grained_change_entry_settled",
+          "fine_grained_change_pre_settled",
+          "composition_change_pre_entry",
+          "composition_change_entry_settled",
+          "composition_change_pre_settled",
+          "focus_gain_pre_settled",
+          "multi_to_single_pre_settled",
+          "single_to_multi_pre_settled",
+          "any_model_uncertainty",
+          "transition_seconds",
+          "previous_speaker_id",
+          "current_speaker_id",
+          "previous_role_group",
+          "nearest_shot_change_seconds",
+          "signed_edit_delay_seconds",
+          "absolute_edit_delay_seconds",
+          "edit_within_1s",
+          "edit_within_2s",
+          "edit_within_3s",
+          "cut_count_pre_to_entry",
+          "cut_count_entry_to_settled",
+          "cut_count_pre_to_settled",
+          "cut_between_pre_and_entry",
+          "cut_between_entry_and_settled",
+          "cut_between_pre_and_settled",
+          "turn_start_seconds",
+          "turn_end_seconds",
+          "elapsed_duration_s",
+          "response_latency_s",
+          "speaking_rate_wpm",
+          "f0_cv",
+          "intensity_sd_db",
+          "filled_pause_count",
+          "discourse_filler_count",
+          "prior_chance_adjusted_responsiveness"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/event_aligned_rates_by_format_and_cut.csv",
+      "bytes": 2811,
+      "sha256": "f7a75f1408a35af7280b3161c643de1509df3af90c2a2c6ec19e0959313365de",
+      "structure": {
+        "rows": 32,
+        "column_count": 8,
+        "columns": [
+          "visual_format",
+          "cut_between_pre_and_settled",
+          "measure",
+          "successes",
+          "events",
+          "rate",
+          "ci95_low",
+          "ci95_high"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_answer_scores.csv",
+      "bytes": 1181281,
+      "sha256": "430c6dd622fc028ea8fd30643eb1ee6839724bc698ed239102a1aa6756b7dd90",
+      "structure": {
+        "rows": 3273,
+        "column_count": 29,
+        "columns": [
+          "call_id",
+          "source_segment_index",
+          "year",
+          "quarter",
+          "audio_interaction_deviation",
+          "transcript_visible_deviation",
+          "priority_for_clip_review",
+          "full_reconstructed",
+          "exclude_timing_and_rate",
+          "exclude_pitch",
+          "exclude_intensity",
+          "timing_and_rate_only",
+          "pitch_only",
+          "intensity_only",
+          "drop_speaking_rate_delta_from_prepared_wpm",
+          "drop_response_latency_s",
+          "drop_long_gap_rate_delta_from_prepared_per_100_words",
+          "drop_f0_relative_to_prepared_semitones",
+          "drop_f0_cv_delta_from_prepared",
+          "drop_intensity_relative_to_prepared_db",
+          "drop_intensity_sd_delta_from_prepared_db",
+          "ticker",
+          "executive",
+          "acoustic_anchor",
+          "primary_high_priority",
+          "exclude_timing_and_rate_flag",
+          "exclude_pitch_flag",
+          "exclude_intensity_flag",
+          "family_exclusion_support_count"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_archive_validation.json",
+      "bytes": 440,
+      "sha256": "315119a7a34957e36d0f098d8c9d48956253a768256d066581bd275007ea1016",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "audio_files_present_and_at_least_1mb",
+          "audio_interaction_review_flags",
+          "calls_meeting_baseline_requirements",
+          "eligible_answers",
+          "partial_files",
+          "retrieval_failures",
+          "selected_calls",
+          "selected_executives",
+          "structured_metadata_complete",
+          "structured_metadata_files_present",
+          "structured_metadata_review",
+          "transcripts_present_and_at_least_1000_bytes"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_call_concentration.csv",
+      "bytes": 805,
+      "sha256": "ba34345288c6cfbde4dfb433751169cabf163b7148d55813ccc0e5d1e4609c21",
+      "structure": {
+        "rows": 12,
+        "column_count": 7,
+        "columns": [
+          "ticker",
+          "executive",
+          "eligible_calls",
+          "high_priority_answers",
+          "calls_with_high_priority_answer",
+          "share_high_priority_from_top_call",
+          "effective_number_of_contributing_calls"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_candidate_audit.csv",
+      "bytes": 1878,
+      "sha256": "91117a564f01419f66fce9ea8f4197170216f40fb163b01cbc6214ed0646f5ac",
+      "structure": {
+        "rows": 7,
+        "column_count": 10,
+        "columns": [
+          "ticker",
+          "exchange",
+          "executive",
+          "sector",
+          "sample_start",
+          "sample_end",
+          "listed_calls_in_window",
+          "aliases_for_screening",
+          "rationale",
+          "tenure_source"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_eligibility_sensitivity.csv",
+      "bytes": 2955,
+      "sha256": "28bce59bee916b8ef4e024c6b029a91d598e9f8400fe3e3c67644daeb57332be",
+      "structure": {
+        "rows": 36,
+        "column_count": 12,
+        "columns": [
+          "ticker",
+          "executive",
+          "minimum_words",
+          "minimum_duration_s",
+          "eligible_answers",
+          "common_answers_with_primary_setting",
+          "score_spearman_with_primary_setting",
+          "high_priority_count",
+          "original_high_count",
+          "original_high_retained_count",
+          "original_high_retained_share",
+          "flag_set_jaccard_with_primary_setting"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_feature_variant_summary.csv",
+      "bytes": 29614,
+      "sha256": "752bcf378acbb53c42db9e87870a1049f6427866f32f5a42cceeab9145ea8b22",
+      "structure": {
+        "rows": 168,
+        "column_count": 14,
+        "columns": [
+          "ticker",
+          "executive",
+          "variant",
+          "description",
+          "answers_scored",
+          "spearman_with_original_score",
+          "median_absolute_score_change",
+          "audio_outlier_routine_transcript_count",
+          "original_high_count",
+          "original_high_retained_count",
+          "original_high_retained_share",
+          "new_flags_not_in_original",
+          "flag_set_jaccard_with_original",
+          "top_decile_overlap_share"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_measurement_yield.csv",
+      "bytes": 662,
+      "sha256": "9378fd2487068c073ff3de71a528e6be43eb95cb879f360921e39aa1459e0ec5",
+      "structure": {
+        "rows": 12,
+        "column_count": 7,
+        "columns": [
+          "cohort",
+          "ticker",
+          "executive",
+          "usable_calls",
+          "eligible_answers",
+          "excluded_short_or_unstable_answers",
+          "audio_delivery_flags_with_routine_text"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_metadata_status_summary.csv",
+      "bytes": 335,
+      "sha256": "bc782b569ea3012d7afb581202544ff23bcdfcc9216885710f5982c6e193b7f5",
+      "structure": {
+        "rows": 10,
+        "column_count": 4,
+        "columns": [
+          "ticker",
+          "executive",
+          "status",
+          "calls"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_prepared_qa_summary.csv",
+      "bytes": 6436,
+      "sha256": "b1d39d4e44a560093b92a78a0d1c11dcb6cf918c27f4bfb8f95ef6fd60c21a25",
+      "structure": {
+        "rows": 65,
+        "column_count": 8,
+        "columns": [
+          "ticker",
+          "executive",
+          "metric",
+          "calls_compared",
+          "median_q_and_a_minus_prepared",
+          "expected_direction",
+          "share_calls_in_expected_direction",
+          "two_sided_wilcoxon_p"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/expanded_audio_primary_examples_robustness.csv",
+      "bytes": 19226,
+      "sha256": "05ffcd24c77ebbd6d1489e10480ff0692c316269691d0fe7c7bfb7a6fb15a09e",
+      "structure": {
+        "rows": 177,
+        "column_count": 12,
+        "columns": [
+          "ticker",
+          "executive",
+          "call_id",
+          "source_segment_index",
+          "year",
+          "quarter",
+          "audio_interaction_deviation",
+          "transcript_visible_deviation",
+          "exclude_timing_and_rate",
+          "exclude_pitch",
+          "exclude_intensity",
+          "family_exclusion_support_count"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/interview_measures.csv",
+      "bytes": 15166,
+      "sha256": "bad64123237159f1e39c20f4deaf4bb1858a4647183e9df8e2519255fa575311",
+      "structure": {
+        "rows": 30,
+        "column_count": 60,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "duration_seconds",
+          "language",
+          "speaker_count",
+          "turn_count",
+          "total_asr_word_count",
+          "total_speech_duration_s",
+          "dominant_speaker_speech_share",
+          "speaker_speech_share_hhi",
+          "mean_turn_duration_s",
+          "median_response_latency_s",
+          "mean_speaking_rate_wpm",
+          "mean_pitch_variability_f0_cv",
+          "mean_intensity_variability_db",
+          "mean_within_turn_silence_s",
+          "guest_turn_count",
+          "interviewer_turn_count",
+          "exploratory_guest_speech_share",
+          "exploratory_mean_guest_turn_duration_s",
+          "exploratory_mean_interviewer_turn_duration_s",
+          "exploratory_median_guest_response_latency_s",
+          "exploratory_median_interviewer_response_latency_s",
+          "exploratory_mean_guest_speaking_rate_wpm",
+          "exploratory_mean_interviewer_speaking_rate_wpm",
+          "all_filler_phrases_per_100_words",
+          "exploratory_guest_filler_phrases_per_100_words",
+          "exploratory_mean_guest_pitch_variability_f0_cv",
+          "exploratory_mean_guest_intensity_variability_db",
+          "exploratory_mean_guest_within_turn_silence_s",
+          "qc_flagged_turn_rate",
+          "designed_visual_format",
+          "sampled_frame_count",
+          "mean_people_per_frame",
+          "no_person_frame_rate",
+          "single_person_frame_rate",
+          "multiple_people_frame_rate",
+          "close_up_frame_rate",
+          "single_medium_frame_rate",
+          "split_screen_frame_rate",
+          "two_shot_frame_rate",
+          "stage_wide_frame_rate",
+          "audience_frame_rate",
+          "shared_content_frame_rate",
+          "remote_context_frame_rate",
+          "studio_context_frame_rate",
+          "stage_context_frame_rate",
+          "person_observation_count",
+          "gaze_toward_camera_person_rate",
+          "gaze_toward_other_person_rate",
+          "raised_hand_person_rate",
+          "shot_transition_rate",
+          "lead_gaze_transition_rate",
+          "lead_hand_position_transition_rate",
+          "frames_with_uncertainty_rate",
+          "mean_uncertainties_per_frame",
+          "youtube_url",
+          "playlist_index",
+          "playlist_third"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/multimodal_frame_turn_alignment.csv",
+      "bytes": 42940,
+      "sha256": "6cd015f484a918d567acd3bbff37856fd0d650fc92d2831ed102fba3f5823723",
+      "structure": {
+        "rows": 360,
+        "column_count": 18,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "sample_index",
+          "timestamp_seconds",
+          "speech_active_at_frame",
+          "active_or_nearest_speaker_id",
+          "active_or_nearest_functional_role",
+          "active_or_nearest_role_group",
+          "distance_to_nearest_turn_seconds",
+          "person_count",
+          "shot_type",
+          "camera_context",
+          "audience_visible",
+          "shared_content_visible",
+          "any_gaze_toward_camera",
+          "any_gaze_toward_other_person",
+          "any_raised_hand",
+          "uncertainty_count"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/organizational_variable_recipes.csv",
+      "bytes": 2684,
+      "sha256": "6f77a34471809936d1fd3820e80cc6d3d584ed3db94c6b9173dcb78fc47d82ca",
+      "structure": {
+        "rows": 5,
+        "column_count": 7,
+        "columns": [
+          "variable",
+          "level",
+          "transparent_recipe",
+          "organization_research_use",
+          "what_a_transcript_misses",
+          "required_validation",
+          "not_an_inference_of"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/organizational_variable_summary.csv",
+      "bytes": 4284,
+      "sha256": "3149328be43c90c916d6cdb6f49f605e76907843311523e17e73ef7f7c7d61f6",
+      "structure": {
+        "rows": 36,
+        "column_count": 8,
+        "columns": [
+          "sample",
+          "level",
+          "variable",
+          "n",
+          "mean",
+          "median",
+          "p10",
+          "p90"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/outcome_model_comparison.csv",
+      "bytes": 930,
+      "sha256": "6102b2ef7417bbb9737b35b9657d27a50d543dd9b6697fcf2e07ac678d97ccb5",
+      "structure": {
+        "rows": 7,
+        "column_count": 11,
+        "columns": [
+          "outcome",
+          "model",
+          "n",
+          "videos",
+          "roc_auc",
+          "brier_score",
+          "log_loss",
+          "accuracy_at_0_5",
+          "mae",
+          "r_squared",
+          "spearman_rho"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/outcome_variable_recipes.csv",
+      "bytes": 1507,
+      "sha256": "3d0ba80d646bec21e317393ec6406d229f9c37e13e4e9a28c1bf73ebc28d1dc5",
+      "structure": {
+        "rows": 3,
+        "column_count": 7,
+        "columns": [
+          "outcome",
+          "unit",
+          "operationalization",
+          "modalities",
+          "theoretical_use",
+          "must_not_be_called",
+          "validation_priority"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/pilot_scale.csv",
+      "bytes": 531,
+      "sha256": "5be1bcc069655b422e9a531629b6363b5bf6d1270d301ee00f68bcefafbc03ae",
+      "structure": {
+        "rows": 10,
+        "column_count": 4,
+        "columns": [
+          "pilot",
+          "measure",
+          "value",
+          "unit"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/pilot_summary_statistics.json",
+      "bytes": 2170,
+      "sha256": "a2d120cd5287625c6fa5252480f0af88c5d31e652197bc76547eca3d9bd55d61",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "bloomberg_video_pilot",
+          "earnings_audio_pilot",
+          "illustrative_variation"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/sample_manifest.csv",
+      "bytes": 6650,
+      "sha256": "c21768976051d45cd70b6f429ca97cbebaa5e777a248aa2bf03f18dd89823c47",
+      "structure": {
+        "rows": 30,
+        "column_count": 10,
+        "columns": [
+          "candidate_id",
+          "playlist_index",
+          "video_id",
+          "title",
+          "expected_duration_minutes",
+          "duration_band",
+          "playlist_third",
+          "designed_visual_format",
+          "youtube_url",
+          "screening_note"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/speaker_transition_edit_alignment.csv",
+      "bytes": 256244,
+      "sha256": "7cbf3df1a9d2bacc4b9705c8fa14f52e8281c44bd9682bf878ed8289d1c876d9",
+      "structure": {
+        "rows": 1178,
+        "column_count": 19,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "visual_format",
+          "duration_band",
+          "turn_index",
+          "transition_seconds",
+          "previous_speaker_id",
+          "current_speaker_id",
+          "previous_role_group",
+          "current_role_group",
+          "role_transition",
+          "nearest_shot_change_seconds",
+          "signed_edit_delay_seconds",
+          "absolute_edit_delay_seconds",
+          "edit_within_1s",
+          "edit_within_2s",
+          "edit_within_3s",
+          "scene_threshold"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/validation_plan.csv",
+      "bytes": 5100,
+      "sha256": "5629fa282ea78c4f40e080d447c59f1f8ae010571c309a4d90fba2f36cb1ead0",
+      "structure": {
+        "rows": 19,
+        "column_count": 7,
+        "columns": [
+          "measure_or_layer",
+          "validation_question",
+          "current_evidence",
+          "proposed_sample",
+          "evaluation_metric",
+          "decision_rule_or_use",
+          "key_risk"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/variable_dictionary.csv",
+      "bytes": 15681,
+      "sha256": "9fb96fb570eca234b9595b985bd0f45a1556aa0c3b4dc13ef309812c2b298c5c",
+      "structure": {
+        "rows": 74,
+        "column_count": 9,
+        "columns": [
+          "variable",
+          "level",
+          "family",
+          "definition",
+          "unit_or_type",
+          "provenance",
+          "recommended_status",
+          "validation_target",
+          "main_limitation"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_measure_summary.json",
+      "bytes": 702,
+      "sha256": "e375fe29820faa4ee0e5ac3b9f3ebebc0088f2c45f7379f84017e035876d27a8",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "chance_empirical_p_below_005_videos",
+          "chance_median_adjusted_responsiveness",
+          "chance_median_expected_rate",
+          "chance_median_observed_rate",
+          "chance_positive_videos",
+          "definition",
+          "frame_turn_rows",
+          "hand_contrast_interviews",
+          "interpretation",
+          "interview_rows",
+          "median_edit_within_2s_rate",
+          "median_shot_changes_per_minute",
+          "scene_threshold",
+          "total_duration_hours",
+          "total_shots",
+          "total_speaker_transitions",
+          "videos"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_measurement_sensitivity.csv",
+      "bytes": 499,
+      "sha256": "cc608adf60574af86790c665cc9b5d0f09b6405cab2dc4c7a435258d63cbfffe",
+      "structure": {
+        "rows": 6,
+        "column_count": 6,
+        "columns": [
+          "variable",
+          "n_interviews",
+          "median_threshold_005",
+          "median_threshold_010",
+          "median_absolute_difference",
+          "spearman_rank_correlation"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_organizational_measures.csv",
+      "bytes": 21114,
+      "sha256": "e5b1764e6e0b8084309c0288e3c6f436fc7e5db34f296405cf35aff58aa6c6c3",
+      "structure": {
+        "rows": 30,
+        "column_count": 89,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "duration_seconds",
+          "language",
+          "speaker_count",
+          "turn_count",
+          "total_asr_word_count",
+          "total_speech_duration_s",
+          "dominant_speaker_speech_share",
+          "speaker_speech_share_hhi",
+          "mean_turn_duration_s",
+          "median_response_latency_s",
+          "mean_speaking_rate_wpm",
+          "mean_pitch_variability_f0_cv",
+          "mean_intensity_variability_db",
+          "mean_within_turn_silence_s",
+          "guest_turn_count",
+          "interviewer_turn_count",
+          "exploratory_guest_speech_share",
+          "exploratory_mean_guest_turn_duration_s",
+          "exploratory_mean_interviewer_turn_duration_s",
+          "exploratory_median_guest_response_latency_s",
+          "exploratory_median_interviewer_response_latency_s",
+          "exploratory_mean_guest_speaking_rate_wpm",
+          "exploratory_mean_interviewer_speaking_rate_wpm",
+          "all_filler_phrases_per_100_words",
+          "exploratory_guest_filler_phrases_per_100_words",
+          "exploratory_mean_guest_pitch_variability_f0_cv",
+          "exploratory_mean_guest_intensity_variability_db",
+          "exploratory_mean_guest_within_turn_silence_s",
+          "qc_flagged_turn_rate",
+          "visual_format",
+          "duration_band",
+          "sampled_frame_count",
+          "mean_people_per_frame",
+          "no_person_frame_rate",
+          "single_person_frame_rate",
+          "multiple_people_frame_rate",
+          "close_up_frame_rate",
+          "single_medium_frame_rate",
+          "split_screen_frame_rate",
+          "two_shot_frame_rate",
+          "stage_wide_frame_rate",
+          "audience_frame_rate",
+          "shared_content_frame_rate",
+          "remote_context_frame_rate",
+          "studio_context_frame_rate",
+          "stage_context_frame_rate",
+          "person_observation_count",
+          "gaze_toward_camera_person_rate",
+          "gaze_toward_other_person_rate",
+          "raised_hand_person_rate",
+          "shot_transition_rate",
+          "lead_gaze_transition_rate",
+          "lead_hand_position_transition_rate",
+          "frames_with_uncertainty_rate",
+          "mean_uncertainties_per_frame",
+          "duration_minutes",
+          "shot_count",
+          "shot_changes_per_minute",
+          "median_shot_duration_seconds",
+          "shot_duration_iqr_seconds",
+          "short_shot_rate_under_3s",
+          "long_shot_rate_over_15s",
+          "speaker_transition_count",
+          "edit_within_1s_of_speaker_change_rate",
+          "edit_within_2s_of_speaker_change_rate",
+          "edit_within_3s_of_speaker_change_rate",
+          "median_absolute_edit_delay_seconds",
+          "scene_threshold",
+          "interviewer_to_guest_transition_count",
+          "interviewer_to_guest_edit_within_2s_rate",
+          "guest_to_interviewer_transition_count",
+          "guest_to_interviewer_edit_within_2s_rate",
+          "focused_single_person_frame_rate",
+          "interpersonal_visual_scene_rate",
+          "visible_hand_acoustic_variability_difference_z",
+          "visible_hand_frame_count_for_contrast",
+          "no_visible_hand_frame_count_for_contrast",
+          "focused_frame_acoustic_variability_difference_z",
+          "focused_frame_count_for_contrast",
+          "nonfocused_frame_count_for_contrast",
+          "role_based_edit_measure_status",
+          "chance_expected_edit_near_transition_rate",
+          "chance_adjusted_editorial_responsiveness",
+          "chance_adjusted_responsiveness_z",
+          "circular_shift_empirical_p_one_sided",
+          "null_iterations"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_shot_dynamics.csv",
+      "bytes": 6427,
+      "sha256": "83070e6af52cc347294939bc78a038be6e4a1b29a2cdb8fb46ed956a9d1d213a",
+      "structure": {
+        "rows": 30,
+        "column_count": 22,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "visual_format",
+          "duration_band",
+          "duration_minutes",
+          "shot_count",
+          "shot_changes_per_minute",
+          "median_shot_duration_seconds",
+          "shot_duration_iqr_seconds",
+          "short_shot_rate_under_3s",
+          "long_shot_rate_over_15s",
+          "speaker_transition_count",
+          "edit_within_1s_of_speaker_change_rate",
+          "edit_within_2s_of_speaker_change_rate",
+          "edit_within_3s_of_speaker_change_rate",
+          "median_absolute_edit_delay_seconds",
+          "scene_threshold",
+          "interviewer_to_guest_transition_count",
+          "interviewer_to_guest_edit_within_2s_rate",
+          "guest_to_interviewer_transition_count",
+          "guest_to_interviewer_edit_within_2s_rate"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_shot_segments.csv",
+      "bytes": 328172,
+      "sha256": "a4540198e4579111c1c7a7a30f8b35b9ad5bc761d7adeb847d598aae26e956fd",
+      "structure": {
+        "rows": 2451,
+        "column_count": 10,
+        "columns": [
+          "candidate_id",
+          "video_id",
+          "title",
+          "visual_format",
+          "duration_band",
+          "shot_index",
+          "shot_start_seconds",
+          "shot_end_seconds",
+          "shot_duration_seconds",
+          "scene_threshold"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/video_variable_recipes.csv",
+      "bytes": 2974,
+      "sha256": "d7d236bb264c59cc3b3c955c7684cf250f5e6f05d607124a84ce8c889dffd561",
+      "structure": {
+        "rows": 8,
+        "column_count": 6,
+        "columns": [
+          "candidate_measure",
+          "variable",
+          "observable_definition",
+          "potential_research_use",
+          "recommended_status",
+          "main_limitation"
+        ]
+      }
+    },
+    {
+      "path": "docs/event_aligned_video_measurement.md",
+      "bytes": 3541,
+      "sha256": "937bed1870b88e8e0da989e1c31706644621db9317bb3817bd84d6f1eb97c86d"
+    },
+    {
+      "path": "docs/event_aligned_video_results.md",
+      "bytes": 2585,
+      "sha256": "21ccb0514b7bb7f9bef184385ec0af8f71c8ac942a06ed8dc33a8f55b7d54cb4"
+    },
+    {
+      "path": "docs/methods.md",
+      "bytes": 2950,
+      "sha256": "fcf51f5c0702ba65cd6b15127bf387e135e42fcad5454d77067b980803a86cbb"
+    },
+    {
+      "path": "docs/proximal_outcome_pilot.md",
+      "bytes": 2136,
+      "sha256": "8ca2b3ce504469034147664ca07418793264ef20b85d7cabfa435c4189e45936"
+    },
+    {
+      "path": "docs/release_checklist.md",
+      "bytes": 2568,
+      "sha256": "ddb25f51c3032dd08ab0fda93230c8877afc7768ea21ed80582fade72680d8c1"
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "bytes": 2005,
+      "sha256": "ab8a96cd81ccc4a5505eb056fb3ccd6b8a31842532a3001aeb4248ece3858be6"
+    },
+    {
+      "path": "docs/research_object_manifest.md",
+      "bytes": 2178,
+      "sha256": "6795ff9f2932aaaf5c2beb515b1452551a61a27bb2d79c488086f064ab0052c5"
+    },
+    {
+      "path": "docs/research_opportunity_map.md",
+      "bytes": 5285,
+      "sha256": "545e16d1c57221dbbd24142540fc6304e45e0c46f331584a987f669442683bb7"
+    },
+    {
+      "path": "docs/reviewer_tour.md",
+      "bytes": 4877,
+      "sha256": "fb8b6e04425fe595131cbaf4a8e48f5457a9ebb526a06e76e7474e9ebd536455"
+    },
+    {
+      "path": "figures/figure_10_expanded_audio_robustness.png",
+      "bytes": 323924,
+      "sha256": "1ea036cffc65a57cba3a54c8422238110a345d70b093d76e4ce8a223c7a92a0e"
+    },
+    {
+      "path": "figures/figure_11_event_aligned_production_responsiveness.png",
+      "bytes": 244255,
+      "sha256": "3b34a0e6c122104a07d0fadd29e9b6a58e006e0625dcdbc84c07eada38c69e75"
+    },
+    {
+      "path": "figures/figure_1_two_pilots_at_scale.png",
+      "bytes": 239096,
+      "sha256": "5151c718a6fccc39d8b49d0490b1d26a3ceea95216415bf5f8a27902c8da30aa"
+    },
+    {
+      "path": "figures/figure_2_interview_level_variation.png",
+      "bytes": 201892,
+      "sha256": "eae4f5421befbc81702b9a553fea741685ec24b0f901a1c0f066350e6a92cb0f"
+    },
+    {
+      "path": "figures/figure_3_production_format_comparison.png",
+      "bytes": 218940,
+      "sha256": "dd0d731aa64167a5881c880b45fc64590ecc3f086255ef2097c3c9fc4406fde1"
+    },
+    {
+      "path": "figures/figure_4_validation_architecture.png",
+      "bytes": 153466,
+      "sha256": "ef14f16e83be42d136ae247236adacd0035375f9db0f950ef4ef49d59ff39e4f"
+    },
+    {
+      "path": "figures/figure_5_organizational_variable_recipes.png",
+      "bytes": 316890,
+      "sha256": "f5d3eb7aff86b2d5cb46b5db25293ffa2e8cce337bbbc49f164d1d8ef16c38fe"
+    },
+    {
+      "path": "figures/figure_6_organizational_variable_evidence.png",
+      "bytes": 680047,
+      "sha256": "289cac477d6dfbd5f218271089584510086690ad1b3dee6b2c5c003e5a1f3335"
+    },
+    {
+      "path": "figures/figure_7_video_organizational_measures.png",
+      "bytes": 430014,
+      "sha256": "ef0d926d4fbd9ee2c6d91b0128fc455e3446509c3962d2126a565dba21370a4e"
+    },
+    {
+      "path": "figures/figure_8_proximal_outcomes.png",
+      "bytes": 211301,
+      "sha256": "6af815b622f4bf240687581a613e5c9607b60cc6ca612826b0c99856d7eb883d"
+    },
+    {
+      "path": "figures/figure_9_expanded_audio_panel.png",
+      "bytes": 365126,
+      "sha256": "67b886e33a62e6ca1e681786739226fe59059d9bfd1bfbe130738833eaedea4d"
+    },
+    {
+      "path": "scripts/summarize_pilot.py",
+      "bytes": 6356,
+      "sha256": "c5789ea3f515bd26543e4eef81678dd5cfd8edf9e94e0d8b8cccff17386043e8"
+    },
+    {
+      "path": "scripts/verify_research_object.py",
+      "bytes": 11044,
+      "sha256": "aee866b69823020fb59301ac305257df38261440598a681ff196516cb7039461"
+    },
+    {
+      "path": "summary_check.json",
+      "bytes": 2227,
+      "sha256": "04120946c5f79ec438ffc89b409e8954ca99cd821572bac548606af9c0862071",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "aligned_frame_rows",
+          "continuous_video_analysis",
+          "descriptive_variation",
+          "earnings_audio",
+          "event_aligned_video_analysis",
+          "frames_during_speech",
+          "interviews"
+        ]
+      }
+    },
+    {
+      "path": "tests/test_repository.py",
+      "bytes": 1849,
+      "sha256": "2cb6b54ab55f806e9bd641446e039d7d212ab3cee21c13ba9aa60634f96e5e98"
+    },
+    {
+      "path": "tools/measurement-recipe-studio/README.md",
+      "bytes": 1298,
+      "sha256": "b680edc6e3c9dbb07dab128d53994727a05f012f019210d55ec2dc75d37f8919"
+    },
+    {
+      "path": "tools/measurement-recipe-studio/index.html",
+      "bytes": 32556,
+      "sha256": "c4bbaab9d3866358dd8128021aa1503c1d3d759ac202a637600a9610e971becb",
+      "structure": {
+        "title": "Measurement Recipe Studio"
+      }
+    }
+  ]
+}

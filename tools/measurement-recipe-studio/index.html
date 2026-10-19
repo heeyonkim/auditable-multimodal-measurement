@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build auditable measurement recipes for multimodal organizational research.">
+  <title>Measurement Recipe Studio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1f33'/%3E%3Cpath d='M17 17h30v8H17zm0 13h21v8H17zm0 13h30v8H17z' fill='%2367e8c0'/%3E%3Ccircle cx='45' cy='34' r='6' fill='%23f4b860'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #102235;
+      --ink-2: #31485d;
+      --navy: #0b1f33;
+      --navy-2: #163650;
+      --paper: #f5f8fb;
+      --surface: #ffffff;
+      --line: #d6e0e8;
+      --line-dark: #b6c6d2;
+      --mint: #67e8c0;
+      --mint-dark: #09745c;
+      --amber: #f4b860;
+      --red: #b64141;
+      --shadow: 0 18px 45px rgba(10, 31, 51, .10);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .topbar {
+      min-height: 72px;
+      padding: 12px clamp(18px, 3vw, 42px);
+      color: white;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .brand { display: flex; align-items: center; gap: 13px; min-width: 230px; }
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 11px;
+      display: grid; place-items: center; background: var(--mint); color: var(--navy);
+      font-weight: 900; letter-spacing: -.04em;
+    }
+    .brand h1 { margin: 0; font-size: 1.05rem; letter-spacing: .01em; }
+    .brand p { margin: 1px 0 0; color: #bcd0df; font-size: .78rem; }
+    .top-actions { display: flex; align-items: center; gap: 10px; }
+    .pilot-chip {
+      border: 1px solid rgba(255,255,255,.2); border-radius: 999px;
+      padding: 7px 11px; font-size: .78rem; color: #d6e3ec;
+    }
+    .button {
+      border: 1px solid transparent; border-radius: 10px; padding: 10px 14px;
+      font-weight: 750; transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(103, 232, 192, .5); outline-offset: 2px;
+    }
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--mint); color: var(--navy); }
+    .button-secondary { background: transparent; color: white; border-color: rgba(255,255,255,.28); }
+    .button-ink { background: var(--navy); color: white; }
+    .button-quiet { color: var(--ink); background: #eef3f7; border-color: var(--line); }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(360px, .92fr) minmax(470px, 1.08fr);
+      gap: 22px;
+      padding: 22px clamp(18px, 3vw, 42px) 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .panel {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+    .panel-head {
+      padding: 19px 22px 16px; border-bottom: 1px solid var(--line);
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 18px;
+    }
+    .panel-head h2 { margin: 0 0 4px; font-size: 1.1rem; letter-spacing: -.015em; }
+    .panel-head p { margin: 0; color: var(--ink-2); font-size: .86rem; max-width: 58ch; }
+    .step {
+      padding: 20px 22px; border-bottom: 1px solid var(--line);
+    }
+    .step:last-child { border-bottom: 0; }
+    .step-title { display: flex; gap: 10px; align-items: center; margin: 0 0 13px; }
+    .step-no {
+      width: 25px; height: 25px; border-radius: 8px; display: grid; place-items: center;
+      background: var(--navy); color: white; font-size: .76rem; font-weight: 850;
+    }
+    .step-title h3 { margin: 0; font-size: .9rem; }
+    .field { display: grid; gap: 7px; margin-top: 12px; }
+    .field:first-of-type { margin-top: 0; }
+    label, .field-label { font-weight: 760; font-size: .82rem; color: var(--ink); }
+    .hint { color: #657a8c; font-size: .75rem; font-weight: 500; }
+    select, input[type="text"], textarea {
+      width: 100%; color: var(--ink); background: white; border: 1px solid var(--line-dark);
+      border-radius: 10px; padding: 11px 12px;
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .choice {
+      position: relative; display: flex; align-items: flex-start; gap: 9px;
+      border: 1px solid var(--line); border-radius: 10px; padding: 10px 11px;
+      color: var(--ink-2); background: #fbfdff; font-size: .8rem;
+    }
+    .choice input { margin: 3px 0 0; accent-color: var(--mint-dark); }
+    .choice:has(input:checked) { border-color: #58bda0; background: #effcf7; color: var(--ink); }
+    .choice strong { display: block; font-size: .8rem; color: var(--ink); }
+    .choice small { display: block; color: #6a7f90; margin-top: 2px; }
+    .builder-actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 14px; }
+    .right-panel { min-width: 0; }
+    .status-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .status {
+      display: inline-flex; align-items: center; gap: 7px; border-radius: 999px;
+      font-size: .75rem; font-weight: 800; padding: 6px 10px;
+      background: #fff6e7; color: #78500c; border: 1px solid #f2d391;
+    }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
+    .readiness { font-size: .77rem; font-weight: 800; color: var(--ink-2); }
+    .score-track { height: 7px; width: 112px; border-radius: 99px; background: #dfe7ed; overflow: hidden; }
+    .score-fill { height: 100%; width: 0; background: var(--mint-dark); transition: width .25s ease; }
+    .recipe { padding: 20px 22px 4px; }
+    .recipe-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .recipe h3 { margin: 0; font-size: 1.35rem; letter-spacing: -.025em; }
+    .recipe-subtitle { margin: 4px 0 0; color: var(--ink-2); font-size: .86rem; }
+    .version { color: #587084; font-size: .73rem; white-space: nowrap; padding-top: 4px; }
+    .boundary {
+      margin: 18px 0; border-left: 4px solid var(--mint-dark); background: #f0faf7;
+      padding: 12px 14px; border-radius: 0 10px 10px 0; font-size: .85rem;
+    }
+    .boundary strong { display: block; margin-bottom: 3px; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+    .metric-card { border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: #fbfdff; }
+    .metric-card span { display: block; font-size: .7rem; color: #657a8c; text-transform: uppercase; letter-spacing: .06em; font-weight: 800; }
+    .metric-card strong { display: block; margin-top: 4px; font-size: .93rem; }
+    .section-label {
+      margin: 20px 0 8px; color: #52697c; font-size: .72rem; font-weight: 850;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .evidence-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+    .evidence-table th { text-align: left; color: #52697c; font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; }
+    .evidence-table th, .evidence-table td { padding: 9px 7px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .evidence-table td:first-child { font-weight: 800; }
+    .tag { display: inline-block; border-radius: 999px; padding: 3px 7px; font-size: .67rem; font-weight: 800; }
+    .tag-direct { background: #e6f8f2; color: #06654f; }
+    .tag-derived { background: #eaf0f7; color: #36566f; }
+    .tag-context { background: #fff2de; color: #7a4a00; }
+    .list { margin: 0; padding-left: 19px; color: var(--ink-2); font-size: .84rem; }
+    .list li { margin: 6px 0; }
+    .audit-strip {
+      margin-top: 20px; padding: 16px 22px; background: var(--navy); color: white;
+      display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+    }
+    .audit-strip strong { display: block; font-size: .86rem; }
+    .audit-strip span { color: #bcd0df; font-size: .76rem; }
+    .audit-actions { display: flex; gap: 8px; }
+    .pilot-evidence {
+      grid-column: 1 / -1; border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--surface); padding: 19px 22px; box-shadow: 0 12px 34px rgba(10,31,51,.07);
+      display: grid; grid-template-columns: 1.35fr repeat(4, minmax(110px, .45fr)); gap: 18px; align-items: center;
+    }
+    .pilot-evidence h2 { margin: 0 0 4px; font-size: 1rem; }
+    .pilot-evidence p { margin: 0; color: var(--ink-2); font-size: .8rem; }
+    .stat { border-left: 1px solid var(--line); padding-left: 16px; }
+    .stat strong { display: block; font-size: 1.15rem; color: var(--navy); }
+    .stat span { color: #657a8c; font-size: .72rem; }
+    .toast {
+      position: fixed; right: 22px; bottom: 22px; z-index: 20;
+      color: white; background: var(--navy); border: 1px solid #34516b;
+      padding: 11px 14px; border-radius: 10px; box-shadow: var(--shadow);
+      font-size: .82rem; opacity: 0; pointer-events: none; transform: translateY(8px);
+      transition: .2s ease;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    @media (max-width: 1040px) {
+      .workspace { grid-template-columns: 1fr; }
+      .pilot-evidence { grid-template-columns: repeat(2, 1fr); }
+      .pilot-evidence > div:first-child { grid-column: 1 / -1; }
+      .stat { border-left: 0; border-top: 1px solid var(--line); padding: 12px 0 0; }
+    }
+    @media (max-width: 680px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .top-actions { width: 100%; }
+      .pilot-chip { display: none; }
+      .workspace { padding: 14px 12px 30px; }
+      .two-col, .choice-grid, .cards { grid-template-columns: 1fr; }
+      .panel-head, .step, .recipe { padding-left: 16px; padding-right: 16px; }
+      .audit-strip { grid-template-columns: 1fr; }
+      .audit-actions { flex-wrap: wrap; }
+      .evidence-table { display: block; overflow-x: auto; }
+      .pilot-evidence { grid-template-columns: 1fr 1fr; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">MR</div>
+      <div>
+        <h1>Measurement Recipe Studio</h1>
+        <p>Auditable multimodal measures for organizational research</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span class="pilot-chip">Prototype · 2026 pilot corpus</span>
+      <button class="button button-secondary" id="resetButton" type="button">Reset</button>
+      <button class="button button-primary" id="downloadTop" type="button">Export recipe</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="panel" aria-labelledby="builderHeading">
+      <div class="panel-head">
+        <div>
+          <h2 id="builderHeading">Define the measure before asking AI to label it</h2>
+          <p>Separate the theoretical construct from what the recording can actually show.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-title"><span class="step-no">1</span><h3>Research claim</h3></div>
+        <div class="field">
+          <label for="preset">Worked recipe</label>
+          <select id="preset">
+            <option value="conversational">Conversational space</option>
+            <option value="deviation">Personal-baseline behavioral deviation</option>
+            <option value="editorial">Editorial responsiveness</option>
+            <option value="divergence">Delivery–text divergence</option>
+            <option value="custom">Custom construct</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="construct">Construct definition <span class="hint">What is the theoretical idea?</span></label>
+          <textarea id="construct"></textarea>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="setting">Setting</label>
+            <select id="setting">
+              <option>Video interview</option>
+              <option>Earnings call</option>
+              <option>Team meeting</option>
+              <option>Pitch or presentation</option>
+              <option>Hearing or negotiation</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="unit">Unit of analysis</label>
+            <select id="unit">
+              <option>Question–answer pair</option>
+              <option>Speaker transition</option>
+              <option>Speaker turn</option>
+              <option>Recording</option>
+              <option>Person within recording</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-title"><span class="step-no">2</span><h3>Observable evidence</h3></div>
+        <div class="choice-grid" id="modalities">
+          <label class="choice"><input type="checkbox" value="words" checked><span><strong>Words</strong><small>Content and sequence</small></span></label>
+          <label class="choice"><input type="checkbox" value="timing" checked><span><strong>Timing</strong><small>Turns, gaps, overlap</small></span></label>
+          <label class="choice"><input type="checkbox" value="voice"><span><strong>Voice</strong><small>Rate, pitch, intensity</small></span></label>
+          <label class="choice"><input type="checkbox" value="visible"><span><strong>Visible behavior</strong><small>Gaze, hands, framing</small></span></label>
+          <label class="choice"><input type="checkbox" value="production" checked><span><strong>Production</strong><small>Cuts, shots, context</small></span></label>
+          <label class="choice"><input type="checkbox" value="metadata"><span><strong>Source metadata</strong><small>Role, format, quality</small></span></label>
+        </div>
+        <div class="field">
+          <label for="observation">Operational rule <span class="hint">Specify what is counted or compared</span></label>
+          <textarea id="observation"></textarea>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-title"><span class="step-no">3</span><h3>Rivals and validation</h3></div>
+        <div class="field">
+          <label for="rivals">Rival explanations</label>
+          <textarea id="rivals"></textarea>
+        </div>
+        <div class="field">
+          <span class="field-label">Required tests</span>
+          <div class="choice-grid" id="tests">
+            <label class="choice"><input type="checkbox" value="event" checked><span><strong>Event accuracy</strong><small>Did the event occur?</small></span></label>
+            <label class="choice"><input type="checkbox" value="construct" checked><span><strong>Construct validity</strong><small>Does it represent the idea?</small></span></label>
+            <label class="choice"><input type="checkbox" value="robustness" checked><span><strong>Specification robustness</strong><small>Models, prompts, thresholds</small></span></label>
+            <label class="choice"><input type="checkbox" value="transport"><span><strong>Transportability</strong><small>Roles, cultures, formats</small></span></label>
+          </div>
+        </div>
+        <div class="builder-actions">
+          <button class="button button-ink" id="generateButton" type="button">Update recipe</button>
+          <button class="button button-quiet" id="loadEvidence" type="button">Load pilot evidence</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel right-panel" aria-labelledby="recipeHeading">
+      <div class="panel-head">
+        <div>
+          <h2 id="recipeHeading">Auditable recipe</h2>
+          <p>A versioned specification another researcher can inspect, rerun, modify, or reject.</p>
+        </div>
+        <div class="status-row">
+          <span class="status" id="statusLabel">Exploratory</span>
+          <span class="readiness" id="readinessText">0% ready</span>
+          <span class="score-track" aria-hidden="true"><span class="score-fill" id="scoreFill"></span></span>
+        </div>
+      </div>
+
+      <div class="recipe">
+        <div class="recipe-title-row">
+          <div>
+            <h3 id="recipeName">Conversational space</h3>
+            <p class="recipe-subtitle" id="recipeMeta">Video interview · Question–answer pair</p>
+          </div>
+          <span class="version">Recipe v0.1</span>
+        </div>
+
+        <div class="boundary">
+          <strong>Construct boundary</strong>
+          <span id="boundaryText">Measures response timing and floor allocation. It does not establish deliberation, confidence, question difficulty, or cognitive effort.</span>
+        </div>
+
+        <div class="cards">
+          <div class="metric-card"><span>Observed</span><strong id="observedCard">Turn timing</strong></div>
+          <div class="metric-card"><span>Derived</span><strong id="derivedCard">Answer duration</strong></div>
+          <div class="metric-card"><span>Not inferred</span><strong id="notInferredCard">Mental state</strong></div>
+        </div>
+
+        <div class="section-label">Evidence specification</div>
+        <table class="evidence-table">
+          <thead><tr><th>Layer</th><th>Indicator</th><th>Role</th></tr></thead>
+          <tbody id="evidenceBody"></tbody>
+        </table>
+
+        <div class="section-label">Rival explanations retained</div>
+        <ul class="list" id="rivalList"></ul>
+
+        <div class="section-label">Validation plan</div>
+        <ul class="list" id="validationList"></ul>
+      </div>
+
+      <div class="audit-strip">
+        <div>
+          <strong>Audit record includes source timestamps, rules, exclusions, and model provenance</strong>
+          <span id="auditSummary">3 evidence layers · 3 validation tests · automatic role labels require review</span>
+        </div>
+        <div class="audit-actions">
+          <button class="button button-secondary" id="copyButton" type="button">Copy JSON</button>
+          <button class="button button-primary" id="downloadButton" type="button">Download</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pilot-evidence" aria-labelledby="pilotHeading">
+      <div>
+        <h2 id="pilotHeading">Evidence that the measurement layer can operate at research scale</h2>
+        <p>Completed audio and video pilots; figures are descriptive and every interpretive recipe remains revisable.</p>
+      </div>
+      <div class="stat"><strong>118</strong><span>earnings calls</span></div>
+      <div class="stat"><strong>1,260</strong><span>eligible Q&amp;A answers</span></div>
+      <div class="stat"><strong>30</strong><span>heterogeneous videos</span></div>
+      <div class="stat"><strong>1,178</strong><span>speaker transitions</span></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const recipes = {
+      conversational: {
+        name: "Conversational space",
+        construct: "The amount and timing of interactional space available to a guest after an interviewer turn.",
+        setting: "Video interview",
+        unit: "Question–answer pair",
+        modalities: ["words", "timing", "production"],
+        observation: "Identify interviewer-to-guest transitions; record the response latency and elapsed duration of the following guest answer. Treat nearby camera cuts as production context, not as the guest's behavior.",
+        rivals: "Question length; interview format; editing conventions; network delay; diarization boundary error",
+        boundary: "Measures response timing and floor allocation. It does not establish deliberation, confidence, question difficulty, or cognitive effort.",
+        observed: "Turn timing",
+        derived: "Answer duration",
+        excluded: "Mental state"
+      },
+      deviation: {
+        name: "Personal-baseline behavioral deviation",
+        construct: "How unusual an answer's observable delivery is relative to the same speaker's own historical pattern.",
+        setting: "Earnings call",
+        unit: "Speaker turn",
+        modalities: ["timing", "voice", "metadata"],
+        observation: "Within speaker, standardize response latency, speaking rate, pitch variability, and intensity variability against eligible historical Q&A answers; retain feature-level contributions.",
+        rivals: "Recording quality; call section; question topic; speaker misidentification; changes in microphone or platform",
+        boundary: "Measures deviation from a personal behavioral baseline. It does not identify deception, anxiety, confidence, performance, or intent.",
+        observed: "Vocal delivery",
+        derived: "Within-person deviation",
+        excluded: "Deception"
+      },
+      editorial: {
+        name: "Editorial responsiveness",
+        construct: "The temporal coupling between conversational floor changes and observable video-production decisions.",
+        setting: "Video interview",
+        unit: "Speaker transition",
+        modalities: ["timing", "production", "metadata"],
+        observation: "Align each diarized speaker transition to the nearest continuously detected camera cut; compare the observed two-second coupling rate with within-video circular time shifts.",
+        rivals: "Base cutting frequency; interview format; scene-detection threshold; graphics insertion; pre-edited footage",
+        boundary: "Measures coupling between talk and production. It does not reveal an editor's intention, approval, attention, or causal response.",
+        observed: "Camera cut",
+        derived: "Chance-adjusted coupling",
+        excluded: "Editorial intent"
+      },
+      divergence: {
+        name: "Delivery–text divergence",
+        construct: "Cases in which a speaker's delivery is unusual even though transcript-visible features remain routine.",
+        setting: "Earnings call",
+        unit: "Speaker turn",
+        modalities: ["words", "timing", "voice", "metadata"],
+        observation: "Estimate transcript-visible and audio-interaction deviation separately within speaker; retain continuous scores and flag only prespecified regions of the joint distribution.",
+        rivals: "ASR errors; low word count; recording artifacts; topic shifts; unstable speaker baselines",
+        boundary: "Measures disagreement between two evidence layers. It does not establish concealment, deception, emotional leakage, or poor performance.",
+        observed: "Words and delivery",
+        derived: "Cross-modal divergence",
+        excluded: "Concealment"
+      },
+      custom: {
+        name: "Custom construct",
+        construct: "",
+        setting: "Video interview",
+        unit: "Speaker turn",
+        modalities: ["words"],
+        observation: "",
+        rivals: "",
+        boundary: "State what the measure can and cannot support before interpreting model output.",
+        observed: "Specify evidence",
+        derived: "Specify rule",
+        excluded: "Unsupported inference"
+      }
+    };
+
+    const modalityInfo = {
+      words: ["Words", "Content words, sequence, and transcript-visible markers", "direct"],
+      timing: ["Timing", "Turn boundaries, gaps, duration, and overlap", "direct"],
+      voice: ["Voice", "Speaking rate, pitch, intensity, and within-turn silence", "derived"],
+      visible: ["Visible behavior", "Gaze, hand position, people count, and framing", "derived"],
+      production: ["Production", "Shot boundaries, cuts, graphics, and camera context", "context"],
+      metadata: ["Source context", "Role, recording format, quality, and eligibility", "context"]
+    };
+    const testLabels = {
+      event: "Human-check the underlying observable event on a stratified held-out sample.",
+      construct: "Test convergence, discrimination, and rival explanations for the intended construct.",
+      robustness: "Vary model, prompt, threshold, segmentation, and repeated runs.",
+      transport: "Audit performance across roles, formats, languages, cultures, and recording conditions."
+    };
+    const el = id => document.getElementById(id);
+    const checkedValues = container => [...container.querySelectorAll("input:checked")].map(x => x.value);
+
+    function setChecked(container, values) {
+      [...container.querySelectorAll("input")].forEach(input => { input.checked = values.includes(input.value); });
+    }
+
+    function loadPreset(key) {
+      const r = recipes[key];
+      el("construct").value = r.construct;
+      el("setting").value = r.setting;
+      el("unit").value = r.unit;
+      el("observation").value = r.observation;
+      el("rivals").value = r.rivals;
+      setChecked(el("modalities"), r.modalities);
+      renderRecipe();
+    }
+
+    function getState() {
+      const key = el("preset").value;
+      const base = recipes[key];
+      return {
+        recipe_name: base.name,
+        recipe_version: "0.1",
+        status: "exploratory",
+        construct_definition: el("construct").value.trim(),
+        setting: el("setting").value,
+        unit_of_analysis: el("unit").value,
+        evidence_layers: checkedValues(el("modalities")),
+        operational_rule: el("observation").value.trim(),
+        rival_explanations: el("rivals").value.split(/[;\n]/).map(x => x.trim()).filter(Boolean),
+        validation_tests: checkedValues(el("tests")),
+        construct_boundary: base.boundary,
+        prohibited_interpretations: [base.excluded],
+        audit_requirements: ["source identifier", "timestamps", "eligibility and exclusions", "model and prompt versions", "uncertainty", "feature-level contributions"],
+        generated_at: new Date().toISOString()
+      };
+    }
+
+    function readiness(state) {
+      let score = 0;
+      if (state.construct_definition.length > 20) score += 18;
+      if (state.operational_rule.length > 30) score += 22;
+      if (state.evidence_layers.length >= 2) score += 16;
+      if (state.rival_explanations.length >= 2) score += 18;
+      if (state.validation_tests.length >= 3) score += 18;
+      if (state.unit_of_analysis) score += 8;
+      return Math.min(score, 100);
+    }
+
+    function renderRecipe() {
+      const key = el("preset").value;
+      const base = recipes[key];
+      const state = getState();
+      el("recipeName").textContent = base.name;
+      el("recipeMeta").textContent = `${state.setting} · ${state.unit_of_analysis}`;
+      el("boundaryText").textContent = base.boundary;
+      el("observedCard").textContent = base.observed;
+      el("derivedCard").textContent = base.derived;
+      el("notInferredCard").textContent = base.excluded;
+
+      el("evidenceBody").innerHTML = state.evidence_layers.length
+        ? state.evidence_layers.map(key => {
+            const item = modalityInfo[key];
+            return `<tr><td>${item[0]}</td><td>${item[1]}</td><td><span class="tag tag-${item[2]}">${item[2]}</span></td></tr>`;
+          }).join("")
+        : `<tr><td colspan="3">Select at least one observable evidence layer.</td></tr>`;
+
+      el("rivalList").innerHTML = state.rival_explanations.length
+        ? state.rival_explanations.map(x => `<li>${escapeHtml(x)}</li>`).join("")
+        : `<li>No rivals specified. This recipe is not ready for interpretation.</li>`;
+      el("validationList").innerHTML = state.validation_tests.length
+        ? state.validation_tests.map(x => `<li>${testLabels[x]}</li>`).join("")
+        : `<li>No validation tests selected.</li>`;
+
+      const score = readiness(state);
+      el("readinessText").textContent = `${score}% ready`;
+      el("scoreFill").style.width = `${score}%`;
+      el("statusLabel").textContent = score >= 90 ? "Specified, not validated" : "Exploratory";
+      el("auditSummary").textContent = `${state.evidence_layers.length} evidence layers · ${state.validation_tests.length} validation tests · automatic role labels require review`;
+    }
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[char]);
+    }
+
+    function recipeJson() { return JSON.stringify(getState(), null, 2); }
+
+    function downloadRecipe() {
+      const blob = new Blob([recipeJson()], {type: "application/json"});
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `${getState().recipe_name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-recipe-v0.1.json`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+      notify("Recipe downloaded with construct boundary and audit requirements.");
+    }
+
+    async function copyRecipe() {
+      try {
+        await navigator.clipboard.writeText(recipeJson());
+        notify("Recipe JSON copied.");
+      } catch (_) {
+        notify("Clipboard unavailable; use Download instead.");
+      }
+    }
+
+    function loadPilotEvidence() {
+      el("preset").value = "conversational";
+      loadPreset("conversational");
+      setChecked(el("tests"), ["event", "construct", "robustness", "transport"]);
+      renderRecipe();
+      notify("Loaded the 304-pair conversational-space worked example.");
+    }
+
+    let toastTimer;
+    function notify(message) {
+      clearTimeout(toastTimer);
+      el("toast").textContent = message;
+      el("toast").classList.add("show");
+      toastTimer = setTimeout(() => el("toast").classList.remove("show"), 2600);
+    }
+
+    el("preset").addEventListener("change", event => loadPreset(event.target.value));
+    ["construct", "setting", "unit", "observation", "rivals"].forEach(id => el(id).addEventListener("input", renderRecipe));
+    el("modalities").addEventListener("change", renderRecipe);
+    el("tests").addEventListener("change", renderRecipe);
+    el("generateButton").addEventListener("click", () => { renderRecipe(); notify("Recipe updated."); });
+    el("loadEvidence").addEventListener("click", loadPilotEvidence);
+    el("downloadButton").addEventListener("click", downloadRecipe);
+    el("downloadTop").addEventListener("click", downloadRecipe);
+    el("copyButton").addEventListener("click", copyRecipe);
+    el("resetButton").addEventListener("click", () => {
+      el("preset").value = "conversational";
+      setChecked(el("tests"), ["event", "construct", "robustness"]);
+      loadPreset("conversational");
+      notify("Studio reset to the worked example.");
+    });
+
+    function registerAgentTools() {
+      const context = document.modelContext;
+      if (!context?.registerTool) return;
+      const allowed = Object.keys(recipes);
+      void Promise.resolve(context.registerTool({
+        name: "configure_measurement_recipe",
+        title: "Configure measurement recipe",
+        description: "Load one of the worked organizational-research measurement recipes into the visible studio.",
+        inputSchema: {
+          type: "object",
+          properties: { preset: { type: "string", enum: allowed } },
+          required: ["preset"],
+          additionalProperties: false
+        },
+        annotations: { readOnlyHint: false, untrustedContentHint: false },
+        execute(input) {
+          if (!input || !allowed.includes(input.preset)) throw new Error("Unknown recipe preset");
+          el("preset").value = input.preset;
+          loadPreset(input.preset);
+          return { loaded: input.preset, recipe: getState() };
+        }
+      })).catch(() => {});
+      void Promise.resolve(context.registerTool({
+        name: "read_measurement_recipe",
+        title: "Read measurement recipe",
+        description: "Return the currently visible measurement recipe and readiness score without changing it.",
+        inputSchema: { type: "object", properties: {}, additionalProperties: false },
+        annotations: { readOnlyHint: true, untrustedContentHint: false },
+        execute() { return { recipe: getState(), readiness: readiness(getState()) }; }
+      })).catch(() => {});
+    }
+
+    loadPreset("conversational");
+    registerAgentTools();
+  </script>
+</body>
+</html>

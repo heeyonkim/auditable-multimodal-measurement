@@ -1,0 +1,28 @@
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+*token*
+*credentials*
+
+# Source media and extracted content
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.mov
+*.webm
+*.mkv
+frames/
+media/
+transcripts/
+
+# Local caches and generated state
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+.cache/
+tmp/

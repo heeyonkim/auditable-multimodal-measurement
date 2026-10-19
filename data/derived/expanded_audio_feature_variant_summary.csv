@@ -1,0 +1,169 @@
+ticker,executive,variant,description,answers_scored,spearman_with_original_score,median_absolute_score_change,audio_outlier_routine_transcript_count,original_high_count,original_high_retained_count,original_high_retained_share,new_flags_not_in_original,flag_set_jaccard_with_original,top_decile_overlap_share
+AAPL,Tim Cook,full_reconstructed,Full seven-feature score,395,0.9999979555217925,0.0002502127539582011,22,22,22,1.0,0,1.0,1.0
+AAPL,Tim Cook,exclude_timing_and_rate,Exclude timing and speaking-rate features,395,0.7901101478380217,0.2075987051448558,34,22,18,0.8181818181818182,16,0.47368421052631576,0.725
+AAPL,Tim Cook,exclude_pitch,Exclude pitch features,395,0.799483603221007,0.1330404486026101,18,22,13,0.5909090909090909,5,0.48148148148148145,0.675
+AAPL,Tim Cook,exclude_intensity,Exclude intensity features,395,0.8571695883768377,0.13334393050102644,23,22,15,0.6818181818181818,8,0.5,0.75
+AAPL,Tim Cook,timing_and_rate_only,Timing and rate only,395,0.5652829331956458,0.303301853960682,17,22,7,0.3181818181818182,10,0.21875,0.35
+AAPL,Tim Cook,pitch_only,Pitch only,387,0.5523929774037913,0.3910110709976484,35,22,14,0.6363636363636364,21,0.32558139534883723,0.525
+AAPL,Tim Cook,intensity_only,Intensity only,395,0.5373739382824253,0.39557272766402585,27,22,10,0.45454545454545453,17,0.2564102564102564,0.45
+AAPL,Tim Cook,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,395,0.9715567033223348,0.06660666221536904,27,22,21,0.9545454545454546,6,0.75,0.875
+AAPL,Tim Cook,drop_response_latency_s,Drop only: response latency,395,0.947289695753131,0.07554632282601381,28,22,22,1.0,6,0.7857142857142857,0.925
+AAPL,Tim Cook,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,395,0.9573900125599779,0.06630965008864376,25,22,19,0.8636363636363636,6,0.6785714285714286,0.85
+AAPL,Tim Cook,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,395,0.9342064821922412,0.06915007309687904,23,22,20,0.9090909090909091,3,0.8,0.925
+AAPL,Tim Cook,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,395,0.9003910701403098,0.07006650827782634,21,22,16,0.7272727272727273,5,0.5925925925925926,0.775
+AAPL,Tim Cook,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,395,0.9105002463617788,0.07009402327720793,19,22,15,0.6818181818181818,4,0.5769230769230769,0.775
+AAPL,Tim Cook,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,395,0.9714119346460313,0.07024597716466063,26,22,20,0.9090909090909091,6,0.7142857142857143,0.925
+MSFT,Satya Nadella,full_reconstructed,Full seven-feature score,120,0.9999930550491526,0.0002676281568420591,9,9,9,1.0,0,1.0,0.8571428571428571
+MSFT,Satya Nadella,exclude_timing_and_rate,Exclude timing and speaking-rate features,120,0.8025613067858438,0.23827155906405617,11,9,8,0.8888888888888888,3,0.6666666666666666,0.42857142857142855
+MSFT,Satya Nadella,exclude_pitch,Exclude pitch features,120,0.8679621360174318,0.1370503191716534,6,9,5,0.5555555555555556,1,0.5,0.6428571428571429
+MSFT,Satya Nadella,exclude_intensity,Exclude intensity features,120,0.8202397405555164,0.16290359638635377,8,9,5,0.5555555555555556,3,0.4166666666666667,0.6428571428571429
+MSFT,Satya Nadella,timing_and_rate_only,Timing and rate only,120,0.6106195612312076,0.3190338793151223,5,9,3,0.3333333333333333,2,0.2727272727272727,0.5714285714285714
+MSFT,Satya Nadella,pitch_only,Pitch only,119,0.49344329805869136,0.3867947568911288,7,9,4,0.4444444444444444,3,0.3333333333333333,0.42857142857142855
+MSFT,Satya Nadella,intensity_only,Intensity only,120,0.468226518876573,0.5125615079297181,8,9,4,0.4444444444444444,4,0.3076923076923077,0.5
+MSFT,Satya Nadella,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,120,0.978123328888988,0.07755524956851145,10,9,9,1.0,1,0.9,0.7142857142857143
+MSFT,Satya Nadella,drop_response_latency_s,Drop only: response latency,120,0.9115106015262636,0.09195905794607162,9,9,7,0.7777777777777778,2,0.6363636363636364,0.8571428571428571
+MSFT,Satya Nadella,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,120,0.9646257700473622,0.07494527419684283,10,9,9,1.0,1,0.9,0.7142857142857143
+MSFT,Satya Nadella,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,120,0.9671572134215697,0.08343145915534533,10,9,9,1.0,1,0.9,0.7142857142857143
+MSFT,Satya Nadella,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,120,0.9092847370504515,0.06442811672064452,7,9,6,0.6666666666666666,1,0.6,0.7142857142857143
+MSFT,Satya Nadella,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,120,0.9336303467851154,0.07776027053852419,6,9,5,0.5555555555555556,1,0.5,0.6428571428571429
+MSFT,Satya Nadella,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,120,0.9536839619923162,0.0685197305701743,9,9,8,0.8888888888888888,1,0.8,0.7142857142857143
+NVDA,Jensen Huang,full_reconstructed,Full seven-feature score,163,0.9999958434504902,0.00022761910789181883,5,5,5,1.0,0,1.0,1.0
+NVDA,Jensen Huang,exclude_timing_and_rate,Exclude timing and speaking-rate features,163,0.7762483183325547,0.20880636220430515,10,5,4,0.8,6,0.36363636363636365,0.6470588235294118
+NVDA,Jensen Huang,exclude_pitch,Exclude pitch features,163,0.8865827688573036,0.13625496382081104,4,5,2,0.4,2,0.2857142857142857,0.7647058823529411
+NVDA,Jensen Huang,exclude_intensity,Exclude intensity features,163,0.8744151376381214,0.12996574973563213,6,5,4,0.8,2,0.5714285714285714,0.7647058823529411
+NVDA,Jensen Huang,timing_and_rate_only,Timing and rate only,163,0.6703295180805837,0.3206671288271563,8,5,2,0.4,6,0.18181818181818182,0.5882352941176471
+NVDA,Jensen Huang,pitch_only,Pitch only,160,0.5735016535410974,0.42658917709401367,11,5,4,0.8,7,0.3333333333333333,0.5294117647058824
+NVDA,Jensen Huang,intensity_only,Intensity only,163,0.6022949743107459,0.3786332305177207,12,5,2,0.4,10,0.13333333333333333,0.5294117647058824
+NVDA,Jensen Huang,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,163,0.9575116626176754,0.05930959867473362,5,5,5,1.0,0,1.0,0.8235294117647058
+NVDA,Jensen Huang,drop_response_latency_s,Drop only: response latency,163,0.9162231850121613,0.0646134630501054,6,5,4,0.8,2,0.5714285714285714,0.8235294117647058
+NVDA,Jensen Huang,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,163,0.9869040708030236,0.05736289488430957,5,5,5,1.0,0,1.0,0.9411764705882353
+NVDA,Jensen Huang,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,163,0.9702986210009402,0.06634289377426095,7,5,5,1.0,2,0.7142857142857143,0.9411764705882353
+NVDA,Jensen Huang,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,163,0.9546173126271412,0.06230936319227043,4,5,2,0.4,2,0.2857142857142857,0.7647058823529411
+NVDA,Jensen Huang,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,163,0.9364171300155293,0.0707807445358628,6,5,4,0.8,2,0.5714285714285714,0.8235294117647058
+NVDA,Jensen Huang,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,163,0.9759459980049696,0.06636203554205267,6,5,5,1.0,1,0.8333333333333334,0.9411764705882353
+GM,Mary Barra,full_reconstructed,Full seven-feature score,333,0.9999978876480627,0.000238979048585386,14,14,14,1.0,0,1.0,1.0
+GM,Mary Barra,exclude_timing_and_rate,Exclude timing and speaking-rate features,333,0.708010908198505,0.1967759443914311,12,14,10,0.7142857142857143,2,0.625,0.7058823529411765
+GM,Mary Barra,exclude_pitch,Exclude pitch features,333,0.8743521369162985,0.13684541045916188,15,14,9,0.6428571428571429,6,0.45,0.7647058823529411
+GM,Mary Barra,exclude_intensity,Exclude intensity features,333,0.8535062885615078,0.1327275696880731,15,14,12,0.8571428571428571,3,0.7058823529411765,0.7941176470588235
+GM,Mary Barra,timing_and_rate_only,Timing and rate only,333,0.6866914608333705,0.27601327069261594,13,14,6,0.42857142857142855,7,0.2857142857142857,0.5294117647058824
+GM,Mary Barra,pitch_only,Pitch only,329,0.3983213052692431,0.364315999759747,12,14,7,0.5,5,0.3684210526315789,0.38235294117647056
+GM,Mary Barra,intensity_only,Intensity only,333,0.5364377031832633,0.3781144703163861,15,14,5,0.35714285714285715,10,0.20833333333333334,0.4411764705882353
+GM,Mary Barra,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,333,0.9666283788954487,0.06409832403135052,13,14,13,0.9285714285714286,0,0.9285714285714286,0.9411764705882353
+GM,Mary Barra,drop_response_latency_s,Drop only: response latency,333,0.8750423892630037,0.06927210214108692,13,14,11,0.7857142857142857,2,0.6875,0.8235294117647058
+GM,Mary Barra,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,333,0.9522845191596333,0.06596109187977839,15,14,13,0.9285714285714286,2,0.8125,0.8529411764705882
+GM,Mary Barra,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,333,0.9515152972647882,0.0749733597315061,15,14,14,1.0,1,0.9333333333333333,0.9117647058823529
+GM,Mary Barra,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,333,0.9413967958208089,0.06654098448574053,10,14,9,0.6428571428571429,1,0.6,0.7941176470588235
+GM,Mary Barra,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,333,0.9338412299381718,0.06821000830538748,14,14,12,0.8571428571428571,2,0.75,0.7941176470588235
+GM,Mary Barra,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,333,0.9531572464087278,0.07221034414286054,16,14,14,1.0,2,0.875,0.9705882352941176
+C,Jane Fraser,full_reconstructed,Full seven-feature score,235,0.9999963013237563,0.0002701757899856716,14,14,14,1.0,0,1.0,1.0
+C,Jane Fraser,exclude_timing_and_rate,Exclude timing and speaking-rate features,235,0.8322115535820415,0.1919081187068482,16,14,6,0.42857142857142855,10,0.25,0.5833333333333334
+C,Jane Fraser,exclude_pitch,Exclude pitch features,235,0.7758496337432144,0.13302708109177241,12,14,9,0.6428571428571429,3,0.5294117647058824,0.625
+C,Jane Fraser,exclude_intensity,Exclude intensity features,235,0.8462882790640299,0.1385714808833891,20,14,13,0.9285714285714286,7,0.6190476190476191,0.7916666666666666
+C,Jane Fraser,timing_and_rate_only,Timing and rate only,235,0.5920505129189263,0.26842832184299903,11,14,8,0.5714285714285714,3,0.47058823529411764,0.5
+C,Jane Fraser,pitch_only,Pitch only,231,0.580042271241265,0.41648643682783637,25,14,5,0.35714285714285715,20,0.14705882352941177,0.375
+C,Jane Fraser,intensity_only,Intensity only,235,0.46515575015029087,0.4383855109113808,17,14,3,0.21428571428571427,14,0.10714285714285714,0.2916666666666667
+C,Jane Fraser,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,235,0.9635832286980154,0.06815422428019025,12,14,7,0.5,5,0.3684210526315789,0.6666666666666666
+C,Jane Fraser,drop_response_latency_s,Drop only: response latency,235,0.9523406191290755,0.07604938990486598,20,14,13,0.9285714285714286,7,0.6190476190476191,0.9166666666666666
+C,Jane Fraser,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,235,0.9738345912004666,0.0637132072611647,18,14,13,0.9285714285714286,5,0.6842105263157895,0.875
+C,Jane Fraser,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,235,0.9419713611033246,0.06385461205915988,16,14,13,0.9285714285714286,3,0.7647058823529411,0.9166666666666666
+C,Jane Fraser,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,235,0.8808931579971226,0.06774029194269804,13,14,10,0.7142857142857143,3,0.5882352941176471,0.6666666666666666
+C,Jane Fraser,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,235,0.9426047605814447,0.06320138140838893,19,14,13,0.9285714285714286,6,0.65,0.8333333333333334
+C,Jane Fraser,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,235,0.9500663913678541,0.06966488720825137,17,14,12,0.8571428571428571,5,0.631578947368421,0.875
+AMD,Lisa Su,full_reconstructed,Full seven-feature score,477,0.9999982032743279,0.0002362412963634597,18,18,18,1.0,0,1.0,1.0
+AMD,Lisa Su,exclude_timing_and_rate,Exclude timing and speaking-rate features,477,0.7127663226746588,0.17008828307514756,10,18,6,0.3333333333333333,4,0.2727272727272727,0.5208333333333334
+AMD,Lisa Su,exclude_pitch,Exclude pitch features,477,0.9191393941677091,0.11503316590907198,26,18,17,0.9444444444444444,9,0.6296296296296297,0.9166666666666666
+AMD,Lisa Su,exclude_intensity,Exclude intensity features,477,0.8817292654299272,0.12135691194091014,24,18,15,0.8333333333333334,9,0.5555555555555556,0.8125
+AMD,Lisa Su,timing_and_rate_only,Timing and rate only,477,0.7019201513950326,0.25368571605386614,35,18,15,0.8333333333333334,20,0.39473684210526316,0.75
+AMD,Lisa Su,pitch_only,Pitch only,477,0.5103336423159496,0.32378513523271546,8,18,3,0.16666666666666666,5,0.13043478260869565,0.4583333333333333
+AMD,Lisa Su,intensity_only,Intensity only,477,0.5553570156556706,0.340532321505963,24,18,6,0.3333333333333333,18,0.16666666666666666,0.4583333333333333
+AMD,Lisa Su,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,477,0.9713229886268744,0.06260788915486382,24,18,17,0.9444444444444444,7,0.68,0.9583333333333334
+AMD,Lisa Su,drop_response_latency_s,Drop only: response latency,477,0.8390124888315844,0.06077188653641674,8,18,8,0.4444444444444444,0,0.4444444444444444,0.6458333333333334
+AMD,Lisa Su,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,477,0.9711431500465119,0.06231125170292673,26,18,18,1.0,8,0.6923076923076923,0.9583333333333334
+AMD,Lisa Su,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,477,0.9753979108278984,0.06268553929418286,23,18,17,0.9444444444444444,6,0.7083333333333334,0.8958333333333334
+AMD,Lisa Su,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,477,0.9662542274589967,0.06068604560699875,23,18,17,0.9444444444444444,6,0.7083333333333334,0.9791666666666666
+AMD,Lisa Su,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,477,0.9459751470615819,0.05961713682883141,21,18,15,0.8333333333333334,6,0.625,0.9375
+AMD,Lisa Su,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,477,0.9590978350363868,0.06551625638885139,21,18,16,0.8888888888888888,5,0.6956521739130435,0.8541666666666666
+ACN,Julie Sweet,full_reconstructed,Full seven-feature score,263,0.9999952174521436,0.0002569402429550838,8,8,8,1.0,0,1.0,1.0
+ACN,Julie Sweet,exclude_timing_and_rate,Exclude timing and speaking-rate features,263,0.7520722911958778,0.2155213187676197,8,8,7,0.875,1,0.7777777777777778,0.8148148148148148
+ACN,Julie Sweet,exclude_pitch,Exclude pitch features,263,0.8978869168905425,0.1571275273194338,9,8,7,0.875,2,0.7,0.7777777777777778
+ACN,Julie Sweet,exclude_intensity,Exclude intensity features,263,0.8060997091141727,0.13609338373164803,7,8,5,0.625,2,0.5,0.6296296296296297
+ACN,Julie Sweet,timing_and_rate_only,Timing and rate only,263,0.6695635782789403,0.2810835063617676,12,8,4,0.5,8,0.25,0.5185185185185185
+ACN,Julie Sweet,pitch_only,Pitch only,263,0.45772126882151337,0.4195565342566951,12,8,4,0.5,8,0.25,0.48148148148148145
+ACN,Julie Sweet,intensity_only,Intensity only,263,0.62903778275507,0.39880207769722253,15,8,6,0.75,9,0.35294117647058826,0.6296296296296297
+ACN,Julie Sweet,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,263,0.9285751156289904,0.0634147240236087,8,8,7,0.875,1,0.7777777777777778,0.9259259259259259
+ACN,Julie Sweet,drop_response_latency_s,Drop only: response latency,263,0.9409342383362451,0.07527943959556871,11,8,8,1.0,3,0.7272727272727273,0.9629629629629629
+ACN,Julie Sweet,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,263,0.9667062959535159,0.06676552243013212,10,8,7,0.875,3,0.6363636363636364,0.8888888888888888
+ACN,Julie Sweet,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,263,0.9449736868643266,0.07263669702869846,9,8,7,0.875,2,0.7,0.7777777777777778
+ACN,Julie Sweet,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,263,0.9683735950724389,0.07056781882633889,10,8,8,1.0,2,0.8,0.8888888888888888
+ACN,Julie Sweet,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,263,0.9115871351897936,0.06842359706648682,8,8,6,0.75,2,0.6,0.7407407407407407
+ACN,Julie Sweet,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,263,0.9681331477811046,0.0648529903391255,9,8,7,0.875,2,0.7,0.8148148148148148
+GOOG,Sundar Pichai,full_reconstructed,Full seven-feature score,129,0.9999874216717606,0.00025772309112959135,5,5,5,1.0,0,1.0,0.8666666666666667
+GOOG,Sundar Pichai,exclude_timing_and_rate,Exclude timing and speaking-rate features,129,0.7336925151992867,0.2199081897616001,8,5,5,1.0,3,0.625,0.6
+GOOG,Sundar Pichai,exclude_pitch,Exclude pitch features,129,0.9296772255176223,0.15325005017332516,6,5,5,1.0,1,0.8333333333333334,0.8666666666666667
+GOOG,Sundar Pichai,exclude_intensity,Exclude intensity features,129,0.7591762576791022,0.14218258333166334,2,5,2,0.4,0,0.4,0.6666666666666666
+GOOG,Sundar Pichai,timing_and_rate_only,Timing and rate only,129,0.629367658275501,0.31845587744248494,5,5,2,0.4,3,0.25,0.6666666666666666
+GOOG,Sundar Pichai,pitch_only,Pitch only,129,0.41080792495604307,0.43022019077648177,0,5,0,0.0,0,0.0,0.2
+GOOG,Sundar Pichai,intensity_only,Intensity only,129,0.6231039615528693,0.4343438250885331,12,5,5,1.0,7,0.4166666666666667,0.6666666666666666
+GOOG,Sundar Pichai,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,129,0.9460123128327523,0.0696525352216315,5,5,5,1.0,0,1.0,0.8
+GOOG,Sundar Pichai,drop_response_latency_s,Drop only: response latency,129,0.9181945871379927,0.07009407781240862,4,5,4,0.8,0,0.8,0.8
+GOOG,Sundar Pichai,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,129,0.95938170411069,0.060565796157915464,5,5,5,1.0,0,1.0,0.8666666666666667
+GOOG,Sundar Pichai,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,129,0.9691928191818924,0.07217136692389092,5,5,5,1.0,0,1.0,0.8666666666666667
+GOOG,Sundar Pichai,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,129,0.9784197396519891,0.06493411978876584,5,5,5,1.0,0,1.0,0.8
+GOOG,Sundar Pichai,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,129,0.9084701229406386,0.06932324535376688,3,5,3,0.6,0,0.6,0.8
+GOOG,Sundar Pichai,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,129,0.9619393024839522,0.06545521832374601,3,5,3,0.6,0,0.6,0.8
+JPM,Jamie Dimon,full_reconstructed,Full seven-feature score,286,0.9999960245067357,0.0002499318080822488,10,10,10,1.0,0,1.0,0.9666666666666667
+JPM,Jamie Dimon,exclude_timing_and_rate,Exclude timing and speaking-rate features,286,0.8103776995480285,0.21218336680089672,13,10,6,0.6,7,0.35294117647058826,0.7333333333333333
+JPM,Jamie Dimon,exclude_pitch,Exclude pitch features,286,0.86327340971338,0.11623983534180898,11,10,8,0.8,3,0.6153846153846154,0.7333333333333333
+JPM,Jamie Dimon,exclude_intensity,Exclude intensity features,286,0.8176120857351941,0.1372585135078344,9,10,5,0.5,4,0.35714285714285715,0.6666666666666666
+JPM,Jamie Dimon,timing_and_rate_only,Timing and rate only,286,0.5879127580162745,0.2947362351230584,11,10,5,0.5,6,0.3125,0.4666666666666667
+JPM,Jamie Dimon,pitch_only,Pitch only,286,0.5540074034162265,0.35869005367128926,18,10,7,0.7,11,0.3333333333333333,0.6333333333333333
+JPM,Jamie Dimon,intensity_only,Intensity only,286,0.6017203919427514,0.3927894475768522,16,10,7,0.7,9,0.3684210526315789,0.5666666666666667
+JPM,Jamie Dimon,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,286,0.9581301499647579,0.06251155577787715,8,10,6,0.6,2,0.5,0.9
+JPM,Jamie Dimon,drop_response_latency_s,Drop only: response latency,286,0.9652109022681358,0.07188563463871639,12,10,10,1.0,2,0.8333333333333334,0.9333333333333333
+JPM,Jamie Dimon,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,286,0.958326873151511,0.06651669530164228,8,10,7,0.7,1,0.6363636363636364,0.8333333333333334
+JPM,Jamie Dimon,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,286,0.9584345964089246,0.060964834332464135,10,10,9,0.9,1,0.8181818181818182,0.8666666666666667
+JPM,Jamie Dimon,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,286,0.9646086779624042,0.0645554539971901,9,10,9,0.9,0,0.9,0.9
+JPM,Jamie Dimon,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,286,0.9181432768128095,0.06725596295795261,10,10,9,0.9,1,0.8181818181818182,0.8333333333333334
+JPM,Jamie Dimon,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,286,0.9350055573732934,0.06629867558687202,8,10,6,0.6,2,0.5,0.8333333333333334
+PFE,Albert Bourla,full_reconstructed,Full seven-feature score,333,0.9999972376927228,0.00026019505958219113,34,34,34,1.0,0,1.0,1.0
+PFE,Albert Bourla,exclude_timing_and_rate,Exclude timing and speaking-rate features,333,0.78631313851324,0.24465039718455717,39,34,26,0.7647058823529411,13,0.5531914893617021,0.7352941176470589
+PFE,Albert Bourla,exclude_pitch,Exclude pitch features,333,0.8796555300607941,0.13518352202404316,32,34,24,0.7058823529411765,8,0.5714285714285714,0.7647058823529411
+PFE,Albert Bourla,exclude_intensity,Exclude intensity features,333,0.8533461417939839,0.13256058071604127,29,34,23,0.6764705882352942,6,0.575,0.6176470588235294
+PFE,Albert Bourla,timing_and_rate_only,Timing and rate only,333,0.6233788686799966,0.31498291654506483,20,34,12,0.35294117647058826,8,0.2857142857142857,0.35294117647058826
+PFE,Albert Bourla,pitch_only,Pitch only,333,0.5789917449971993,0.40939935591128973,35,34,17,0.5,18,0.3269230769230769,0.47058823529411764
+PFE,Albert Bourla,intensity_only,Intensity only,333,0.5972138179333077,0.41080030541032564,42,34,22,0.6470588235294118,20,0.4074074074074074,0.6470588235294118
+PFE,Albert Bourla,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,333,0.9692822882112132,0.06564236732590722,31,34,28,0.8235294117647058,3,0.7567567567567568,0.8235294117647058
+PFE,Albert Bourla,drop_response_latency_s,Drop only: response latency,333,0.911451193135007,0.0820286893281097,35,34,30,0.8823529411764706,5,0.7692307692307693,0.8823529411764706
+PFE,Albert Bourla,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,333,0.9728684179647784,0.06514206625510943,34,34,30,0.8823529411764706,4,0.7894736842105263,0.8823529411764706
+PFE,Albert Bourla,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,333,0.9221328876406648,0.062381813482132675,32,34,28,0.8235294117647058,4,0.7368421052631579,0.8529411764705882
+PFE,Albert Bourla,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,333,0.9718754483714825,0.06675625633871307,33,34,31,0.9117647058823529,2,0.8611111111111112,0.8529411764705882
+PFE,Albert Bourla,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,333,0.9465565923646512,0.06808569777701212,31,34,26,0.7647058823529411,5,0.6666666666666666,0.7647058823529411
+PFE,Albert Bourla,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,333,0.9645571113542274,0.07186715443566682,33,34,27,0.7941176470588235,6,0.675,0.7941176470588235
+WMT,Doug McMillon,full_reconstructed,Full seven-feature score,211,0.999996167645904,0.00025149861528084294,22,22,22,1.0,0,1.0,1.0
+WMT,Doug McMillon,exclude_timing_and_rate,Exclude timing and speaking-rate features,211,0.8911316695821667,0.2368459673340233,28,22,21,0.9545454545454546,7,0.7241379310344828,0.8636363636363636
+WMT,Doug McMillon,exclude_pitch,Exclude pitch features,211,0.8450584306779684,0.1263767844580469,18,22,16,0.7272727272727273,2,0.6666666666666666,0.8636363636363636
+WMT,Doug McMillon,exclude_intensity,Exclude intensity features,211,0.75966137290618,0.14734658096918585,15,22,14,0.6363636363636364,1,0.6086956521739131,0.5
+WMT,Doug McMillon,timing_and_rate_only,Timing and rate only,211,0.5116918835797633,0.30847631934578607,9,22,5,0.22727272727272727,4,0.19230769230769232,0.36363636363636365
+WMT,Doug McMillon,pitch_only,Pitch only,211,0.5520001558506284,0.36248346028407774,21,22,15,0.6818181818181818,6,0.5357142857142857,0.4090909090909091
+WMT,Doug McMillon,intensity_only,Intensity only,211,0.5920981614782029,0.43070003599136264,26,22,14,0.6363636363636364,12,0.4117647058823529,0.7727272727272727
+WMT,Doug McMillon,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,211,0.9713007531891366,0.08045701594082666,25,22,22,1.0,3,0.88,0.9545454545454546
+WMT,Doug McMillon,drop_response_latency_s,Drop only: response latency,211,0.9708376766748429,0.07406009247075224,24,22,22,1.0,2,0.9166666666666666,0.9090909090909091
+WMT,Doug McMillon,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,211,0.9701031415142392,0.0790272432653576,23,22,21,0.9545454545454546,2,0.875,0.9090909090909091
+WMT,Doug McMillon,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,211,0.9033932969544359,0.06960737166788955,16,22,15,0.6818181818181818,1,0.6521739130434783,0.9090909090909091
+WMT,Doug McMillon,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,211,0.9566464573719791,0.07316648450197294,24,22,22,1.0,2,0.9166666666666666,0.9090909090909091
+WMT,Doug McMillon,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,211,0.9146534016033776,0.07860070762078064,20,22,19,0.8636363636363636,1,0.8260869565217391,0.6818181818181818
+WMT,Doug McMillon,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,211,0.9758759491503578,0.07043341114945267,24,22,22,1.0,2,0.9166666666666666,0.7727272727272727
+XOM,Darren Woods,full_reconstructed,Full seven-feature score,288,0.9999974882317378,0.0002477061114102841,16,16,16,1.0,0,1.0,1.0
+XOM,Darren Woods,exclude_timing_and_rate,Exclude timing and speaking-rate features,287,0.8312496224575155,0.21567393267525992,24,16,16,1.0,8,0.6666666666666666,0.7931034482758621
+XOM,Darren Woods,exclude_pitch,Exclude pitch features,288,0.8497131808246025,0.13823385974383917,9,16,8,0.5,1,0.47058823529411764,0.6206896551724138
+XOM,Darren Woods,exclude_intensity,Exclude intensity features,288,0.9041035814372443,0.1325134915425366,16,16,11,0.6875,5,0.5238095238095238,0.7586206896551724
+XOM,Darren Woods,timing_and_rate_only,Timing and rate only,288,0.6512731918154882,0.2999306462409906,10,16,2,0.125,8,0.08333333333333333,0.3448275862068966
+XOM,Darren Woods,pitch_only,Pitch only,287,0.6649844851060552,0.4111416173331317,26,16,14,0.875,12,0.5,0.6896551724137931
+XOM,Darren Woods,intensity_only,Intensity only,288,0.5363877813389291,0.3876761858977702,19,16,11,0.6875,8,0.4583333333333333,0.6551724137931034
+XOM,Darren Woods,drop_speaking_rate_delta_from_prepared_wpm,Drop only: speaking rate relative to prepared remarks,288,0.9839751495414154,0.06704400978891639,20,16,16,1.0,4,0.8,0.9310344827586207
+XOM,Darren Woods,drop_response_latency_s,Drop only: response latency,288,0.9194449788964852,0.0736981189044261,20,16,16,1.0,4,0.8,0.9655172413793104
+XOM,Darren Woods,drop_long_gap_rate_delta_from_prepared_per_100_words,Drop only: long word-onset gaps relative to prepared remarks,288,0.980997695703997,0.061219435772115915,21,16,16,1.0,5,0.7619047619047619,0.9655172413793104
+XOM,Darren Woods,drop_f0_relative_to_prepared_semitones,Drop only: pitch relative to prepared remarks,288,0.9350154499089339,0.06770424640989098,13,16,9,0.5625,4,0.45,0.6896551724137931
+XOM,Darren Woods,drop_f0_cv_delta_from_prepared,Drop only: pitch variability relative to prepared remarks,288,0.9282751113120786,0.06699590676838385,15,16,14,0.875,1,0.8235294117647058,0.9655172413793104
+XOM,Darren Woods,drop_intensity_relative_to_prepared_db,Drop only: intensity relative to prepared remarks,288,0.9743457714610112,0.06262536182374556,17,16,15,0.9375,2,0.8333333333333334,0.896551724137931
+XOM,Darren Woods,drop_intensity_sd_delta_from_prepared_db,Drop only: intensity variability relative to prepared remarks,288,0.9708551627231504,0.06601709713818293,19,16,14,0.875,5,0.6666666666666666,0.8620689655172413

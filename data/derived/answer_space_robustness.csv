@@ -1,0 +1,30 @@
+analysis,specification,subgroup,predictor,n_turn_pairs,videos,minimum_question_words,minimum_answer_duration_seconds,within_video_spearman_rho,leave_one_video_out_min_rho,leave_one_video_out_max_rho
+Eligibility threshold,Loose,All formats,Question length (words),347,27,1,0.5,0.21927790224221938,,
+Eligibility threshold,Loose,All formats,Guest response latency,347,27,1,0.5,0.26015825745920207,,
+Eligibility threshold,Loose,All formats,Camera cut within 2 seconds,347,27,1,0.5,0.15101059630207914,,
+Eligibility threshold,Primary,All formats,Question length (words),304,27,3,1.0,0.23502203809890196,,
+Eligibility threshold,Primary,All formats,Guest response latency,304,27,3,1.0,0.16200537096729253,,
+Eligibility threshold,Primary,All formats,Camera cut within 2 seconds,304,27,3,1.0,0.17440562284813502,,
+Eligibility threshold,Moderate,All formats,Question length (words),278,27,5,2.0,0.18936776316758847,,
+Eligibility threshold,Moderate,All formats,Guest response latency,278,27,5,2.0,0.08664678791272745,,
+Eligibility threshold,Moderate,All formats,Camera cut within 2 seconds,278,27,5,2.0,0.1521580303243889,,
+Eligibility threshold,Strict,All formats,Question length (words),240,27,10,5.0,0.2110687467709023,,
+Eligibility threshold,Strict,All formats,Guest response latency,240,27,10,5.0,0.07591641274718001,,
+Eligibility threshold,Strict,All formats,Camera cut within 2 seconds,240,27,10,5.0,0.12937617263606643,,
+Format heterogeneity,Primary,Panel,Question length (words),44,4,3,1.0,0.1683639311803216,,
+Format heterogeneity,Primary,Panel,Guest response latency,44,4,3,1.0,-0.09563104282806342,,
+Format heterogeneity,Primary,Panel,Camera cut within 2 seconds,44,4,3,1.0,-0.08739140944003078,,
+Format heterogeneity,Primary,Remote,Question length (words),97,10,3,1.0,0.3390129163283852,,
+Format heterogeneity,Primary,Remote,Guest response latency,97,10,3,1.0,0.24447354616200037,,
+Format heterogeneity,Primary,Remote,Camera cut within 2 seconds,97,10,3,1.0,0.3039365150715055,,
+Format heterogeneity,Primary,Stage/event,Question length (words),37,4,3,1.0,0.7438055772484209,,
+Format heterogeneity,Primary,Stage/event,Guest response latency,37,4,3,1.0,0.1941545406303728,,
+Format heterogeneity,Primary,Stage/event,Camera cut within 2 seconds,37,4,3,1.0,0.2630030643424876,,
+Format heterogeneity,Primary,Studio,Question length (words),126,9,3,1.0,0.056675285899198805,,
+Format heterogeneity,Primary,Studio,Guest response latency,126,9,3,1.0,0.16082633914091568,,
+Format heterogeneity,Primary,Studio,Camera cut within 2 seconds,126,9,3,1.0,0.15100190847052422,,
+Leave-one-video-out influence,Primary,All formats,Question length (words),304,27,3,1.0,0.23502203809890196,0.19190390054676684,0.3082011942791519
+Leave-one-video-out influence,Primary,All formats,Guest response latency,304,27,3,1.0,0.16200537096729253,0.1289231990224847,0.18260326789565554
+Leave-one-video-out influence,Primary,All formats,Camera cut within 1 second,304,27,3,1.0,0.12775730500887092,0.10253248803661688,0.1453706336204397
+Leave-one-video-out influence,Primary,All formats,Camera cut within 2 seconds,304,27,3,1.0,0.17440562284813502,0.11453408371195177,0.2129785823851484
+Leave-one-video-out influence,Primary,All formats,Camera cut within 3 seconds,304,27,3,1.0,0.2040161186523547,0.14972375637744145,0.2354779739107729

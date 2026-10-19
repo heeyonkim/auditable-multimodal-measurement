@@ -1,0 +1,11 @@
+pilot,measure,value,unit
+Earnings-call audio,Executives,12,executives
+Earnings-call audio,Calls,286,calls
+Earnings-call audio,Eligible Q&A answers,3273,answers
+Earnings-call audio,Audio-distinct ordinary-text cases,177,answers
+Bloomberg audio-video,Interviews,30,videos
+Bloomberg audio-video,Source duration,8.6,hours
+Bloomberg audio-video,Speech segments,2894,segments
+Bloomberg audio-video,Speaker turns,1208,turns
+Bloomberg audio-video,Sampled frames,360,frames
+Bloomberg audio-video,Time-aligned frame rows,360,rows

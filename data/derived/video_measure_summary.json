@@ -1,0 +1,19 @@
+{
+  "videos": 30,
+  "total_duration_hours": 8.595,
+  "total_shots": 2451,
+  "total_speaker_transitions": 1178,
+  "scene_threshold": 0.05,
+  "definition": "A shot change is a frame whose FFmpeg scene score exceeds the threshold.",
+  "frame_turn_rows": 360,
+  "interview_rows": 30,
+  "median_shot_changes_per_minute": 2.804,
+  "median_edit_within_2s_rate": 0.659,
+  "hand_contrast_interviews": 19,
+  "interpretation": "Descriptive measurement demonstration; no psychological or causal labels.",
+  "chance_median_observed_rate": 0.659,
+  "chance_median_expected_rate": 0.1714,
+  "chance_median_adjusted_responsiveness": 0.4906,
+  "chance_positive_videos": 27,
+  "chance_empirical_p_below_005_videos": 25
+}

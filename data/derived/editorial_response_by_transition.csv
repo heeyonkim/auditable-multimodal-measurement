@@ -1,0 +1,8 @@
+role_transition,transition_count,camera_cut_within_2s_rate,median_absolute_edit_delay_seconds,videos
+Guest to Guest,147,0.7278911564625851,1.014,7
+Other to Other,20,0.7,1.1139999999999999,1
+Guest to Interviewer,391,0.6342710997442456,1.42,27
+Interviewer to Guest,407,0.6142506142506142,1.3875,27
+Other to Guest,53,0.5471698113207547,1.411,4
+Guest to Other,52,0.5384615384615384,1.7974999999999999,4
+Interviewer to Interviewer,108,0.39814814814814814,4.954000000000001,9

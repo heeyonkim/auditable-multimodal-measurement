@@ -1,0 +1,13 @@
+cohort,ticker,executive,usable_calls,eligible_answers,excluded_short_or_unstable_answers,audio_delivery_flags_with_routine_text
+Original pilot,AAPL,Tim Cook,33,398,35,22
+Original pilot,MSFT,Satya Nadella,22,131,12,9
+Original pilot,NVDA,Jensen Huang,17,163,13,5
+Original pilot,GM,Mary Barra,25,333,58,14
+Original pilot,C,Jane Fraser,21,235,53,14
+New expansion,AMD,Lisa Su,26,477,77,18
+New expansion,ACN,Julie Sweet,25,263,43,8
+New expansion,GOOG,Sundar Pichai,24,150,5,5
+New expansion,JPM,Jamie Dimon,24,291,119,10
+New expansion,PFE,Albert Bourla,28,333,385,34
+New expansion,WMT,Doug McMillon,20,211,29,22
+New expansion,XOM,Darren Woods,21,288,81,16

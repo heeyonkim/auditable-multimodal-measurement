@@ -1,0 +1,14 @@
+{
+  "selected_executives": 7,
+  "selected_calls": 182,
+  "audio_files_present_and_at_least_1mb": 182,
+  "transcripts_present_and_at_least_1000_bytes": 182,
+  "structured_metadata_files_present": 182,
+  "partial_files": 0,
+  "retrieval_failures": 0,
+  "structured_metadata_complete": 172,
+  "structured_metadata_review": 10,
+  "calls_meeting_baseline_requirements": 168,
+  "eligible_answers": 2013,
+  "audio_interaction_review_flags": 113
+}

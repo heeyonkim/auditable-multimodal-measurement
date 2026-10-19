@@ -1,0 +1,91 @@
+{
+  "earnings_audio_pilot": {
+    "executives": 12,
+    "calls_meeting_baseline_requirements": 286,
+    "eligible_answers": 3273,
+    "audio_interaction_review_flags": 177,
+    "review_flags_supported_by_at_least_two_family_exclusions": 172,
+    "review_flags_stable_across_all_three_family_exclusions": 31,
+    "family_exclusion_score_spearman_min": 0.708010908198505,
+    "family_exclusion_score_spearman_median": 0.8386349921300049,
+    "prepared_qa_calls_compared": 259,
+    "new_expansion_selected_calls": 182,
+    "new_expansion_retrieval_failures": 0,
+    "content_released": "derived measures only"
+  },
+  "bloomberg_video_pilot": {
+    "interviews": 30,
+    "source_hours": 8.6,
+    "completed": 30,
+    "failures": 0,
+    "speech_segments": 2894,
+    "speaker_turns": 1208,
+    "sampled_frames": 360,
+    "aligned_frame_rows": 360,
+    "frames_during_speech": 355,
+    "format_counts": {
+      "Remote": 10,
+      "Stage/event": 5,
+      "Studio": 10,
+      "Panel": 5
+    }
+  },
+  "illustrative_variation": {
+    "speaker_count": {
+      "min": 2.0,
+      "p25": 2.0,
+      "median": 3.0,
+      "p75": 3.75,
+      "max": 8.0
+    },
+    "turn_count": {
+      "min": 4.0,
+      "p25": 20.0,
+      "median": 34.0,
+      "p75": 51.75,
+      "max": 134.0
+    },
+    "dominant_speaker_speech_share": {
+      "min": 0.1795,
+      "p25": 0.68675,
+      "median": 0.7616,
+      "p75": 0.805925,
+      "max": 0.9681
+    },
+    "median_response_latency_s": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.186,
+      "p75": 0.495625,
+      "max": 2.818
+    },
+    "all_filler_phrases_per_100_words": {
+      "min": 0.0,
+      "p25": 0.4215,
+      "median": 0.6755,
+      "p75": 1.08425,
+      "max": 2.531
+    },
+    "multiple_people_frame_rate": {
+      "min": 0.0,
+      "p25": 0.0833,
+      "median": 0.1667,
+      "p75": 0.312475,
+      "max": 1.0
+    },
+    "raised_hand_person_rate": {
+      "min": 0.0,
+      "p25": 0.06924999999999999,
+      "median": 0.2404,
+      "p75": 0.4375,
+      "max": 0.7143
+    },
+    "shot_transition_rate": {
+      "min": 0.0,
+      "p25": 0.2727,
+      "median": 0.40905,
+      "p75": 0.5455,
+      "max": 0.8182
+    }
+  }
+}

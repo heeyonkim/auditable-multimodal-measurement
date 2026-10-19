@@ -1,0 +1,7 @@
+variable,n_interviews,median_threshold_005,median_threshold_010,median_absolute_difference,spearman_rank_correlation
+shot_changes_per_minute,30,2.8042,2.3904,0.0954,0.8127
+median_shot_duration_seconds,30,10.2188,11.8038,0.0,0.7962
+edit_within_1s_of_speaker_change_rate,30,0.336,0.3182,0.0,0.9497
+edit_within_2s_of_speaker_change_rate,30,0.659,0.6142,0.0,0.8522
+edit_within_3s_of_speaker_change_rate,30,0.8218,0.7806,0.0,0.8835
+chance_adjusted_editorial_responsiveness,30,0.4906,0.4567,0.0016,0.9106

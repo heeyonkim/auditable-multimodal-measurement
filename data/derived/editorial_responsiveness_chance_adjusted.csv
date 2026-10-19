@@ -1,0 +1,31 @@
+candidate_id,video_id,title,visual_format,speaker_transition_count,cut_count,window_seconds,observed_edit_near_transition_rate,chance_expected_edit_near_transition_rate,chance_adjusted_editorial_responsiveness,chance_adjusted_responsiveness_z,circular_shift_empirical_p_one_sided,null_iterations
+C001,VgeCf6DEgjo,"Dan Ives on US-Anthropic Talks, AI M&A, Open AI Losses",Remote,13,74,2.0,0.6923,0.2042,0.4881,4.9146,0.0045,2000
+C002,OvcUtc4nYn8,"NEC’s Hassett on Jobs Report, Oil Exports, US Economy",Remote,15,15,2.0,0.7333,0.1149,0.6184,6.6311,0.005,2000
+C004,5cmzrpmNL2w,"BNY CEO on Clients’ Tariff Questions, US Treasury Market",Stage/event,17,17,2.0,0.8235,0.1516,0.6719,5.6708,0.0045,2000
+C006,9_0YOSQsRyU,"Roche Has Over Five Weight-Loss Companion Medicines, CEO Says",Studio,31,20,2.0,0.3226,0.1847,0.1379,1.3456,0.1189,2000
+C007,CYsIzcP0uyI,"In Full: Lebanese Minister Amin Salam on Cease-Fire, Economy",Remote,13,12,2.0,0.6154,0.0826,0.5328,5.8754,0.007,2000
+C008,HCJaxh7BFLY,"John Bolton on Gaza Truce Talks, Israel-Iran Tensions",Remote,11,20,2.0,1.0,0.1395,0.8605,7.5694,0.0025,2000
+C014,oSSZHO3CR40,JPMorgan APAC CEO: Business in China Has Been 'Exceptionally Resilient',Remote,37,72,2.0,0.7568,0.312,0.4448,4.1225,0.006,2000
+C017,Xq3qHOhEI7c,El-Erian Says Global 'Fragmented Outlook' Is Unprecedented,Stage/event,23,24,2.0,0.5652,0.2696,0.2957,3.0255,0.01,2000
+C019,EUn0Tx5vWqI,"Ken Moelis on Banker Pay, Private Equity, China",Studio,25,26,2.0,0.68,0.2298,0.4502,4.087,0.0095,2000
+C020,uf3KcVHy6_g,Billionaire Leon Cooperman Says the Fed Is Too Accommodative,Remote,3,3,2.0,0.0,0.036,-0.036,-0.3426,1.0,2000
+C021,6iJSfeqr-TQ,"Chevron CEO Wirth on Oil Prices, Strait of Hormuz, Venezuela",Studio,48,53,2.0,0.5625,0.2001,0.3624,4.7433,0.0045,2000
+C022,ELgQFQaxm-E,"Goldman's Solomon on Iran, AI and Private Credit",Stage/event,19,19,2.0,0.7368,0.1194,0.6175,6.179,0.006,2000
+C023,vt1JIQiuYC0,"GM Profits Fueled by Full-Sized SUV, Truck Demand, CEO Barra Says",Remote,21,21,2.0,0.9524,0.1365,0.8159,8.8775,0.001,2000
+C025,yXw6CSuqP94,"Commerce Secretary Lutnick on US-Japan Trade Deal, Talking to Europe, China",Studio,58,40,2.0,0.6379,0.1996,0.4383,5.5967,0.0055,2000
+C028,GABitudnwkc,Stellantis CEO Says ‘No Taboos’ on Brands as Profit Falls,Remote,19,34,2.0,0.6316,0.1186,0.513,5.3597,0.004,2000
+C029,LO8_qNTm65A,"NY Governor Hochul on Support for Biden, Congestion Pricing",Studio,17,27,2.0,0.7059,0.1581,0.5478,6.1525,0.0025,2000
+C032,wbOYdVZovw0,"Steve Wozniak Talks YouTube Lawsuit, Apple and TikTok",Remote,53,34,2.0,0.5094,0.1864,0.323,5.1288,0.006,2000
+C034,I18yZ1CSLFg,"Steve Pagliuca on NBA Valuations, Sports Streaming, AI",Panel,62,75,2.0,0.629,0.253,0.376,4.3416,0.0035,2000
+C038,uzy-KAIgAx8,"Cathie Wood on Bank Turmoil, Bitcoin and Strategy",Panel,31,245,2.0,0.2903,0.3407,-0.0504,-0.5078,0.7281,2000
+C039,ykVjwWtLd6Y,"Gorman on Succession Plan, Debt Ceiling",Stage/event,33,43,2.0,0.6364,0.1433,0.4931,6.2216,0.003,2000
+C042,ci1my3gPFK4,"Stoltenberg Weighs In on US-NATO Tensions, Wealth Fund (full interview)",Studio,88,422,2.0,0.5341,0.2474,0.2867,4.4704,0.001,2000
+C043,nWaFDNs3Zio,"Oaktree's Howard Marks on Unpredictablility, Importance and Investing in AI",Stage/event,41,0,2.0,0.0,0.0,0.0,,1.0,2000
+C047,GecO5Iu8q-Y,"Jake Sullivan on Israel-Hamas War, Sale of AI Chips, China, Ukraine, Trump",Studio,51,56,2.0,0.7255,0.1201,0.6054,10.3299,0.0015,2000
+C048,lVKo3NxWPzA,Bloomberg Panel Discussion With Japanese Prime Minister Kishida,Panel,58,88,2.0,0.7931,0.1911,0.602,7.5355,0.001,2000
+C050,iFYD4d6jPG0,India Insight: JPMorgan Includes India in its EM Bond Index,Panel,86,35,2.0,0.0698,0.0422,0.0276,0.978,0.1944,2000
+C054,a8FCNK54wOQ,How Andrea Orcel Transformed UniCredit: Full Interview,Studio,41,59,2.0,0.8537,0.1505,0.7032,8.1027,0.0005,2000
+C055,y-okFwo8xv8,Permacrisis: A Plan to Fix a Fractured World,Studio,50,133,2.0,0.6,0.3296,0.2704,3.6972,0.0015,2000
+C056,8V1nqN8eVrU,"Mexican presidential Candidate Xochiti Galvez on Pemex, Trump, China: Full Interview",Studio,133,80,2.0,0.782,0.1493,0.6327,10.6427,0.001,2000
+C058,mx-5FDEmovs,"Bloomberg New Economy Gateway Europe - Trade, Energy, Banking in Europe",Panel,33,353,2.0,0.9697,0.3596,0.6101,5.2943,0.0015,2000
+C060,1ZT21aiGZ_g,"Robinhood CEO Vlad Tenev on ""Bloomberg Studio 1.0""",Remote,48,321,2.0,0.9167,0.2917,0.6249,7.6975,0.0025,2000
