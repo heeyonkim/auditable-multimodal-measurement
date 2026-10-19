@@ -4,14 +4,14 @@ This repository is a proposal-stage demonstration of a general scientific workfl
 
 ## Minute 1 — See the scientific object
 
-Open `tools/measurement-recipe-studio/index.html`. Choose among four worked recipes:
+Open `tools/measure-specification-prototype/index.html`. Choose among four worked recipes:
 
 - conversational space;
 - personal-baseline behavioral deviation;
 - editorial responsiveness; and
 - delivery–text divergence.
 
-Change the construct, evidence layers, operational rule, rivals, or validation tests. The Studio updates the claim boundary and readiness assessment, then exports a versioned JSON recipe. The key design principle is visible: AI extracts observations; researchers remain responsible for defining constructs and evaluating validity.
+Change the construct, evidence layers, operational rule, rivals, or validation tests. The interface updates the claim boundary and readiness assessment, then exports a versioned JSON recipe. The key design principle is visible: AI extracts observations; researchers remain responsible for defining constructs and evaluating validity.
 
 ## Minute 2 — Inspect scale and variation
 
@@ -50,7 +50,7 @@ Then read `docs/research_opportunity_map.md`. It shows how future researchers ca
 - **Novelty:** constructs can be specified as versioned, contestable recipes over multimodal evidence rather than fixed black-box labels.
 - **Feasibility and scale:** two dissimilar audiovisual corpora have been processed into analysis-ready, time-aligned measures.
 - **Auditability:** the release retains definitions, rivals, negative tests, provenance gaps, and per-file checksums.
-- **Adoption potential:** researchers can reuse the Studio and flat tables without committing to the authors' preferred construct.
+- **Adoption potential:** researchers can reuse the prototype and flat tables without committing to the authors' preferred construct.
 
 ## What remains for Stage 2
 

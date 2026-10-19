@@ -35,4 +35,4 @@ The manifest separates three questions that are often blurred in AI-enabled rese
 2. **Computational reproducibility:** Can the released derived results be recomputed?
 3. **Measurement validity:** Does a recipe measure the proposed construct in the intended setting?
 
-Checksums and scripts address the first two. The Measurement Recipe Studio, validation designs, rival explanations, and domain evidence address the third. No manifest can substitute for construct validation.
+Checksums and scripts address the first two. The measure-specification prototype, validation designs, rival explanations, and domain evidence address the third. No manifest can substitute for construct validation.

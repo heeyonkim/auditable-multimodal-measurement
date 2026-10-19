@@ -17,7 +17,7 @@ The prototype is not a claim that one audio or video feature is intrinsically im
 
 1. **A variable a transcript cannot contain:** estimate within-person delivery deviation while holding language constant, then show its distribution and reliability across repeated calls.
 2. **A relation that exists between modalities:** identify moments when routine words arrive with unusual timing or vocal delivery, or when editorial cuts respond to changes in conversational floor.
-3. **A reusable research workflow:** use the Measurement Recipe Studio to define rival measures, attach validation evidence, export versioned recipes, and preserve negative tests.
+3. **A reusable research workflow:** use the measure-specification prototype to define rival measures, attach validation evidence, export versioned recipes, and preserve negative tests.
 
 ## How outcomes should enter the proposal
 

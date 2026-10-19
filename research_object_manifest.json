@@ -55,7 +55,7 @@
     },
     {
       "stage": "construct specification",
-      "status": "working Measurement Recipe Studio released"
+      "status": "working measure-specification prototype released"
     }
   ],
   "model_registry": [
@@ -132,13 +132,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 3138,
-      "sha256": "05314113b280cb163168d22d376ab73110cbafd3e3bb41264468c6384b353ed1"
+      "bytes": 3150,
+      "sha256": "c78160276f249110648ee71955436e7671e60420b1262bb9b99df4d09e6a134d"
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 1725,
-      "sha256": "0ed650039042c1e17479e5fdba18cc33e7f95590a5e769dbfb1c43228bf2fbb7"
+      "bytes": 1731,
+      "sha256": "dd9d2136df3dd066cdb7c0286958a11927fb4cff5382282f055da4d70d30dc70"
     },
     {
       "path": "data/derived/answer_level_organizational_variables.csv",
@@ -1128,8 +1128,8 @@
     },
     {
       "path": "docs/data_catalog.md",
-      "bytes": 7145,
-      "sha256": "d66a9afe759c2d73cbfcef2add04d223ed9c674c5e9e8c4c57b10efe3ef34b24"
+      "bytes": 7151,
+      "sha256": "5722f010aa86fdb589db88ff2a9236ca57cb84050dabc19665b0994ab85bc38f"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1163,18 +1163,18 @@
     },
     {
       "path": "docs/research_object_manifest.md",
-      "bytes": 2178,
-      "sha256": "6795ff9f2932aaaf5c2beb515b1452551a61a27bb2d79c488086f064ab0052c5"
+      "bytes": 2184,
+      "sha256": "5cd5ac77d2c5c698d36427f5003d011cfcb1f7eb58017f5cdcdadf0522d11aef"
     },
     {
       "path": "docs/research_opportunity_map.md",
-      "bytes": 5285,
-      "sha256": "545e16d1c57221dbbd24142540fc6304e45e0c46f331584a987f669442683bb7"
+      "bytes": 5291,
+      "sha256": "182de963187bba3f0ee34669ce37eab75eea2bcd0872f629e8258cfdc564c6b7"
     },
     {
       "path": "docs/reviewer_tour.md",
-      "bytes": 4877,
-      "sha256": "fb8b6e04425fe595131cbaf4a8e48f5457a9ebb526a06e76e7474e9ebd536455"
+      "bytes": 4889,
+      "sha256": "9d1730688618edb20dcd003bf2654055670fd47d17c9bc2c1903dbc2ba4a5697"
     },
     {
       "path": "figures/figure_10_expanded_audio_robustness.png",
@@ -1238,8 +1238,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11044,
-      "sha256": "aee866b69823020fb59301ac305257df38261440598a681ff196516cb7039461"
+      "bytes": 11050,
+      "sha256": "641e01a2285003a0387ab8b46e24160cc388c7c779d6c97e47840dc6371c4dd1"
     },
     {
       "path": "summary_check.json",
@@ -1260,20 +1260,20 @@
     },
     {
       "path": "tests/test_repository.py",
-      "bytes": 1849,
-      "sha256": "2cb6b54ab55f806e9bd641446e039d7d212ab3cee21c13ba9aa60634f96e5e98"
+      "bytes": 1885,
+      "sha256": "76d6b1ce17ba4f6f1d70899412d4eb7ea5a0b0bcb25b10802fbd007bef4499c5"
     },
     {
-      "path": "tools/measurement-recipe-studio/README.md",
-      "bytes": 1298,
-      "sha256": "b680edc6e3c9dbb07dab128d53994727a05f012f019210d55ec2dc75d37f8919"
+      "path": "tools/measure-specification-prototype/README.md",
+      "bytes": 1160,
+      "sha256": "ce0f6622bda7b5f1eafad5b47da55c3d34d6f1b92d98f3f27bc502d3bfac8699"
     },
     {
-      "path": "tools/measurement-recipe-studio/index.html",
-      "bytes": 32556,
-      "sha256": "c4bbaab9d3866358dd8128021aa1503c1d3d759ac202a637600a9610e971becb",
+      "path": "tools/measure-specification-prototype/index.html",
+      "bytes": 32574,
+      "sha256": "494577aa1ee1d39e7bf05a1d10b9d3ac382cabb19a34f706302ddd2879fd38da",
       "structure": {
-        "title": "Measurement Recipe Studio"
+        "title": "Measure-Specification Prototype"
       }
     }
   ]

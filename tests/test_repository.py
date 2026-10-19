@@ -44,10 +44,10 @@ class ResearchObjectTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
 
-    def test_recipe_studio_is_standalone(self) -> None:
-        studio = ROOT / "tools" / "measurement-recipe-studio" / "index.html"
-        html = studio.read_text(encoding="utf-8")
-        self.assertIn("<title>Measurement Recipe Studio</title>", html)
+    def test_measure_specification_prototype_is_standalone(self) -> None:
+        prototype = ROOT / "tools" / "measure-specification-prototype" / "index.html"
+        html = prototype.read_text(encoding="utf-8")
+        self.assertIn("<title>Measure-Specification Prototype</title>", html)
         self.assertNotIn("<script src=", html)
         self.assertNotIn("<link rel=\"stylesheet\"", html)
 

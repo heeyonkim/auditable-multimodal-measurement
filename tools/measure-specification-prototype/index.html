@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Build auditable measurement recipes for multimodal organizational research.">
-  <title>Measurement Recipe Studio</title>
+  <title>Measure-Specification Prototype</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1f33'/%3E%3Cpath d='M17 17h30v8H17zm0 13h21v8H17zm0 13h30v8H17z' fill='%2367e8c0'/%3E%3Ccircle cx='45' cy='34' r='6' fill='%23f4b860'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -208,7 +208,7 @@
     <div class="brand">
       <div class="brand-mark" aria-hidden="true">MR</div>
       <div>
-        <h1>Measurement Recipe Studio</h1>
+        <h1>Measure-Specification Prototype</h1>
         <p>Auditable multimodal measures for organizational research</p>
       </div>
     </div>
@@ -597,7 +597,7 @@
       el("preset").value = "conversational";
       setChecked(el("tests"), ["event", "construct", "robustness"]);
       loadPreset("conversational");
-      notify("Studio reset to the worked example.");
+      notify("Prototype reset to the worked example.");
     });
 
     function registerAgentTools() {
@@ -607,7 +607,7 @@
       void Promise.resolve(context.registerTool({
         name: "configure_measurement_recipe",
         title: "Configure measurement recipe",
-        description: "Load one of the worked organizational-research measurement recipes into the visible studio.",
+        description: "Load one of the worked organizational-research measurement recipes into the visible interface.",
         inputSchema: {
           type: "object",
           properties: { preset: { type: "string", enum: allowed } },

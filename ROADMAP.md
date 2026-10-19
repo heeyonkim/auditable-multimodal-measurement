@@ -3,7 +3,7 @@
 ## 1. Public foundation — complete
 
 - Promote the sanitized research object to a standalone repository.
-- Preserve derived data, figures, methods, and the Measurement Recipe Studio.
+- Preserve derived data, figures, methods, and the measure-specification prototype.
 - Add dependency-free tests, integrity verification, and continuous checks.
 - Document contribution rules, claim boundaries, and current licensing status.
 

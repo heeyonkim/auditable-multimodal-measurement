@@ -18,7 +18,7 @@ The release supports feasibility, auditability, descriptive variation, and const
 1. Read the [reviewer tour](docs/reviewer_tour.md) for the main argument and evidence.
 2. Browse the [figures](figures/) for the proposal-level results.
 3. Review the [methods](docs/methods.md) and [reproducibility guide](docs/reproducibility.md).
-4. Open `tools/measurement-recipe-studio/index.html` locally to explore the construct-specification prototype.
+4. Open `tools/measure-specification-prototype/index.html` locally to explore the construct-specification prototype.
 5. Use the [full data and artifact catalog](docs/data_catalog.md) only when you need the detailed inventory.
 
 ## Repository map
@@ -28,7 +28,7 @@ The release supports feasibility, auditability, descriptive variation, and const
 | `data/derived/` | Sanitized derived measures and robustness checks |
 | `figures/` | Eleven proposal-ready descriptive figures |
 | `docs/` | Reviewer tour, methods, results, and detailed catalog |
-| `tools/measurement-recipe-studio/` | Dependency-free browser prototype |
+| `tools/measure-specification-prototype/` | Dependency-free browser prototype |
 | `scripts/` and `tests/` | Summary reproduction and integrity checks |
 | `research_object_manifest.json` | Checksums, schemas, provenance status, and claim boundaries |
 

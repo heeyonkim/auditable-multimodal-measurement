@@ -43,7 +43,7 @@ This catalog contains the detailed inventory for the proposal-stage research obj
 - `scripts/summarize_pilot.py`: portable script that regenerates core summary statistics from the derived tables.
 - `scripts/verify_research_object.py`: dependency-free integrity, structure, privacy, and credential verification for the release.
 - `research_object_manifest.json`: machine-readable checksums, corpus scope, pipeline status, model provenance, limitations, and prohibited claims.
-- `tools/measurement-recipe-studio/`: a dependency-free working interface for defining constructs, selecting observable evidence, retaining rivals, specifying validation, and exporting a versioned recipe.
+- `tools/measure-specification-prototype/`: a dependency-free working interface for defining constructs, selecting observable evidence, retaining rivals, specifying validation, and exporting a versioned recipe.
 - `docs/methods.md`: data flow and measurement boundaries.
 - `docs/reproducibility.md`: environment, licensing, credential, and rerun guidance.
 - `docs/release_checklist.md`: completed privacy, integrity, and portability checks for this snapshot.

@@ -151,7 +151,7 @@ def build_manifest(root: Path) -> dict:
             {"stage": "sampled-frame observation", "status": "derived tables released"},
             {"stage": "shot detection and temporal alignment", "status": "derived tables and sensitivity checks released"},
             {"stage": "event-aligned composition measurement", "status": "frozen specification, derived tables, and uncertainty audit released"},
-            {"stage": "construct specification", "status": "working Measurement Recipe Studio released"},
+            {"stage": "construct specification", "status": "working measure-specification prototype released"},
         ],
         "model_registry": [
             {
