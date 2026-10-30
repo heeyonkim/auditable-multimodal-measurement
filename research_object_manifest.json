@@ -2,7 +2,7 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable proposal prototype",
-    "version": "0.6.0-submission-evidence",
+    "version": "0.6.1-submission-navigation",
     "date": "2026-10-30",
     "status": "proposal-stage derived-data research object"
   },
@@ -117,7 +117,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 102,
+    "file_count": 92,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -149,8 +149,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2741,
-      "sha256": "7516a62487771162bb0271fb85ef559df407dd6d8206ee6f05a1be23380dea84"
+      "bytes": 1484,
+      "sha256": "802f6db130e784ccb033ca10ec157ea7e3759995460ccb9d4529b184cab64c41"
     },
     {
       "path": "ROADMAP.md",
@@ -159,65 +159,8 @@
     },
     {
       "path": "data/README.md",
-      "bytes": 807,
-      "sha256": "95555d061f709da97854272868a108b64b907ee81ff368b8c6cf0ed05a59d3e4"
-    },
-    {
-      "path": "data/derived/answer_level_organizational_variables.csv",
-      "bytes": 214446,
-      "sha256": "6d7a6923b19b2321dcd0fc24226479fda3e767a824a85b6ea4f18d6e344838b2",
-      "structure": {
-        "rows": 1260,
-        "column_count": 17,
-        "columns": [
-          "ticker",
-          "executive",
-          "call_id",
-          "year",
-          "quarter",
-          "source_segment_index",
-          "personal_baseline_deviation",
-          "transcript_visible_deviation",
-          "temporal_interaction_disruption",
-          "pitch_pattern_deviation",
-          "intensity_pattern_deviation",
-          "family_exclusion_support_count",
-          "priority_for_clip_review",
-          "acoustic_anchor",
-          "vocal_modulation_deviation",
-          "delivery_text_divergence",
-          "high_delivery_routine_text_example"
-        ]
-      }
-    },
-    {
-      "path": "data/derived/call_level_organizational_variables.csv",
-      "bytes": 19661,
-      "sha256": "4a40b0bf99dd1b9e7ea4e052a24d2090139ef5d8f7d4cea4c9ca65066e7c8fd0",
-      "structure": {
-        "rows": 118,
-        "column_count": 18,
-        "columns": [
-          "ticker",
-          "executive",
-          "call_id",
-          "year",
-          "quarter",
-          "eligible_answers",
-          "personal_baseline_deviation_median",
-          "personal_baseline_deviation_p90",
-          "temporal_interaction_disruption_p90",
-          "vocal_modulation_deviation_p90",
-          "delivery_text_divergence_median",
-          "delivery_text_divergence_p90",
-          "personal_baseline_deviation_p25",
-          "personal_baseline_deviation_p75",
-          "high_delivery_routine_text_answers",
-          "within_call_behavioral_volatility",
-          "high_delivery_routine_text_share",
-          "scripted_to_spontaneous_pitch_shift"
-        ]
-      }
+      "bytes": 571,
+      "sha256": "4763fc1749c2ed0ce09753bd0980faa826f07d255513b578d488d4e0fa38d436"
     },
     {
       "path": "data/derived/earnings_call_market_cohort_sensitivity.csv",
@@ -870,43 +813,6 @@
       }
     },
     {
-      "path": "data/derived/organizational_variable_recipes.csv",
-      "bytes": 2684,
-      "sha256": "6f77a34471809936d1fd3820e80cc6d3d584ed3db94c6b9173dcb78fc47d82ca",
-      "structure": {
-        "rows": 5,
-        "column_count": 7,
-        "columns": [
-          "variable",
-          "level",
-          "transparent_recipe",
-          "organization_research_use",
-          "what_a_transcript_misses",
-          "required_validation",
-          "not_an_inference_of"
-        ]
-      }
-    },
-    {
-      "path": "data/derived/organizational_variable_summary.csv",
-      "bytes": 4284,
-      "sha256": "3149328be43c90c916d6cdb6f49f605e76907843311523e17e73ef7f7c7d61f6",
-      "structure": {
-        "rows": 36,
-        "column_count": 8,
-        "columns": [
-          "sample",
-          "level",
-          "variable",
-          "n",
-          "mean",
-          "median",
-          "p10",
-          "p90"
-        ]
-      }
-    },
-    {
       "path": "data/derived/pilot_scale.csv",
       "bytes": 531,
       "sha256": "5be1bcc069655b422e9a531629b6363b5bf6d1270d301ee00f68bcefafbc03ae",
@@ -1494,14 +1400,113 @@
       }
     },
     {
+      "path": "data/earlier_pilot/README.md",
+      "bytes": 667,
+      "sha256": "14e38bda46eb8f8f6e294d679ce72a5582d7bbd9e040207d9ba0b95e5c738a65"
+    },
+    {
+      "path": "data/earlier_pilot/answer_level_organizational_variables.csv",
+      "bytes": 214446,
+      "sha256": "6d7a6923b19b2321dcd0fc24226479fda3e767a824a85b6ea4f18d6e344838b2",
+      "structure": {
+        "rows": 1260,
+        "column_count": 17,
+        "columns": [
+          "ticker",
+          "executive",
+          "call_id",
+          "year",
+          "quarter",
+          "source_segment_index",
+          "personal_baseline_deviation",
+          "transcript_visible_deviation",
+          "temporal_interaction_disruption",
+          "pitch_pattern_deviation",
+          "intensity_pattern_deviation",
+          "family_exclusion_support_count",
+          "priority_for_clip_review",
+          "acoustic_anchor",
+          "vocal_modulation_deviation",
+          "delivery_text_divergence",
+          "high_delivery_routine_text_example"
+        ]
+      }
+    },
+    {
+      "path": "data/earlier_pilot/call_level_organizational_variables.csv",
+      "bytes": 19661,
+      "sha256": "4a40b0bf99dd1b9e7ea4e052a24d2090139ef5d8f7d4cea4c9ca65066e7c8fd0",
+      "structure": {
+        "rows": 118,
+        "column_count": 18,
+        "columns": [
+          "ticker",
+          "executive",
+          "call_id",
+          "year",
+          "quarter",
+          "eligible_answers",
+          "personal_baseline_deviation_median",
+          "personal_baseline_deviation_p90",
+          "temporal_interaction_disruption_p90",
+          "vocal_modulation_deviation_p90",
+          "delivery_text_divergence_median",
+          "delivery_text_divergence_p90",
+          "personal_baseline_deviation_p25",
+          "personal_baseline_deviation_p75",
+          "high_delivery_routine_text_answers",
+          "within_call_behavioral_volatility",
+          "high_delivery_routine_text_share",
+          "scripted_to_spontaneous_pitch_shift"
+        ]
+      }
+    },
+    {
+      "path": "data/earlier_pilot/organizational_variable_recipes.csv",
+      "bytes": 2684,
+      "sha256": "6f77a34471809936d1fd3820e80cc6d3d584ed3db94c6b9173dcb78fc47d82ca",
+      "structure": {
+        "rows": 5,
+        "column_count": 7,
+        "columns": [
+          "variable",
+          "level",
+          "transparent_recipe",
+          "organization_research_use",
+          "what_a_transcript_misses",
+          "required_validation",
+          "not_an_inference_of"
+        ]
+      }
+    },
+    {
+      "path": "data/earlier_pilot/organizational_variable_summary.csv",
+      "bytes": 4284,
+      "sha256": "3149328be43c90c916d6cdb6f49f605e76907843311523e17e73ef7f7c7d61f6",
+      "structure": {
+        "rows": 36,
+        "column_count": 8,
+        "columns": [
+          "sample",
+          "level",
+          "variable",
+          "n",
+          "mean",
+          "median",
+          "p10",
+          "p90"
+        ]
+      }
+    },
+    {
       "path": "docs/README.md",
-      "bytes": 2408,
-      "sha256": "f52b1d15f79936b7cb2fc3dd1cfc314bcfbb728adf899c4ff09daa4c16b4bb0b"
+      "bytes": 1710,
+      "sha256": "2b1c5446717ec92bd52553d3c5f5d43493e863a690d3b57036f0a11435863143"
     },
     {
       "path": "docs/data_catalog.md",
-      "bytes": 11395,
-      "sha256": "b1b2c8451da79d2de33115972532d09496e3afc5e65ef764deee44e4064a357f"
+      "bytes": 9734,
+      "sha256": "e53155b021a35dd6c6409e6efa8d4bffca66a0fa4ef8694332983c61f664450c"
     },
     {
       "path": "docs/earnings_call_market_outcome.md",
@@ -1510,8 +1515,8 @@
     },
     {
       "path": "docs/earnings_call_pilot.md",
-      "bytes": 3453,
-      "sha256": "70b1c30d08bc391cb350d77226702a5ba55277d6fe28faf1830f070be991135c"
+      "bytes": 3419,
+      "sha256": "13ea18fbdfaa6ff7c9265e7020b084b3145416eb5e6cea78df23e13cbde74b1d"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1539,34 +1544,14 @@
       "sha256": "dd56bd74302d071a65ec358e1fc1925e69e08561e77844cc09dfc7de2dffa5d3"
     },
     {
-      "path": "docs/methods.md",
-      "bytes": 3001,
-      "sha256": "c6bdf501974de467a8e68a850f00dcc86a6a205a2f3236bb596ed88799353574"
-    },
-    {
-      "path": "docs/release_checklist.md",
-      "bytes": 3306,
-      "sha256": "a66663b0decce7af90e18ca4bb5b8dabcf03f0896b108689c2811192869ae14b"
-    },
-    {
       "path": "docs/repeated_interviewer.md",
       "bytes": 5408,
       "sha256": "3c81834d80881e8c4da73ed4d91f1936feb0ee9397f16c3a93c595852e3de3d4"
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 2728,
-      "sha256": "cfc837ab9000c05b344296775b30150f736edba882c4bb09be86e6d1c66a2ed6"
-    },
-    {
-      "path": "docs/research_object_manifest.md",
-      "bytes": 2235,
-      "sha256": "8d152f1e40983fc5c551f93895c8f483ba3d33c6341ea5da17baf119a703838e"
-    },
-    {
-      "path": "docs/research_opportunity_map.md",
-      "bytes": 5465,
-      "sha256": "fbf07da866d932ab8129eb324051dce8cc30de09fe0b5d47e2740a02ecd86cfe"
+      "bytes": 3828,
+      "sha256": "6a8b61f48c39f504ca28977c46d7af1db2cc0664cfd9f23b22904e0292a261db"
     },
     {
       "path": "docs/researcher_walkthrough.md",
@@ -1574,24 +1559,19 @@
       "sha256": "3e820b2dfc2043b4d51f14c39039fb835574ce397c9103079d011ce434978998"
     },
     {
-      "path": "docs/reviewer_tour.md",
-      "bytes": 3254,
-      "sha256": "e7091575ea0e88fec4dc26043a2df07e7baeefd32a60b4b1f0146e386243826e"
-    },
-    {
       "path": "docs/submission_technical_appendix.md",
-      "bytes": 9441,
-      "sha256": "ec05b09e5be1c3ec316d8c7af4de251a38362f7c359a20978839950038a22b55"
+      "bytes": 10805,
+      "sha256": "90cd507007d5fdfa4e0d66b2e82bd9d8d53527fed73638a505f43646f6d9e7db"
     },
     {
       "path": "docs/video_interview_pilot.md",
-      "bytes": 3301,
-      "sha256": "678d5d458135d02c3a3d1ffb1b013e191672f292a469f4b582f09e9169f450f9"
+      "bytes": 3323,
+      "sha256": "cca655ed0f7c18e06dc82c1e9fb1dbbd2c11d276aa48a6e7f312d55d09c90271"
     },
     {
       "path": "figures/README.md",
-      "bytes": 2216,
-      "sha256": "6225808b8a5b6e9e96913508dc0e00f98db9a283cdf99b777d009349f98af948"
+      "bytes": 1321,
+      "sha256": "18ce9205b33f9a59a4f45eb762467bac46ebf018102b5a03ea038e52f878acf2"
     },
     {
       "path": "figures/figure_10_expanded_audio_robustness.png",
@@ -1604,39 +1584,9 @@
       "sha256": "3b34a0e6c122104a07d0fadd29e9b6a58e006e0625dcdbc84c07eada38c69e75"
     },
     {
-      "path": "figures/figure_1_two_pilots_at_scale.png",
-      "bytes": 239096,
-      "sha256": "5151c718a6fccc39d8b49d0490b1d26a3ceea95216415bf5f8a27902c8da30aa"
-    },
-    {
-      "path": "figures/figure_2_interview_level_variation.png",
-      "bytes": 201892,
-      "sha256": "eae4f5421befbc81702b9a553fea741685ec24b0f901a1c0f066350e6a92cb0f"
-    },
-    {
       "path": "figures/figure_3_production_format_comparison.png",
       "bytes": 218940,
       "sha256": "dd0d731aa64167a5881c880b45fc64590ecc3f086255ef2097c3c9fc4406fde1"
-    },
-    {
-      "path": "figures/figure_4_validation_architecture.png",
-      "bytes": 153466,
-      "sha256": "ef14f16e83be42d136ae247236adacd0035375f9db0f950ef4ef49d59ff39e4f"
-    },
-    {
-      "path": "figures/figure_5_organizational_variable_recipes.png",
-      "bytes": 316890,
-      "sha256": "f5d3eb7aff86b2d5cb46b5db25293ffa2e8cce337bbbc49f164d1d8ef16c38fe"
-    },
-    {
-      "path": "figures/figure_6_organizational_variable_evidence.png",
-      "bytes": 680047,
-      "sha256": "289cac477d6dfbd5f218271089584510086690ad1b3dee6b2c5c003e5a1f3335"
-    },
-    {
-      "path": "figures/figure_7_video_organizational_measures.png",
-      "bytes": 430014,
-      "sha256": "ef0d926d4fbd9ee2c6d91b0128fc455e3446509c3962d2126a565dba21370a4e"
     },
     {
       "path": "figures/figure_8_earnings_call_market_outcomes.png",
@@ -1685,8 +1635,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11820,
-      "sha256": "31bc49031b73d69f58b4c3847f7bab8d03ab40cf24a42ccd192526da0ffea096"
+      "bytes": 11822,
+      "sha256": "6d8df4125d8a2712c5a9813e077cb475411bb578bb21ec6e0dd2d871069f8a9f"
     },
     {
       "path": "scripts/verify_submission_evidence.py",

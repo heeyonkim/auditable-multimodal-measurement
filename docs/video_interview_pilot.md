@@ -29,6 +29,6 @@ The submission also analyzes eight additional *Leaders with Lacqua* interviews, 
 
 The event-aligned extension studies **120 speaker-transition events** using matched frames before, shortly after, and after settling into a transition. Read the [frozen measurement specification](event_aligned_video_measurement.md) before the [detailed results](event_aligned_video_results.md).
 
-Sampled frames do not provide continuous tracking. An off-camera person is unobservable, and a visible person is not necessarily the active speaker. Source media and extracted frames are excluded from this release. See [methods and limitations](methods.md).
+Sampled frames do not provide continuous tracking. An off-camera person is unobservable, and a visible person is not necessarily the active speaker. Source media and extracted frames are excluded from this release. See [methods and limitations](submission_technical_appendix.md).
 
 **Next:** [Earnings-call pilot](earnings_call_pilot.md) · [Researcher walkthrough](researcher_walkthrough.md) · [All documentation](README.md)

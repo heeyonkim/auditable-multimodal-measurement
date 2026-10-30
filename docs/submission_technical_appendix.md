@@ -12,6 +12,12 @@ The 286 retained calls yield 3,273 eligible executive Q&A answers. Of these, 3,2
 
 Video evidence comes from two disjoint samples: a 30-interview Bloomberg archive covering 8.6 hours and four production formats, and eight additional *Leaders with Lacqua* interviews covering 192.4 minutes. The latter supports the repeated-interviewer demonstration and Figure 3. See the [30-interview source manifest](../data/derived/sample_manifest.csv) and [eight-interview source manifest](../data/derived/repeated_interviewer/manifest.csv).
 
+## Processing and observation levels
+
+The 30-interview pipeline preserves public source identifiers and preparation metadata, extracts mono 16 kHz audio and time-spread frames, transcribes and diarizes speech, groups consecutive same-speaker segments into turns, and aligns sampled visual observations to active or nearest speech turns. Continuous shot detection is aligned to speaker changes; circular shifts supply within-video chance comparisons. The event-aligned extension uses matched pre-transition, entry, and settled frames and exact-window cut counts. Derived outputs use flat CSV/JSON tables.
+
+Observation levels include interviews, conversational turns, frame-turn alignments, and transition events. Produced-interview features such as framing, cut frequency, and shot duration describe production as well as participants. Twelve time-spread frames per interview do not provide continuous tracking. A visible person is not necessarily speaking; exclusive diarization cannot reliably estimate overlap or interruption duration. Functional-role labels remain exploratory without external validation. The [variable dictionary](../data/derived/variable_dictionary.csv), [validation plan](../data/derived/validation_plan.csv), and detailed [event-aligned specification](event_aligned_video_measurement.md) preserve field-level definitions and requirements.
+
 ## Earnings-call measurement
 
 Eligibility requires an executive Q&A answer with at least 20 words and ten seconds of duration. Scoring requires at least five eligible answers in the call, with baseline requirements of 40 reference turns and 15 reference calls in the scoring implementation. Recording-sensitive features use the same call's prepared remarks as an anchor, with a documented Q&A fallback where prepared remarks are unavailable.

@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 
-RELEASE_VERSION = "0.6.0-submission-evidence"
+RELEASE_VERSION = "0.6.1-submission-navigation"
 RELEASE_DATE = "2026-10-30"
 MANIFEST_NAME = "research_object_manifest.json"
 EXCLUDED_NAMES = {MANIFEST_NAME, ".DS_Store"}

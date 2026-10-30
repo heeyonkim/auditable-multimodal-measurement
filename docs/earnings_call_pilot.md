@@ -22,9 +22,9 @@ These counts are recorded in the [pilot summary](../data/derived/pilot_summary_s
 | 2. Inspect answer scores | [Continuous answer-level scores](../data/derived/expanded_audio_answer_scores.csv) | Separate audio/interaction and transcript-visible departures |
 | 3. Examine the 177 cases | [Case robustness table](../data/derived/expanded_audio_primary_examples_robustness.csv) | Contributions and support under feature-family exclusions |
 | 4. Check sensitivity | [Robustness figure](../figures/figure_10_expanded_audio_robustness.png) · [Feature variants](../data/derived/expanded_audio_feature_variant_summary.csv) · [Eligibility sensitivity](../data/derived/expanded_audio_eligibility_sensitivity.csv) | Dependence on included features and answer-length requirements |
-| 5. Understand possible variables | [Measurement recipes](../data/derived/organizational_variable_recipes.csv) | Definitions, research uses, validation needs, and prohibited interpretations |
+| 5. Understand possible variables | [Measurement recipes](../data/earlier_pilot/organizational_variable_recipes.csv) | Definitions, research uses, validation needs, and prohibited interpretations |
 
-**Scope matters:** the recipe examples and original organizational-variable tables cover the earlier five-executive, 118-call pilot. Use the `expanded_audio_` tables for the 12-executive panel. The [catalog](data_catalog.md) distinguishes both sets.
+**Earlier examples:** the [five-executive tables](../data/earlier_pilot/README.md) cover 118 calls. They are separate from the current `expanded_audio_` tables for the 12-executive panel.
 
 ## Optional outcome extension
 
@@ -32,6 +32,6 @@ The [market-outcome analysis](earnings_call_market_outcome.md) links the archive
 
 ## What can be checked here
 
-The repository supplies sanitized measures, specifications, and robustness checks. Source audio and verbatim transcripts are excluded, so this public snapshot does not support listening to individual answers or a complete media-processing rerun. See [methods and limitations](methods.md) and [reproducibility](reproducibility.md).
+The repository supplies sanitized measures, specifications, and robustness checks. Source audio and verbatim transcripts are excluded, so this public snapshot does not support listening to individual answers or a complete media-processing rerun. See [methods and limitations](submission_technical_appendix.md) and [reproducibility](reproducibility.md).
 
 **Next:** [Video-interview pilot](video_interview_pilot.md) · [Researcher walkthrough](researcher_walkthrough.md) · [All documentation](README.md)
