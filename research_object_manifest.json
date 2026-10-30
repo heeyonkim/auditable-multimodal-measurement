@@ -117,7 +117,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 94,
+    "file_count": 95,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -149,8 +149,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1927,
-      "sha256": "7871ba5d4e877fb2caaa2c91e1d324ccef4a218e69a883de786e5f374e2eac8f"
+      "bytes": 2015,
+      "sha256": "656512550019c164786d36e56294db5902ae7fa2482a0a26640c27c69f1d5577"
     },
     {
       "path": "ROADMAP.md",
@@ -1521,6 +1521,11 @@
           "p90"
         ]
       }
+    },
+    {
+      "path": "docs/Making_Organizational_Behavior_Observable_Proposal.pdf",
+      "bytes": 857198,
+      "sha256": "17a2617dc216e29df3b3816773ec7cf41b51062599b096535c53fad2ace941f5"
     },
     {
       "path": "docs/README.md",

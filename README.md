@@ -4,6 +4,8 @@ An AI-assisted measurement prototype for studying organizational audio and video
 
 The submission demonstrates the approach using **286 earnings calls from 12 executives**, **30 video interviews**, and **eight additional interviews with the same interviewer**.
 
+[Read the final proposal](docs/Making_Organizational_Behavior_Observable_Proposal.pdf)
+
 ## Start here
 
 | What would you like to do? | Open |
