@@ -18,10 +18,10 @@ These counts are recorded in the [pilot summary](../data/derived/pilot_summary_s
 
 | Step | Open | What to look for |
 | --- | --- | --- |
-| 1. Check coverage | [Panel figure](../figures/figure_9_expanded_audio_panel.png) · [Measurement yield](../data/derived/expanded_audio_measurement_yield.csv) | Calls, eligible answers, and exclusions across executives |
+| 1. Check coverage | [Panel figure](../figures/supporting_figure_S1_expanded_audio_panel.png) · [Measurement yield](../data/derived/expanded_audio_measurement_yield.csv) | Calls, eligible answers, and exclusions across executives |
 | 2. Inspect answer scores | [Continuous answer-level scores](../data/derived/expanded_audio_answer_scores.csv) | Separate audio/interaction and transcript-visible departures |
 | 3. Examine the 177 cases | [Case robustness table](../data/derived/expanded_audio_primary_examples_robustness.csv) | Contributions and support under feature-family exclusions |
-| 4. Check sensitivity | [Robustness figure](../figures/figure_10_expanded_audio_robustness.png) · [Feature variants](../data/derived/expanded_audio_feature_variant_summary.csv) · [Eligibility sensitivity](../data/derived/expanded_audio_eligibility_sensitivity.csv) | Dependence on included features and answer-length requirements |
+| 4. Check sensitivity | [Robustness figure](../figures/supporting_figure_S2_audio_robustness.png) · [Feature variants](../data/derived/expanded_audio_feature_variant_summary.csv) · [Eligibility sensitivity](../data/derived/expanded_audio_eligibility_sensitivity.csv) | Dependence on included features and answer-length requirements |
 | 5. Understand possible variables | [Measurement recipes](../data/earlier_pilot/organizational_variable_recipes.csv) | Definitions, research uses, validation needs, and prohibited interpretations |
 
 **Earlier examples:** the [five-executive tables](../data/earlier_pilot/README.md) cover 118 calls. They are separate from the current `expanded_audio_` tables for the 12-executive panel.

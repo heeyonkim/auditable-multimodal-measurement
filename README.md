@@ -18,3 +18,5 @@ The submission demonstrates the approach using **286 earnings calls from 12 exec
 The browser prototype specifies and exports measurement recipes. The released data and code support verification of derived results. Processing new recordings through a complete guided interface is part of the proposed development work.
 
 Source recordings and verbatim transcripts are excluded. Observable departures do not establish emotion, intent, deception, personality, or causal effects. [Access and reproduction requirements](docs/reproducibility.md) · [Licensing status](LICENSE.md)
+
+[Code for reproducing and checking results](scripts/README.md) explains what each script does and how to run the checks.

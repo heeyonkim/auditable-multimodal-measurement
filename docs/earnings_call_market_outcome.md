@@ -33,4 +33,4 @@ The pattern is sensitive to cohort composition. The correlation is .060 in the o
 - `data/derived/earnings_call_market_cohort_sensitivity.csv`: original, added, and pooled cohort comparisons.
 - `data/derived/earnings_call_market_leave_one_company_out.csv`: influence checks that omit one firm at a time.
 - `data/derived/earnings_call_market_summary.json`: compact machine-readable results.
-- `figures/figure_8_earnings_call_market_outcomes.png`: proposal-ready summary figure.
+- `figures/supporting_figure_S3_market_outcomes.png`: proposal-ready summary figure.

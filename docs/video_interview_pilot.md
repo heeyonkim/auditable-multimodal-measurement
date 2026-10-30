@@ -14,7 +14,7 @@ Camera cuts often occur near changes in speaker. The released summaries report m
 
 | Step | Open | What to look for |
 | --- | --- | --- |
-| 1. Check the sample | [Source manifest](../data/derived/sample_manifest.csv) · [Production-format figure](../figures/figure_3_production_format_comparison.png) | Variation in interviews and production formats |
+| 1. Check the sample | [Source manifest](../data/derived/sample_manifest.csv) · [Production-format figure](../figures/supporting_figure_S4_production_formats.png) | Variation in interviews and production formats |
 | 2. Inspect measures | [Interview measures](../data/derived/interview_measures.csv) · [Variable dictionary](../data/derived/variable_dictionary.csv) | Interaction, voice, visible behavior, quality, and definitions |
 | 3. Inspect production timing | [Shot dynamics](../data/derived/video_shot_dynamics.csv) · [Chance-adjusted responsiveness](../data/derived/editorial_responsiveness_chance_adjusted.csv) | Camera-cut alignment and the within-video comparison |
 | 4. Check sensitivity | [Measurement sensitivity](../data/derived/video_measurement_sensitivity.csv) | Different scene thresholds and alignment windows |

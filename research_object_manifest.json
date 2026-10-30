@@ -2,7 +2,7 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable proposal prototype",
-    "version": "0.6.1-submission-navigation",
+    "version": "0.6.2-figure-numbering",
     "date": "2026-10-30",
     "status": "proposal-stage derived-data research object"
   },
@@ -117,7 +117,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 92,
+    "file_count": 93,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -149,8 +149,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1484,
-      "sha256": "802f6db130e784ccb033ca10ec157ea7e3759995460ccb9d4529b184cab64c41"
+      "bytes": 1606,
+      "sha256": "5a2270b0a602f9a357c97290cd2a5a966004c5ce58c8597d7fce3687fc00b913"
     },
     {
       "path": "ROADMAP.md",
@@ -1501,7 +1501,7 @@
     {
       "path": "docs/README.md",
       "bytes": 1710,
-      "sha256": "2b1c5446717ec92bd52553d3c5f5d43493e863a690d3b57036f0a11435863143"
+      "sha256": "b6bb3ddf3de292e216cf16cfc5ed66e0da07910ab323dfc42f2150ef71e7b17f"
     },
     {
       "path": "docs/data_catalog.md",
@@ -1510,13 +1510,13 @@
     },
     {
       "path": "docs/earnings_call_market_outcome.md",
-      "bytes": 3048,
-      "sha256": "f80f14c87f38bf5890af22e42f1ede8a6646cc06ea31d89e771843d19013d092"
+      "bytes": 3046,
+      "sha256": "c4a5c987aa9abc5beef63c46b46429ad910a29720920e505ab8c5049996e2ef6"
     },
     {
       "path": "docs/earnings_call_pilot.md",
-      "bytes": 3419,
-      "sha256": "13ea18fbdfaa6ff7c9265e7020b084b3145416eb5e6cea78df23e13cbde74b1d"
+      "bytes": 3433,
+      "sha256": "4395278dd88843e94111cb09b2018b54f0a7ac890b6e1dd5b5064dd775ac8b8d"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1565,43 +1565,13 @@
     },
     {
       "path": "docs/video_interview_pilot.md",
-      "bytes": 3323,
-      "sha256": "cca655ed0f7c18e06dc82c1e9fb1dbbd2c11d276aa48a6e7f312d55d09c90271"
+      "bytes": 3325,
+      "sha256": "e0d319ac9df38b404e2c25465011552a6d565c9621568d56031c5cfbfaefa1ea"
     },
     {
       "path": "figures/README.md",
-      "bytes": 1321,
-      "sha256": "18ce9205b33f9a59a4f45eb762467bac46ebf018102b5a03ea038e52f878acf2"
-    },
-    {
-      "path": "figures/figure_10_expanded_audio_robustness.png",
-      "bytes": 323924,
-      "sha256": "1ea036cffc65a57cba3a54c8422238110a345d70b093d76e4ce8a223c7a92a0e"
-    },
-    {
-      "path": "figures/figure_11_event_aligned_production_responsiveness.png",
-      "bytes": 244255,
-      "sha256": "3b34a0e6c122104a07d0fadd29e9b6a58e006e0625dcdbc84c07eada38c69e75"
-    },
-    {
-      "path": "figures/figure_3_production_format_comparison.png",
-      "bytes": 218940,
-      "sha256": "dd0d731aa64167a5881c880b45fc64590ecc3f086255ef2097c3c9fc4406fde1"
-    },
-    {
-      "path": "figures/figure_8_earnings_call_market_outcomes.png",
-      "bytes": 235335,
-      "sha256": "de8cb9b5d35596d2481b89b6aedb5fee43b1d6bd321175c672ebdfab0debb011"
-    },
-    {
-      "path": "figures/figure_9_expanded_audio_panel.png",
-      "bytes": 365126,
-      "sha256": "67b886e33a62e6ca1e681786739226fe59059d9bfd1bfbe130738833eaedea4d"
-    },
-    {
-      "path": "figures/repeated_interviewer_production_sensitivity.png",
-      "bytes": 149263,
-      "sha256": "9209d3d855b805cb10114dfd283d1f41ed540c0c004f9c01415c2f00c5054fcb"
+      "bytes": 1346,
+      "sha256": "0d98584d55f2b096590f4894ff72325c3d04dee03e43265a242946e643abde81"
     },
     {
       "path": "figures/submission_figure_1_architecture.png",
@@ -1617,6 +1587,41 @@
       "path": "figures/submission_figure_3_repeated_interviewer.png",
       "bytes": 104694,
       "sha256": "63d87a5160b9e52e25d33753c27ed600311d820663cc30c6c1c6c8cae5dd035a"
+    },
+    {
+      "path": "figures/supporting_figure_S1_expanded_audio_panel.png",
+      "bytes": 365126,
+      "sha256": "67b886e33a62e6ca1e681786739226fe59059d9bfd1bfbe130738833eaedea4d"
+    },
+    {
+      "path": "figures/supporting_figure_S2_audio_robustness.png",
+      "bytes": 323924,
+      "sha256": "1ea036cffc65a57cba3a54c8422238110a345d70b093d76e4ce8a223c7a92a0e"
+    },
+    {
+      "path": "figures/supporting_figure_S3_market_outcomes.png",
+      "bytes": 235335,
+      "sha256": "de8cb9b5d35596d2481b89b6aedb5fee43b1d6bd321175c672ebdfab0debb011"
+    },
+    {
+      "path": "figures/supporting_figure_S4_production_formats.png",
+      "bytes": 218940,
+      "sha256": "dd0d731aa64167a5881c880b45fc64590ecc3f086255ef2097c3c9fc4406fde1"
+    },
+    {
+      "path": "figures/supporting_figure_S5_event_aligned_responsiveness.png",
+      "bytes": 244255,
+      "sha256": "3b34a0e6c122104a07d0fadd29e9b6a58e006e0625dcdbc84c07eada38c69e75"
+    },
+    {
+      "path": "figures/supporting_figure_S6_repeated_interviewer_sensitivity.png",
+      "bytes": 149263,
+      "sha256": "9209d3d855b805cb10114dfd283d1f41ed540c0c004f9c01415c2f00c5054fcb"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 1658,
+      "sha256": "94aec1e1fc97727feeed69378b84bf16f3adca896d5d5f91b11b472fb2e1f826"
     },
     {
       "path": "scripts/build_submission_video_figure.py",
@@ -1635,8 +1640,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11822,
-      "sha256": "6d8df4125d8a2712c5a9813e077cb475411bb578bb21ec6e0dd2d871069f8a9f"
+      "bytes": 11817,
+      "sha256": "1f16e5c2fed7863a5d42226c633f568a226f9632f3e369104a53b87e8537715c"
     },
     {
       "path": "scripts/verify_submission_evidence.py",
