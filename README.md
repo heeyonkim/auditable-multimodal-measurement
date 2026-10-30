@@ -8,15 +8,15 @@ The submission demonstrates the approach using **286 earnings calls from 12 exec
 
 | What would you like to do? | Open |
 | --- | --- |
-| Follow a researcher's workflow | [Walkthrough and video preview](docs/researcher_walkthrough.md) |
+| Follow a researcher's workflow | [Worked example and researcher guide](docs/researcher_walkthrough.md) |
 | Try defining a measure | [Interactive prototype](tools/measure-specification-prototype/README.md) |
 | Inspect the submission's results | [Submission evidence](docs/README.md) |
 | Review methods, limits, and verification | [Technical appendix](docs/submission_technical_appendix.md) |
 
-**Video status:** the current walkthrough is a preview; the author's voice recording is pending.
+[Watch the 84-second narrated worked example](docs/media/researcher_walkthrough.mp4): follow one Tim Cook answer from source audio and transcript to feature-level measurements, robustness checks, and an exported observation. [Read the example and measurement notes](docs/researcher_walkthrough.md).
 
-The browser prototype specifies and exports measurement recipes. The released data and code support verification of derived results. Processing new recordings through a complete guided interface is part of the proposed development work.
+The browser prototype lets researchers define and export measurement specifications. The released data and code support verification of derived results. Processing new recordings through a complete guided interface is part of the proposed development work.
 
-Source recordings and verbatim transcripts are excluded. Observable departures do not establish emotion, intent, deception, personality, or causal effects. [Access and reproduction requirements](docs/reproducibility.md) · [Licensing status](LICENSE.md)
+Full source recordings and verbatim transcripts are excluded, apart from the short audio excerpt and transcript embedded in the worked-example video. Observable departures do not establish emotion, intent, deception, personality, or causal effects. [Access and reproduction requirements](docs/reproducibility.md) · [Licensing status](LICENSE.md)
 
 [Code for reproducing and checking results](scripts/README.md) explains what each script does and how to run the checks.

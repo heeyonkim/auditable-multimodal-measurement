@@ -7,4 +7,4 @@
 - [Earlier five-executive pilot](earlier_pilot/README.md): retained 118-call examples, separate from the current expanded panel.
 - [Verification instructions](../docs/reproducibility.md).
 
-Source recordings and verbatim transcripts are excluded.
+Full source recordings and verbatim transcripts are excluded. The [worked-example video](../docs/researcher_walkthrough.md) embeds one short audio excerpt and its transcript.

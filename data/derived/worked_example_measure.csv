@@ -1,0 +1,2 @@
+call_id,source_segment_index,started_at_s,ended_at_s,elapsed_duration_s,audio_interaction_deviation,transcript_visible_deviation,exclude_timing_and_rate,exclude_pitch,exclude_intensity,family_exclusion_support_count,reference_design,interpretation
+AAPL_2026_Q1,13,1796.206,1819.08,22.874,2.574,0.269,3.25268404552302,2.411417466968339,2.067817545142704,3,Within-call residual; leave one call out,Descriptive departure only; not a psychological label

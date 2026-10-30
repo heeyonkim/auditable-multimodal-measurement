@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 
-RELEASE_VERSION = "0.6.2-figure-numbering"
+RELEASE_VERSION = "0.6.3-worked-example"
 RELEASE_DATE = "2026-10-30"
 MANIFEST_NAME = "research_object_manifest.json"
 EXCLUDED_NAMES = {MANIFEST_NAME, ".DS_Store"}
@@ -133,7 +133,7 @@ def build_manifest(root: Path) -> dict:
                 "paired_answer_scores": 3233,
                 "unscored_answers_in_short_calls": 40,
                 "market_outcome_calls": 274,
-                "content_released": "derived measures only",
+                "content_released": "derived measures; one short audio excerpt and transcript embedded in the narrated worked example",
             },
             "bloomberg_interviews": {
                 "interviews": 30,
@@ -158,7 +158,7 @@ def build_manifest(root: Path) -> dict:
         },
         "pipeline_stages": [
             {"stage": "source selection", "status": "documented in released manifest"},
-            {"stage": "audio extraction", "status": "run; source media excluded"},
+            {"stage": "audio extraction", "status": "run; full source media excluded; one short excerpt embedded in the worked example"},
             {"stage": "transcription and diarization", "status": "run; exact model versions not recorded in sanitized snapshot"},
             {"stage": "acoustic and interaction measurement", "status": "derived tables released"},
             {"stage": "sampled-frame observation", "status": "derived tables released"},

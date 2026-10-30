@@ -14,6 +14,8 @@ The pilot asks whether an executive's vocal delivery and interaction timing can 
 
 These counts are recorded in the [pilot summary](../data/derived/pilot_summary_statistics.json) and can be regenerated using the [reproduction instructions](reproducibility.md).
 
+[Watch one answer being inspected in the narrated worked example](researcher_walkthrough.md).
+
 ## Inspect the evidence
 
 | Step | Open | What to look for |
@@ -32,6 +34,6 @@ The [market-outcome analysis](earnings_call_market_outcome.md) links the archive
 
 ## What can be checked here
 
-The repository supplies sanitized measures, specifications, and robustness checks. Source audio and verbatim transcripts are excluded, so this public snapshot does not support listening to individual answers or a complete media-processing rerun. See [methods and limitations](submission_technical_appendix.md) and [reproducibility](reproducibility.md).
+The repository supplies sanitized measures, specifications, and robustness checks. The worked-example video includes one short source-audio excerpt and its transcript. Full source recordings and transcripts remain excluded, so this snapshot does not support listening to every answer or a complete media-processing rerun. See [methods and limitations](submission_technical_appendix.md) and [reproducibility](reproducibility.md).
 
 **Next:** [Video-interview pilot](video_interview_pilot.md) · [Researcher walkthrough](researcher_walkthrough.md) · [All documentation](README.md)

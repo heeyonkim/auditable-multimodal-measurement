@@ -7,6 +7,7 @@ This inventory groups the released tables by the questions they support. Start w
 ## Earnings calls and score robustness
 
 - [earnings_call_screening_ledger.csv](../data/derived/earnings_call_screening_ledger.csv): Retained calls, initial exclusions, and answer-summary availability.
+- [worked_example_measure.csv](../data/derived/worked_example_measure.csv): one traceable observation shown in the narrated worked example, with source interval, scores, and feature-exclusion checks.
 - [expanded_audio_answer_scores.csv](../data/derived/expanded_audio_answer_scores.csv): 3,273 eligible answers, including 3,233 with paired departure scores; component variants and missing scores are retained.
 - [expanded_audio_archive_validation.json](../data/derived/expanded_audio_archive_validation.json): private-archive integrity counts without paths or credentials.
 - [expanded_audio_call_concentration.csv](../data/derived/expanded_audio_call_concentration.csv): call-level concentration of review flags.

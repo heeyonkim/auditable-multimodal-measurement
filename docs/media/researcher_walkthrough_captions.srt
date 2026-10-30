@@ -1,27 +1,51 @@
 1
-00:00:00,000 --> 00:00:12,116
-How would an organizational behavior researcher use an auditable multimodal measurement system? They would not begin with code or a repository. They would begin with a research question and a conversation.
+00:00:01,200 --> 00:00:05,760
+The working prototype demonstrates the architecture in earnings calls and video interviews.
 
 2
-00:00:12,266 --> 00:00:30,938
-For example: Do chief executives depart from their usual speaking behavior when responding to analysts? The researcher explains why the question matters. The assistant separates the theoretical idea from what recordings can directly show, and identifies the choices that will change the measure.
+00:00:08,300 --> 00:00:12,780
+For example, do chief executives depart from their usual speaking behavior when
 
 3
-00:00:31,088 --> 00:00:54,772
-Together, they specify the unit of analysis, the personal baseline, the evidence channels, the transcript comparison, and the exclusions. Here, the unit is a CEO answer; the baseline is that executive's other calls; and timing, speaking rate, gaps, pitch, and intensity remain observable features rather than psychological labels.
+00:00:12,860 --> 00:00:14,220
+responding to analysts?
 
 4
-00:00:54,922 --> 00:01:14,922
-Before scaling, the assistant presents source-linked examples. The researcher can inspect the relevant interval, transcript, component scores, quality flags, and rival explanations. A measure is not accepted simply because a model produced a number; the researcher can revise or reject the recipe.
+00:00:16,000 --> 00:00:21,840
+Well, let me just say that we're bringing intelligence to more of what people
 
 5
-00:01:15,072 --> 00:01:33,013
-Once the researcher approves the rule, the recipe is frozen before outcomes are examined. The system applies it consistently across the archive, records exclusions and failures, and retains alternative specifications, heterogeneous results, and null findings.
+00:00:21,920 --> 00:00:29,200
+love, and we're integrating it across the operating system in a personal and
 
 6
-00:01:33,163 --> 00:01:53,911
-The researcher receives an analysis-ready table, a plain-language variable definition, provenance, validation checks, figures, and reproducible files. The measure can then be linked to an organizational outcome, while keeping text as a comparison and distinguishing exploratory correlation from causal evidence.
+00:00:29,280 --> 00:00:30,080
+private way.
 
 7
-00:01:54,061 --> 00:02:16,398
-The conversation is the front door; GitHub is the audit record. The researcher supplies theory and judgment. The assistant operates and explains the workflow. The research object preserves the evidence, decisions, and limits. This lowers technical barriers without removing the need for validation, lawful data access, or domain expertise.
+00:00:30,320 --> 00:00:36,400
+And I think that by doing so, it creates great value, and that opens up a range
+
+8
+00:00:36,400 --> 00:00:38,800
+of opportunities across our products and services.
+
+9
+00:00:47,600 --> 00:00:51,120
+These features do not automatically establish emotion, intent, or deception.
+
+10
+00:00:52,400 --> 00:00:56,080
+Researchers can inspect the recording, transcript, component scores, and
+
+11
+00:00:56,080 --> 00:00:59,840
+quality concerns, then correct assignments or revise measurement choices.
+
+12
+00:01:13,300 --> 00:01:17,460
+The researcher receives an analysis-ready table, a documented measurement
+
+13
+00:01:17,460 --> 00:01:22,580
+specification, source references, quality information, and reproducible files.

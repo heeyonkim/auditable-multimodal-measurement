@@ -2,7 +2,7 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable proposal prototype",
-    "version": "0.6.2-figure-numbering",
+    "version": "0.6.3-worked-example",
     "date": "2026-10-30",
     "status": "proposal-stage derived-data research object"
   },
@@ -14,7 +14,7 @@
       "paired_answer_scores": 3233,
       "unscored_answers_in_short_calls": 40,
       "market_outcome_calls": 274,
-      "content_released": "derived measures only"
+      "content_released": "derived measures; one short audio excerpt and transcript embedded in the narrated worked example"
     },
     "bloomberg_interviews": {
       "interviews": 30,
@@ -44,7 +44,7 @@
     },
     {
       "stage": "audio extraction",
-      "status": "run; source media excluded"
+      "status": "run; full source media excluded; one short excerpt embedded in the worked example"
     },
     {
       "stage": "transcription and diarization",
@@ -117,7 +117,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 93,
+    "file_count": 94,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -139,8 +139,8 @@
     },
     {
       "path": "LICENSE.md",
-      "bytes": 849,
-      "sha256": "3c657d2804384d1b7b51393615c2e13bf47ef91fdc1ecf95d2ad127edabd3a9a"
+      "bytes": 971,
+      "sha256": "10861c84bf4521eefba1dd11680b92098abae4ed4f7fd1ce8760aca95be2e2ec"
     },
     {
       "path": "Makefile",
@@ -149,8 +149,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1606,
-      "sha256": "5a2270b0a602f9a357c97290cd2a5a966004c5ce58c8597d7fce3687fc00b913"
+      "bytes": 1927,
+      "sha256": "7871ba5d4e877fb2caaa2c91e1d324ccef4a218e69a883de786e5f374e2eac8f"
     },
     {
       "path": "ROADMAP.md",
@@ -159,8 +159,8 @@
     },
     {
       "path": "data/README.md",
-      "bytes": 571,
-      "sha256": "4763fc1749c2ed0ce09753bd0980faa826f07d255513b578d488d4e0fa38d436"
+      "bytes": 689,
+      "sha256": "9287b7f5c68a0e47140b02b3b495f9a248d83cc2f69ca4f7b726c79fe96b0c0c"
     },
     {
       "path": "data/derived/earnings_call_market_cohort_sensitivity.csv",
@@ -1400,6 +1400,30 @@
       }
     },
     {
+      "path": "data/derived/worked_example_measure.csv",
+      "bytes": 452,
+      "sha256": "3f00012ed354a4c61d28a15928f64f9e4ae63819b85a6e40dd29e7774bbef7d9",
+      "structure": {
+        "rows": 1,
+        "column_count": 13,
+        "columns": [
+          "call_id",
+          "source_segment_index",
+          "started_at_s",
+          "ended_at_s",
+          "elapsed_duration_s",
+          "audio_interaction_deviation",
+          "transcript_visible_deviation",
+          "exclude_timing_and_rate",
+          "exclude_pitch",
+          "exclude_intensity",
+          "family_exclusion_support_count",
+          "reference_design",
+          "interpretation"
+        ]
+      }
+    },
+    {
       "path": "data/earlier_pilot/README.md",
       "bytes": 667,
       "sha256": "14e38bda46eb8f8f6e294d679ce72a5582d7bbd9e040207d9ba0b95e5c738a65"
@@ -1500,13 +1524,13 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 1710,
-      "sha256": "b6bb3ddf3de292e216cf16cfc5ed66e0da07910ab323dfc42f2150ef71e7b17f"
+      "bytes": 1853,
+      "sha256": "48a37bcec7f3f26d617e6202de2b0e5d075ff4a5c09b27bc37a15a643002c69b"
     },
     {
       "path": "docs/data_catalog.md",
-      "bytes": 9734,
-      "sha256": "e53155b021a35dd6c6409e6efa8d4bffca66a0fa4ef8694332983c61f664450c"
+      "bytes": 9934,
+      "sha256": "5bb5cfdcd074502d68a1bb38e05aa1a724df48a28bbce40e2ac00b1a7e4c8b36"
     },
     {
       "path": "docs/earnings_call_market_outcome.md",
@@ -1515,8 +1539,8 @@
     },
     {
       "path": "docs/earnings_call_pilot.md",
-      "bytes": 3433,
-      "sha256": "4395278dd88843e94111cb09b2018b54f0a7ac890b6e1dd5b5064dd775ac8b8d"
+      "bytes": 3604,
+      "sha256": "3e02e39d33ef7403cf9cefa51f0a919ab49bd189cafdf02e6a037eb13f97c604"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1530,18 +1554,18 @@
     },
     {
       "path": "docs/media/researcher_walkthrough.mp4",
-      "bytes": 6033833,
-      "sha256": "21343e70014855215c42af1afc4104dd249d5c7b34589f868c2e33337d11d03e"
+      "bytes": 1980227,
+      "sha256": "ddb2b234a5d3a2ace83fbf3d20aec153b7053b3706a8885e1e6798813730ea73"
     },
     {
       "path": "docs/media/researcher_walkthrough_captions.srt",
-      "bytes": 2273,
-      "sha256": "7942eb1c6f2256804531fdeb03a6bb6928e459717647481265dc76adea399dc6"
+      "bytes": 1304,
+      "sha256": "56d05aa69c6279ff21cbb5719efb1183cfb14121cc78936d20427186809d9f4a"
     },
     {
       "path": "docs/media/researcher_walkthrough_poster.png",
-      "bytes": 74708,
-      "sha256": "dd56bd74302d071a65ec358e1fc1925e69e08561e77844cc09dfc7de2dffa5d3"
+      "bytes": 50637,
+      "sha256": "150352221bdc216d8e968a70cd3a8aa91a2eb07cd1c150aaafc712e3119ba76e"
     },
     {
       "path": "docs/repeated_interviewer.md",
@@ -1555,13 +1579,13 @@
     },
     {
       "path": "docs/researcher_walkthrough.md",
-      "bytes": 9661,
-      "sha256": "3e820b2dfc2043b4d51f14c39039fb835574ce397c9103079d011ce434978998"
+      "bytes": 4151,
+      "sha256": "769d4da4391d559187c869d9820864f2022ddb46128364e9efe7c3cbcb13a09d"
     },
     {
       "path": "docs/submission_technical_appendix.md",
-      "bytes": 10805,
-      "sha256": "90cd507007d5fdfa4e0d66b2e82bd9d8d53527fed73638a505f43646f6d9e7db"
+      "bytes": 10927,
+      "sha256": "a750b09da64a4766b412dd5b6627781df7f3ed338525a76c760772be4a1ef70b"
     },
     {
       "path": "docs/video_interview_pilot.md",
@@ -1640,8 +1664,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11817,
-      "sha256": "1f16e5c2fed7863a5d42226c633f568a226f9632f3e369104a53b87e8537715c"
+      "bytes": 11945,
+      "sha256": "b0383d7b453446455c746272079f5bcfb0d3f8b3a48d1ca82f64de08386ab1f2"
     },
     {
       "path": "scripts/verify_submission_evidence.py",

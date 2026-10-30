@@ -6,6 +6,7 @@ Start with the three figures used in the proposal, then follow the guides to the
 
 | Proposal component | Figure or result | Supporting guide |
 | --- | --- | --- |
+| Narrated worked example | [84-second video](media/researcher_walkthrough.mp4) | [Example and measurement notes](researcher_walkthrough.md) |
 | Measurement architecture | [Figure 1](../figures/submission_figure_1_architecture.png) | [Technical appendix](submission_technical_appendix.md) |
 | Earnings-call departures | [Figure 2](../figures/submission_figure_2_answer_departures.png) | [Earnings-call pilot](earnings_call_pilot.md) |
 | Repeated-interviewer profiles | [Figure 3](../figures/submission_figure_3_repeated_interviewer.png) | [Eight-interview demonstration](repeated_interviewer.md) |
