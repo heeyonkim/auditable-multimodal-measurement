@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: summary verify test check
+.PHONY: summary verify test evidence check
 
 summary:
 	$(PYTHON) scripts/summarize_pilot.py --data-dir data/derived --output summary_check.json
@@ -11,4 +11,7 @@ verify:
 test:
 	$(PYTHON) -m unittest discover -s tests -v
 
-check: test verify
+evidence:
+	$(PYTHON) scripts/verify_submission_evidence.py
+
+check: test verify evidence

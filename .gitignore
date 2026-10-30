@@ -26,3 +26,9 @@ __pycache__/
 venv/
 .cache/
 tmp/
+
+# Public, project-produced researcher walkthrough (not source research media)
+!docs/media/
+!docs/media/researcher_walkthrough.mp4
+!docs/media/researcher_walkthrough_poster.png
+!docs/media/researcher_walkthrough_captions.srt

@@ -1,60 +1,34 @@
-# Auditable multimodal measurement
+# Making Organizational Behavior Observable
 
-A proposal-stage research repository showing how audiovisual records can be transformed into time-aligned, construct-neutral observations while preserving provenance, uncertainty, and validation requirements.
+An auditable measurement system for organizational audio and video. It aligns words, vocal delivery, interaction timing, and visible behavior with their source, so researchers can inspect and revise how measures are constructed.
 
-> **Start here:** Read the [five-minute reviewer tour](docs/reviewer_tour.md). It points to the strongest evidence, the working prototype, and the limits of the current release.
+**Proposal-stage prototype.** The released pilots cover **286 earnings calls from 12 executives** and **30 video interviews plus eight separate repeated-interviewer interviews**. Researchers define the constructs and validate the interpretations.
 
-## What this repository demonstrates
+## Start here
 
-The project combines two pilot settings:
+**New to the project?** Read the [researcher walkthrough](docs/researcher_walkthrough.md), then explore the [earnings-call pilot](docs/earnings_call_pilot.md) or [video-interview pilot](docs/video_interview_pilot.md).
 
-- **Earnings calls:** 12 executives, 286 calls, and 3,273 eligible answers.
-- **Bloomberg interviews:** 30 interviews, 360 aligned frame observations, and 120 event-aligned speaker transitions.
-
-The release supports feasibility, auditability, descriptive variation, and construct development. It does not claim that automated measures reveal psychological states or causal effects.
-
-## Quick tour
-
-1. Read the [reviewer tour](docs/reviewer_tour.md) for the main argument and evidence.
-2. Browse the [figures](figures/) for the proposal-level results.
-3. Review the [methods](docs/methods.md) and [reproducibility guide](docs/reproducibility.md).
-4. Open `tools/measure-specification-prototype/index.html` locally to explore the construct-specification prototype.
-5. Use the [full data and artifact catalog](docs/data_catalog.md) only when you need the detailed inventory.
-
-## Repository map
-
-| Location | Purpose |
+| I want to… | Go to |
 | --- | --- |
-| `data/derived/` | Sanitized derived measures and robustness checks |
-| `figures/` | Eleven proposal-ready descriptive figures |
-| `docs/` | Reviewer tour, methods, results, and detailed catalog |
-| `tools/measure-specification-prototype/` | Dependency-free browser prototype |
-| `scripts/` and `tests/` | Summary reproduction and integrity checks |
-| `research_object_manifest.json` | Checksums, schemas, provenance status, and claim boundaries |
+| Understand how a researcher uses the system | [Step-by-step walkthrough](docs/researcher_walkthrough.md) |
+| Review the contribution and evidence quickly | [Five-minute reviewer tour](docs/reviewer_tour.md) |
+| Inspect the earnings-call findings | [Earnings-call pilot guide](docs/earnings_call_pilot.md) |
+| Inspect repeated-person behavior and Figure 3 | [Repeated-interviewer demonstration](docs/repeated_interviewer.md) |
+| Inspect video and production measures | [Video-interview pilot guide](docs/video_interview_pilot.md) |
+| Try specifying a measure | [Browser prototype and opening instructions](tools/measure-specification-prototype/README.md) |
+| Find a dataset, definition, or figure | [Data catalog](docs/data_catalog.md) · [Figure index](figures/README.md) |
+| Check or reproduce the released summaries | [Verification and reuse](docs/reproducibility.md) |
 
-## Verify the snapshot
+## Video walkthrough
 
-The repository requires only Python 3.10 or newer:
+[![Preview the two-minute researcher walkthrough](docs/media/researcher_walkthrough_poster.png)](docs/media/researcher_walkthrough.mp4)
 
-```bash
-make check
-```
+[Watch the current preview](docs/media/researcher_walkthrough.mp4) · [Read the walkthrough](docs/researcher_walkthrough.md) · [Caption file](docs/media/researcher_walkthrough_captions.srt)
 
-This runs the regression tests, reproduces the checked-in summary, verifies every released file against its SHA-256 checksum, and scans text files for common path or credential leaks.
+**Final narration pending:** the author's voice recording is pending. The current video is a preview, not the final narrated version.
 
-## Scientific boundary
+## Explore further
 
-The released fields describe observable or mechanically derived properties of recordings. They do not establish emotion, confidence, intent, personality, cultural typicality, deception, editorial intention, or causal effects.
+[Submission technical appendix](docs/submission_technical_appendix.md) · [All documentation](docs/README.md) · [Methods and limitations](docs/methods.md) · [Future development](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
-Camera cuts, framing, and shot duration describe the produced interview rather than stable characteristics of the interviewee. Response latency and answer duration describe conversational timing and floor allocation; they do not independently identify cognition or question difficulty.
-
-## Privacy and licensing
-
-No source videos, audio, extracted frames, verbatim transcripts, credentials, or API keys are included. No open-source or open-data license has been selected yet; see [licensing status](LICENSE.md).
-
-## Project development
-
-- [Roadmap](ROADMAP.md)
-- [Contributing guidance](CONTRIBUTING.md)
-- [Release checklist](docs/release_checklist.md)
-- [Detailed research-object documentation](docs/research_object_manifest.md)
+Source recordings and verbatim transcripts are excluded. Released measures describe observable or mechanically derived properties; they do not establish emotion, intent, deception, personality, or causal effects. The release supports verification of derived data; a complete media-processing rerun requires additional access and setup.

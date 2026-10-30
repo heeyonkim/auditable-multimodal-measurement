@@ -1,0 +1,21 @@
+sample_id,specification,frame_count,comparison_interviews,composite_deviation,rank_most_distinctive_first,interviewee
+F001,naive_zero_fill_full_grid,344,7.0,0.1450745193134372,5.0,Mark Read
+F002,naive_zero_fill_full_grid,378,7.0,0.12706543789790442,7.0,Pascal Soriot
+F003,naive_zero_fill_full_grid,373,7.0,0.18013368489454323,3.0,Bernard Looney
+F004,naive_zero_fill_full_grid,272,7.0,0.11640952069415429,8.0,Carlos Brito
+F005,naive_zero_fill_full_grid,337,7.0,0.16219919507643749,4.0,Vasant Narasimhan
+F006,naive_zero_fill_full_grid,360,7.0,0.35667078032072813,2.0,Severin Schwan
+F007,naive_zero_fill_full_grid,366,7.0,0.3710295490090107,1.0,Federico Marchetti
+F008,naive_zero_fill_full_grid,379,7.0,0.14308451330959418,6.0,Bruce Cleaver
+F001,observed_only_targeted,9,5.0,1.0438985188936147,2.0,Mark Read
+F002,observed_only_targeted,10,5.0,1.3430087191350355,1.0,Pascal Soriot
+F004,observed_only_targeted,78,5.0,0.48610248694010144,5.0,Carlos Brito
+F006,observed_only_targeted,183,5.0,0.581287479443751,4.0,Severin Schwan
+F007,observed_only_targeted,136,5.0,0.6150652214648591,3.0,Federico Marchetti
+F008,observed_only_targeted,18,5.0,0.39024062310811153,6.0,Bruce Cleaver
+F001,production_adjusted_targeted,9,5.0,0.9481143270831303,2.0,Mark Read
+F002,production_adjusted_targeted,10,5.0,1.3131519070574982,1.0,Pascal Soriot
+F004,production_adjusted_targeted,78,5.0,0.6012315506162947,3.0,Carlos Brito
+F006,production_adjusted_targeted,183,5.0,0.4075476171267621,5.0,Severin Schwan
+F007,production_adjusted_targeted,136,5.0,0.4213178565909766,4.0,Federico Marchetti
+F008,production_adjusted_targeted,18,5.0,0.24694779577884576,6.0,Bruce Cleaver

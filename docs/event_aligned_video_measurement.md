@@ -1,5 +1,7 @@
 # Event-aligned video measurement specification
 
+[Home](../README.md) / [Documentation](README.md)
+
 This specification was written before the new event-aligned frames were sent
 to the visual model.
 

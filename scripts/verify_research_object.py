@@ -17,8 +17,8 @@ import sys
 from pathlib import Path
 
 
-RELEASE_VERSION = "0.4.0-event-aligned-video"
-RELEASE_DATE = "2026-09-28"
+RELEASE_VERSION = "0.6.0-submission-evidence"
+RELEASE_DATE = "2026-10-30"
 MANIFEST_NAME = "research_object_manifest.json"
 EXCLUDED_NAMES = {MANIFEST_NAME, ".DS_Store"}
 EXCLUDED_SUFFIXES = {".pyc", ".zip", ".tar", ".gz"}
@@ -130,6 +130,9 @@ def build_manifest(root: Path) -> dict:
                 "calls": 286,
                 "executives": 12,
                 "eligible_answers": 3273,
+                "paired_answer_scores": 3233,
+                "unscored_answers_in_short_calls": 40,
+                "market_outcome_calls": 274,
                 "content_released": "derived measures only",
             },
             "bloomberg_interviews": {
@@ -143,6 +146,16 @@ def build_manifest(root: Path) -> dict:
                 "content_released": "source URLs and derived measures; no media or transcripts",
             },
         },
+        "additional_samples": {
+            "repeated_interviewer": {
+                "interviews": 8,
+                "source_minutes": 192.4,
+                "overlap_with_30_interview_archive": 0,
+                "speaking_scores": 8,
+                "listening_scores": 6,
+                "content_released": "source manifest, numeric profiles, calibrated feature summaries, and sensitivity results; no media, transcripts, or embeddings",
+            },
+        },
         "pipeline_stages": [
             {"stage": "source selection", "status": "documented in released manifest"},
             {"stage": "audio extraction", "status": "run; source media excluded"},
@@ -151,6 +164,7 @@ def build_manifest(root: Path) -> dict:
             {"stage": "sampled-frame observation", "status": "derived tables released"},
             {"stage": "shot detection and temporal alignment", "status": "derived tables and sensitivity checks released"},
             {"stage": "event-aligned composition measurement", "status": "frozen specification, derived tables, and uncertainty audit released"},
+            {"stage": "exploratory outcome linkage", "status": "earnings-call market models, sensitivity checks, and interpretation boundaries released"},
             {"stage": "construct specification", "status": "working measure-specification prototype released"},
         ],
         "model_registry": [

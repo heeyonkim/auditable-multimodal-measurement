@@ -1,0 +1,22 @@
+sample_id,interviewee,speaker_id,assigned_role,selected_as_francine,turns,speech_seconds,words
+F001,Mark Read,SPEAKER_00,Interviewer 1,True,52,310.145,1070
+F001,Mark Read,SPEAKER_01,Guest 1,False,52,1045.171,3608
+F002,Pascal Soriot,SPEAKER_00,Guest 1,False,7,93.235,248
+F002,Pascal Soriot,SPEAKER_01,Guest 1,False,23,1119.47,2950
+F002,Pascal Soriot,SPEAKER_02,Interviewer 2,True,17,132.012,462
+F002,Pascal Soriot,SPEAKER_03,Other 3,False,2,6.7,23
+F002,Pascal Soriot,SPEAKER_04,Other 4,False,2,3.577,11
+F003,Bernard Looney,SPEAKER_00,Guest 1,True,40,227.556,805
+F003,Bernard Looney,SPEAKER_01,Interviewer 1,False,40,1116.939,3221
+F004,Carlos Brito,SPEAKER_00,Guest 1,True,18,311.986,973
+F004,Carlos Brito,SPEAKER_01,Other 1,False,19,839.799,2989
+F004,Carlos Brito,SPEAKER_02,Other 2,False,2,3.021,7
+F005,Vasant Narasimhan,SPEAKER_00,Guest 1,True,20,321.182,959
+F005,Vasant Narasimhan,SPEAKER_01,Interviewer 1,False,20,1013.9,3007
+F006,Severin Schwan,SPEAKER_00,Guest 1,True,15,264.602,771
+F006,Severin Schwan,SPEAKER_01,Interviewer 1,False,15,1083.206,2692
+F007,Federico Marchetti,SPEAKER_00,Guest 1,True,32,265.617,838
+F007,Federico Marchetti,SPEAKER_01,Guest 2,False,30,1091.408,2798
+F007,Federico Marchetti,SPEAKER_02,Other 1,False,4,3.375,5
+F008,Bruce Cleaver,SPEAKER_00,Guest 1,True,48,236.99,786
+F008,Bruce Cleaver,SPEAKER_01,Interviewer 1,False,48,1133.597,4096

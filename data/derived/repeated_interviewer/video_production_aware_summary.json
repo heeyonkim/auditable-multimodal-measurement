@@ -1,0 +1,59 @@
+{
+  "minimum_frames_per_interview": 8,
+  "eligible_interviews_by_specification": {
+    "naive_zero_fill_full_grid": 8,
+    "observed_only_targeted": 6,
+    "production_adjusted_targeted": 6,
+    "production_adjusted_away_from_cuts": 2
+  },
+  "comparisons": [
+    {
+      "first": "observed_only_targeted",
+      "second": "production_adjusted_targeted",
+      "common_interviews": 6,
+      "spearman_rho": 0.8285714285714287,
+      "spearman_p": 0.04156268221574335,
+      "largest_absolute_rank_change": 2
+    },
+    {
+      "first": "naive_zero_fill_full_grid",
+      "second": "production_adjusted_targeted",
+      "common_interviews": 6,
+      "spearman_rho": -0.3714285714285715,
+      "spearman_p": 0.4684781341107872,
+      "largest_absolute_rank_change": 4
+    },
+    {
+      "first": "production_adjusted_targeted",
+      "second": "production_adjusted_away_from_cuts",
+      "common_interviews": 0,
+      "spearman_rho": null,
+      "spearman_p": null,
+      "largest_absolute_rank_change": null
+    }
+  ],
+  "most_distinctive_interview_by_specification": {
+    "naive_zero_fill_full_grid": {
+      "sample_id": "F007",
+      "interviewee": "Federico Marchetti",
+      "composite_deviation": 0.3710295490090107
+    },
+    "observed_only_targeted": {
+      "sample_id": "F002",
+      "interviewee": "Pascal Soriot",
+      "composite_deviation": 1.3430087191350355
+    },
+    "production_adjusted_targeted": {
+      "sample_id": "F002",
+      "interviewee": "Pascal Soriot",
+      "composite_deviation": 1.3131519070574982
+    }
+  },
+  "full_grid_observable_share_range": [
+    0.002680965147453083,
+    0.1638888888888889
+  ],
+  "targeted_frames_within_2s_of_cut": 282,
+  "targeted_valid_listening_frames": 444,
+  "interpretation_limit": "The comparison evaluates production sensitivity, not the meaning of facial movements."
+}

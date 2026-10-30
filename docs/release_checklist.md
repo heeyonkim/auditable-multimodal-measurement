@@ -1,5 +1,7 @@
 # Release checklist
 
+[Home](../README.md) / [Documentation](README.md)
+
 Snapshot checked on September 27, 2026.
 
 ## Expanded audio panel
@@ -19,6 +21,13 @@ Snapshot checked on September 27, 2026.
 - A second scene threshold and one-, two-, and three-second timing windows are included as sensitivity evidence.
 - The portable summary script reproduces the counts and proposal-level descriptive statistics.
 - Public identifiers and source URLs are retained so provenance can be audited.
+
+## Earnings-call market linkage
+
+- The released analysis panel contains 274 earnings calls from 12 firms with eligible answer-level scores and signed market-adjusted returns.
+- Model, cohort-sensitivity, permutation-summary, and leave-one-company-out results are retained rather than reporting only the strongest specification.
+- The pooled median association is small and imprecise, every pooled firm-clustered 95% interval crosses zero, and the direction differs between the original and added cohorts.
+- The documentation identifies omitted earnings and guidance news, daily-return timing, leave-one-call-out baselines, and the small number of firm clusters as material limitations.
 
 ## Privacy and credentials
 

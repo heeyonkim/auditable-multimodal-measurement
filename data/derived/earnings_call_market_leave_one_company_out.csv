@@ -1,0 +1,25 @@
+predictor,predictor_label,omitted_company,n,partial_spearman,p_value_descriptive
+answer_audio_median,Typical answer deviation (median),AMD,248,-0.08313012391611264,0.19196769845366196
+answer_audio_median,Typical answer deviation (median),Accenture,249,-0.07078238273703176,0.2658358738147287
+answer_audio_median,Typical answer deviation (median),Alphabet,256,-0.07032325414971037,0.26226481914846744
+answer_audio_median,Typical answer deviation (median),Apple,242,-0.13933040930720905,0.030247806982091282
+answer_audio_median,Typical answer deviation (median),Citigroup,253,-0.10350748035478285,0.10045548850604674
+answer_audio_median,Typical answer deviation (median),ExxonMobil,253,-0.11364677994059287,0.071143254061829
+answer_audio_median,Typical answer deviation (median),General Motors,249,-0.12399965954125904,0.05065566968766475
+answer_audio_median,Typical answer deviation (median),JPMorgan Chase,252,-0.11136973332708439,0.07762367474439921
+answer_audio_median,Typical answer deviation (median),Microsoft,255,-0.09995987000632166,0.11129946745876011
+answer_audio_median,Typical answer deviation (median),NVIDIA,257,-0.11349510225318975,0.06929844640016851
+answer_audio_median,Typical answer deviation (median),Pfizer,246,-0.07298737583198515,0.25409743366251863
+answer_audio_median,Typical answer deviation (median),Walmart,254,-0.10745133706365195,0.08745150071233702
+answer_audio_p90,Elevated answer deviation (p90),AMD,248,-0.039778169663702345,0.5329498674395449
+answer_audio_p90,Elevated answer deviation (p90),Accenture,249,-0.05801284804230394,0.361985048629511
+answer_audio_p90,Elevated answer deviation (p90),Alphabet,256,-0.05949912004288739,0.3430442527399899
+answer_audio_p90,Elevated answer deviation (p90),Apple,242,-0.10523699852669727,0.10243425029607067
+answer_audio_p90,Elevated answer deviation (p90),Citigroup,253,-0.07305920000829937,0.24691663218997362
+answer_audio_p90,Elevated answer deviation (p90),ExxonMobil,253,-0.07074575315403503,0.2622397567216542
+answer_audio_p90,Elevated answer deviation (p90),General Motors,249,-0.09088654912030668,0.1527427726616316
+answer_audio_p90,Elevated answer deviation (p90),JPMorgan Chase,252,-0.06466551061536298,0.3065442401732586
+answer_audio_p90,Elevated answer deviation (p90),Microsoft,255,-0.050011235674514994,0.42650328449231556
+answer_audio_p90,Elevated answer deviation (p90),NVIDIA,257,-0.08976563206949596,0.15130534961388986
+answer_audio_p90,Elevated answer deviation (p90),Pfizer,246,-0.08849331389045405,0.16647787149811935
+answer_audio_p90,Elevated answer deviation (p90),Walmart,254,-0.0633048396746553,0.31492330627313253

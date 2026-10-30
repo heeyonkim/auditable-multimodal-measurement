@@ -1,5 +1,30 @@
 # Reproducibility and responsible release
 
+[Home](../README.md) / [Documentation](README.md)
+
+## Verify this release
+
+Download and extract the repository, then open a terminal in its main folder. With Python 3.10 or newer installed, run:
+
+```bash
+make check
+```
+
+If `make` is unavailable, run the same checks directly:
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/verify_research_object.py --check
+```
+
+To regenerate a summary separately:
+
+```bash
+python3 scripts/summarize_pilot.py --data-dir data/derived --output summary_check.json
+```
+
+The summary script and checks use the Python standard library. The [data catalog](data_catalog.md) explains the files; the [manifest guide](research_object_manifest.md) explains integrity and provenance.
+
 ## Two reproducibility levels
 
 ### Derived-data reproduction

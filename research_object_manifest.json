@@ -2,8 +2,8 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable proposal prototype",
-    "version": "0.4.0-event-aligned-video",
-    "date": "2026-09-28",
+    "version": "0.6.0-submission-evidence",
+    "date": "2026-10-30",
     "status": "proposal-stage derived-data research object"
   },
   "corpora": {
@@ -11,6 +11,9 @@
       "calls": 286,
       "executives": 12,
       "eligible_answers": 3273,
+      "paired_answer_scores": 3233,
+      "unscored_answers_in_short_calls": 40,
+      "market_outcome_calls": 274,
       "content_released": "derived measures only"
     },
     "bloomberg_interviews": {
@@ -22,6 +25,16 @@
       "event_aligned_frames": 360,
       "eligible_question_answer_pairs": 304,
       "content_released": "source URLs and derived measures; no media or transcripts"
+    }
+  },
+  "additional_samples": {
+    "repeated_interviewer": {
+      "interviews": 8,
+      "source_minutes": 192.4,
+      "overlap_with_30_interview_archive": 0,
+      "speaking_scores": 8,
+      "listening_scores": 6,
+      "content_released": "source manifest, numeric profiles, calibrated feature summaries, and sensitivity results; no media, transcripts, or embeddings"
     }
   },
   "pipeline_stages": [
@@ -52,6 +65,10 @@
     {
       "stage": "event-aligned composition measurement",
       "status": "frozen specification, derived tables, and uncertainty audit released"
+    },
+    {
+      "stage": "exploratory outcome linkage",
+      "status": "earnings-call market models, sensitivity checks, and interpretation boundaries released"
     },
     {
       "stage": "construct specification",
@@ -100,7 +117,7 @@
   ],
   "integrity": {
     "algorithm": "SHA-256",
-    "file_count": 71,
+    "file_count": 102,
     "privacy_or_credential_findings": [],
     "passes_release_scan": true
   },
@@ -112,8 +129,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 284,
-      "sha256": "71b62b3e7397dbf13f3bc5ea87f092dc5c42ca48f1504aaa57aad9ec811e74f6"
+      "bytes": 509,
+      "sha256": "f9064045ecc27529a62ac07b1bae48883891789433c4780f3b33b43aeffbb9b6"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -127,18 +144,23 @@
     },
     {
       "path": "Makefile",
-      "bytes": 286,
-      "sha256": "f3260cb67c1076b59801305624cb843ef2e71a16c155fa2ab059548e4570b0f6"
+      "bytes": 364,
+      "sha256": "9729fcab065d53f94c45f9b3bf95aa3449b77a8ac6d9aeddd0717860cc1503f7"
     },
     {
       "path": "README.md",
-      "bytes": 3150,
-      "sha256": "c78160276f249110648ee71955436e7671e60420b1262bb9b99df4d09e6a134d"
+      "bytes": 2741,
+      "sha256": "7516a62487771162bb0271fb85ef559df407dd6d8206ee6f05a1be23380dea84"
     },
     {
       "path": "ROADMAP.md",
       "bytes": 1731,
       "sha256": "dd9d2136df3dd066cdb7c0286958a11927fb4cff5382282f055da4d70d30dc70"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 807,
+      "sha256": "95555d061f709da97854272868a108b64b907ee81ff368b8c6cf0ed05a59d3e4"
     },
     {
       "path": "data/derived/answer_level_organizational_variables.csv",
@@ -165,46 +187,6 @@
           "vocal_modulation_deviation",
           "delivery_text_divergence",
           "high_delivery_routine_text_example"
-        ]
-      }
-    },
-    {
-      "path": "data/derived/answer_space_robustness.csv",
-      "bytes": 3300,
-      "sha256": "9f04c250fe6fdec6bc05fb6e31187d14cb3c4dc995f30030eeeb5d43c9ed1b5e",
-      "structure": {
-        "rows": 29,
-        "column_count": 11,
-        "columns": [
-          "analysis",
-          "specification",
-          "subgroup",
-          "predictor",
-          "n_turn_pairs",
-          "videos",
-          "minimum_question_words",
-          "minimum_answer_duration_seconds",
-          "within_video_spearman_rho",
-          "leave_one_video_out_min_rho",
-          "leave_one_video_out_max_rho"
-        ]
-      }
-    },
-    {
-      "path": "data/derived/answer_space_within_video_associations.csv",
-      "bytes": 691,
-      "sha256": "041e988e28c8752ebb0b31bcd0afca1be0985c9bae6d7ebe9511b7af01ae8ce0",
-      "structure": {
-        "rows": 6,
-        "column_count": 7,
-        "columns": [
-          "predictor",
-          "within_video_spearman_rho",
-          "ci_low",
-          "ci_high",
-          "n_turn_pairs",
-          "videos",
-          "bootstrap_iterations"
         ]
       }
     },
@@ -238,18 +220,188 @@
       }
     },
     {
-      "path": "data/derived/editorial_response_by_transition.csv",
-      "bytes": 470,
-      "sha256": "baaaeca4380604a1a9dfc8a6fef46a26503a6c00d2ca353d180e7bf7dccdee9c",
+      "path": "data/derived/earnings_call_market_cohort_sensitivity.csv",
+      "bytes": 1412,
+      "sha256": "a89eb19754c407fb455ed1d195ab7c5e19862727d6f5218060e8948825ed63d6",
       "structure": {
-        "rows": 7,
-        "column_count": 5,
+        "rows": 6,
+        "column_count": 12,
         "columns": [
-          "role_transition",
-          "transition_count",
-          "camera_cut_within_2s_rate",
-          "median_absolute_edit_delay_seconds",
-          "videos"
+          "cohort",
+          "predictor",
+          "predictor_label",
+          "n",
+          "companies",
+          "partial_spearman",
+          "spearman_p_descriptive",
+          "std_audio_coefficient_pct_points",
+          "firm_clustered_se",
+          "firm_clustered_p",
+          "ci95_low",
+          "ci95_high"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/earnings_call_market_leave_one_company_out.csv",
+      "bytes": 2613,
+      "sha256": "0ec1bac0f4c97951f4cfce533a05b612e9f8ea3e0a90eee8bcb6844a29fa39ef",
+      "structure": {
+        "rows": 24,
+        "column_count": 6,
+        "columns": [
+          "predictor",
+          "predictor_label",
+          "omitted_company",
+          "n",
+          "partial_spearman",
+          "p_value_descriptive"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/earnings_call_market_models.csv",
+      "bytes": 7931,
+      "sha256": "1beeeb1871fa1605161716d9c3987254a3e2978011f27d71c4cc380fdce9e76c",
+      "structure": {
+        "rows": 20,
+        "column_count": 16,
+        "columns": [
+          "predictor",
+          "predictor_label",
+          "text_control",
+          "outcome",
+          "outcome_label",
+          "specification",
+          "n",
+          "partial_spearman",
+          "spearman_p_descriptive",
+          "std_audio_coefficient_pct_points",
+          "firm_clustered_se",
+          "firm_clustered_p",
+          "ci95_low",
+          "ci95_high",
+          "companies",
+          "controls"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/earnings_call_market_outcomes.csv",
+      "bytes": 391666,
+      "sha256": "67a7336159eec1a67c96f06f4a99cb1e52a9171a854d3cee97a7ec07bfddc5ae",
+      "structure": {
+        "rows": 286,
+        "column_count": 63,
+        "columns": [
+          "call_id",
+          "year",
+          "quarter",
+          "eligible_q_and_a_turns",
+          "speaking_rate_delta_from_prepared_wpm",
+          "response_latency_s",
+          "long_gap_rate_delta_from_prepared_per_100_words",
+          "f0_relative_to_prepared_semitones",
+          "f0_cv_delta_from_prepared",
+          "intensity_relative_to_prepared_db",
+          "intensity_sd_delta_from_prepared_db",
+          "word_count",
+          "filled_pauses_per_1000_words",
+          "discourse_fillers_per_1000_words",
+          "adjacent_repetitions_per_1000_words",
+          "reference_design",
+          "reference_call_count",
+          "call_profile_status",
+          "call_audio_interaction_deviation",
+          "call_transcript_visible_deviation",
+          "audio_top_contributors",
+          "transcript_top_contributors",
+          "call_audio_deviation_percentile",
+          "median_within_call_answer_audio_deviation",
+          "p90_within_call_answer_audio_deviation",
+          "maximum_within_call_answer_audio_deviation",
+          "median_within_call_answer_transcript_deviation",
+          "audio_outlier_turns",
+          "high_priority_audio_not_transcript_turns",
+          "most_deviant_source_segment_index",
+          "most_deviant_started_at_s",
+          "most_deviant_audio_score",
+          "most_deviant_top_contributors",
+          "answer_count",
+          "answer_audio_median",
+          "answer_audio_p90",
+          "answer_audio_max",
+          "answer_text_median",
+          "answer_text_p90",
+          "answer_text_max",
+          "high_audio_routine_text_count",
+          "high_audio_routine_text_share",
+          "ticker",
+          "company",
+          "executive",
+          "prepared_segment_count",
+          "acoustic_anchor",
+          "audio_minus_text_p90",
+          "conference_datetime_iso",
+          "conference_date",
+          "conference_time_eastern",
+          "prior_trading_date",
+          "response_trading_date",
+          "second_response_trading_date",
+          "market_adjusted_return_1d_pct",
+          "absolute_market_adjusted_return_1d_pct",
+          "market_adjusted_return_2d_pct",
+          "absolute_market_adjusted_return_2d_pct",
+          "pre_event_abnormal_volatility_60d_pct",
+          "volatility_scaled_absolute_return_1d",
+          "abnormal_log_volume_20d",
+          "calendar_year",
+          "calendar_quarter"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/earnings_call_market_summary.json",
+      "bytes": 1842,
+      "sha256": "54ff266cd39ee0dc153278cbf39508f58daa637d89bb0c1057c8828b7cf2cbdc",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "answer_level_n",
+          "calls",
+          "cohort_sensitivity",
+          "companies",
+          "median",
+          "median_2d",
+          "outcome",
+          "p90",
+          "permutation",
+          "recommended_interpretation",
+          "whole_call",
+          "whole_call_n"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/earnings_call_screening_ledger.csv",
+      "bytes": 24011,
+      "sha256": "fd96f94beebeca3c02ed3320fc4368f009099ce46b488f7d693f13ed9496a419",
+      "structure": {
+        "rows": 300,
+        "column_count": 12,
+        "columns": [
+          "call_id",
+          "ticker",
+          "executive",
+          "year",
+          "quarter",
+          "cohort",
+          "retained_in_286",
+          "eligible_answer_count",
+          "answer_summary_available",
+          "screening_status",
+          "extracted_focal_turns",
+          "reason"
         ]
       }
     },
@@ -755,46 +907,6 @@
       }
     },
     {
-      "path": "data/derived/outcome_model_comparison.csv",
-      "bytes": 930,
-      "sha256": "6102b2ef7417bbb9737b35b9657d27a50d543dd9b6697fcf2e07ac678d97ccb5",
-      "structure": {
-        "rows": 7,
-        "column_count": 11,
-        "columns": [
-          "outcome",
-          "model",
-          "n",
-          "videos",
-          "roc_auc",
-          "brier_score",
-          "log_loss",
-          "accuracy_at_0_5",
-          "mae",
-          "r_squared",
-          "spearman_rho"
-        ]
-      }
-    },
-    {
-      "path": "data/derived/outcome_variable_recipes.csv",
-      "bytes": 1507,
-      "sha256": "3d0ba80d646bec21e317393ec6406d229f9c37e13e4e9a28c1bf73ebc28d1dc5",
-      "structure": {
-        "rows": 3,
-        "column_count": 7,
-        "columns": [
-          "outcome",
-          "unit",
-          "operationalization",
-          "modalities",
-          "theoretical_use",
-          "must_not_be_called",
-          "validation_priority"
-        ]
-      }
-    },
-    {
       "path": "data/derived/pilot_scale.csv",
       "bytes": 531,
       "sha256": "5be1bcc069655b422e9a531629b6363b5bf6d1270d301ee00f68bcefafbc03ae",
@@ -811,14 +923,269 @@
     },
     {
       "path": "data/derived/pilot_summary_statistics.json",
-      "bytes": 2170,
-      "sha256": "a2d120cd5287625c6fa5252480f0af88c5d31e652197bc76547eca3d9bd55d61",
+      "bytes": 2691,
+      "sha256": "1b6b65309a01264310b27a83a0427fe09a22871a1eaceb33d0e99b907e1d27a9",
       "structure": {
         "top_level_type": "dict",
         "top_level_keys": [
           "bloomberg_video_pilot",
           "earnings_audio_pilot",
+          "earnings_market_outcome_linkage",
           "illustrative_variation"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_audio_transcript_profiles.csv",
+      "bytes": 1807,
+      "sha256": "cf7567729a43bf7c170d9d4bc0730db9ae661e6402253a2dc39a275d4cf83048",
+      "structure": {
+        "rows": 8,
+        "column_count": 17,
+        "columns": [
+          "sample_id",
+          "francine_speaker_id",
+          "interviewer_turns",
+          "interviewer_words",
+          "median_words_per_turn",
+          "turn_word_count_cv",
+          "mattr_50",
+          "median_turn_duration_s",
+          "median_response_latency_s",
+          "interviewer_speech_share",
+          "silent_pauses_per_minute",
+          "median_speaking_rate_wpm",
+          "median_f0_cv",
+          "median_intensity_sd_db",
+          "fillers_per_100_words",
+          "interviewee",
+          "organization"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_multimodal_deviation_profiles.csv",
+      "bytes": 849,
+      "sha256": "08cecb37b34a798a809476d56fad4e46b37785930a1e7a38a17e5a1d8914aed6",
+      "structure": {
+        "rows": 8,
+        "column_count": 6,
+        "columns": [
+          "sample_id",
+          "Interaction timing",
+          "Transcript",
+          "Vocal delivery",
+          "Visual: listening",
+          "Visual: speaking"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_nonvisual_domain_deviations.csv",
+      "bytes": 3067,
+      "sha256": "70ef05def0aa70d16207695355ecd5948d5ecad1c6bc1ffe47fbd4af034088d6",
+      "structure": {
+        "rows": 24,
+        "column_count": 14,
+        "columns": [
+          "sample_id",
+          "domain",
+          "composite_deviation",
+          "median_words_per_turn",
+          "turn_word_count_cv",
+          "mattr_50",
+          "median_turn_duration_s",
+          "median_response_latency_s",
+          "interviewer_speech_share",
+          "silent_pauses_per_minute",
+          "median_speaking_rate_wpm",
+          "median_f0_cv",
+          "median_intensity_sd_db",
+          "fillers_per_100_words"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_speaker_role_audit.csv",
+      "bytes": 1368,
+      "sha256": "aa01abeb9fe4199485c5c023adb33cd46f6fe162dd9429f59541c753e70fe8bf",
+      "structure": {
+        "rows": 21,
+        "column_count": 8,
+        "columns": [
+          "sample_id",
+          "interviewee",
+          "speaker_id",
+          "assigned_role",
+          "selected_as_francine",
+          "turns",
+          "speech_seconds",
+          "words"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_speaker_state_coverage.csv",
+      "bytes": 1061,
+      "sha256": "2203f4e4de80a7626c0f5063df052b12343577b428ab19d09c9574d822a29d40",
+      "structure": {
+        "rows": 8,
+        "column_count": 14,
+        "columns": [
+          "sample_id",
+          "video_id",
+          "interviewee",
+          "organization",
+          "listening",
+          "speaking",
+          "no_speech",
+          "other_speaker",
+          "verified_frames",
+          "classified_speech_share",
+          "speaking_screened_seconds",
+          "speaking_observable_share",
+          "listening_screened_seconds",
+          "listening_observable_share"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/francine_speaker_state_deviations.csv",
+      "bytes": 3172,
+      "sha256": "d1058d419196b25041ae706fdbc162d385bbfee9d803b03a6158a4d20d5885fe",
+      "structure": {
+        "rows": 14,
+        "column_count": 14,
+        "columns": [
+          "sample_id",
+          "conversation_state",
+          "frame_count",
+          "comparison_interviews",
+          "composite_deviation",
+          "smile_intensity",
+          "brow_raise",
+          "brow_lower",
+          "eye_widen",
+          "eye_squint",
+          "jaw_open",
+          "mouth_press",
+          "bootstrap_ci_lower",
+          "bootstrap_ci_upper"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/manifest.csv",
+      "bytes": 2696,
+      "sha256": "883e066f9663468503ba6485e04c37464060fda73ad036828ecc26bb45664a58",
+      "structure": {
+        "rows": 8,
+        "column_count": 15,
+        "columns": [
+          "sample_id",
+          "video_id",
+          "title",
+          "organization",
+          "interviewee",
+          "interviewer",
+          "program",
+          "format_stratum",
+          "host_verification",
+          "duration_seconds",
+          "duration_minutes",
+          "upload_date",
+          "channel",
+          "youtube_url",
+          "in_original_1971_playlist"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/speaker_role_overrides.csv",
+      "bytes": 933,
+      "sha256": "12a35230a7ff90dc924b2bc2073c6a755a9edf2249ce0c21cc1df2e215886ea6",
+      "structure": {
+        "rows": 6,
+        "column_count": 5,
+        "columns": [
+          "sample_id",
+          "francine_speaker_id",
+          "guest_speaker_id",
+          "original_role",
+          "reason"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/video_episode_comparison.csv",
+      "bytes": 1644,
+      "sha256": "ab93d093a16162dbce857bfed9278a22307e03a0c754dabbc0f5f93ecf2a339b",
+      "structure": {
+        "rows": 20,
+        "column_count": 7,
+        "columns": [
+          "sample_id",
+          "specification",
+          "frame_count",
+          "comparison_interviews",
+          "composite_deviation",
+          "rank_most_distinctive_first",
+          "interviewee"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/video_observability_coverage.csv",
+      "bytes": 747,
+      "sha256": "447f9812481fa72b9b024a4ba6859eac055cd963013be0d1c8f5edfe6fe41b18",
+      "structure": {
+        "rows": 8,
+        "column_count": 8,
+        "columns": [
+          "sample_id",
+          "sampled_listening_frames",
+          "observable_listening_frames",
+          "observable_share",
+          "interviewee",
+          "targeted_listening_seconds",
+          "targeted_observable_seconds",
+          "targeted_observable_share"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/video_production_aware_summary.json",
+      "bytes": 1836,
+      "sha256": "ec7e2e9dbc26d7725476db2f793cd1c0160180dd17d2c436bb7f05f545345df4",
+      "structure": {
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "comparisons",
+          "eligible_interviews_by_specification",
+          "full_grid_observable_share_range",
+          "interpretation_limit",
+          "minimum_frames_per_interview",
+          "most_distinctive_interview_by_specification",
+          "targeted_frames_within_2s_of_cut",
+          "targeted_valid_listening_frames"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/repeated_interviewer/visual_feature_calibration.csv",
+      "bytes": 7089,
+      "sha256": "68b737466876e4ceb05dcba6fb1e24975634f1fa0f7183566ad67c5657e98fd8",
+      "structure": {
+        "rows": 98,
+        "column_count": 7,
+        "columns": [
+          "sample_id",
+          "conversation_state",
+          "feature",
+          "adjusted_episode_mean",
+          "pooled_frame_sd",
+          "frame_count",
+          "comparison_interviews"
         ]
       }
     },
@@ -1127,54 +1494,104 @@
       }
     },
     {
+      "path": "docs/README.md",
+      "bytes": 2408,
+      "sha256": "f52b1d15f79936b7cb2fc3dd1cfc314bcfbb728adf899c4ff09daa4c16b4bb0b"
+    },
+    {
       "path": "docs/data_catalog.md",
-      "bytes": 7151,
-      "sha256": "5722f010aa86fdb589db88ff2a9236ca57cb84050dabc19665b0994ab85bc38f"
+      "bytes": 11395,
+      "sha256": "b1b2c8451da79d2de33115972532d09496e3afc5e65ef764deee44e4064a357f"
+    },
+    {
+      "path": "docs/earnings_call_market_outcome.md",
+      "bytes": 3048,
+      "sha256": "f80f14c87f38bf5890af22e42f1ede8a6646cc06ea31d89e771843d19013d092"
+    },
+    {
+      "path": "docs/earnings_call_pilot.md",
+      "bytes": 3453,
+      "sha256": "70b1c30d08bc391cb350d77226702a5ba55277d6fe28faf1830f070be991135c"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
-      "bytes": 3541,
-      "sha256": "937bed1870b88e8e0da989e1c31706644621db9317bb3817bd84d6f1eb97c86d"
+      "bytes": 3592,
+      "sha256": "45865dbe17d529bac902f99484e5bc91ae331888858ba779b2ed1e336e9d431b"
     },
     {
       "path": "docs/event_aligned_video_results.md",
-      "bytes": 2585,
-      "sha256": "21ccb0514b7bb7f9bef184385ec0af8f71c8ac942a06ed8dc33a8f55b7d54cb4"
+      "bytes": 2636,
+      "sha256": "9f70cc42ca16437093337b85c557acbd477a2e6e73f2e43fca35dcadbfa95503"
+    },
+    {
+      "path": "docs/media/researcher_walkthrough.mp4",
+      "bytes": 6033833,
+      "sha256": "21343e70014855215c42af1afc4104dd249d5c7b34589f868c2e33337d11d03e"
+    },
+    {
+      "path": "docs/media/researcher_walkthrough_captions.srt",
+      "bytes": 2273,
+      "sha256": "7942eb1c6f2256804531fdeb03a6bb6928e459717647481265dc76adea399dc6"
+    },
+    {
+      "path": "docs/media/researcher_walkthrough_poster.png",
+      "bytes": 74708,
+      "sha256": "dd56bd74302d071a65ec358e1fc1925e69e08561e77844cc09dfc7de2dffa5d3"
     },
     {
       "path": "docs/methods.md",
-      "bytes": 2950,
-      "sha256": "fcf51f5c0702ba65cd6b15127bf387e135e42fcad5454d77067b980803a86cbb"
-    },
-    {
-      "path": "docs/proximal_outcome_pilot.md",
-      "bytes": 2136,
-      "sha256": "8ca2b3ce504469034147664ca07418793264ef20b85d7cabfa435c4189e45936"
+      "bytes": 3001,
+      "sha256": "c6bdf501974de467a8e68a850f00dcc86a6a205a2f3236bb596ed88799353574"
     },
     {
       "path": "docs/release_checklist.md",
-      "bytes": 2568,
-      "sha256": "ddb25f51c3032dd08ab0fda93230c8877afc7768ea21ed80582fade72680d8c1"
+      "bytes": 3306,
+      "sha256": "a66663b0decce7af90e18ca4bb5b8dabcf03f0896b108689c2811192869ae14b"
+    },
+    {
+      "path": "docs/repeated_interviewer.md",
+      "bytes": 5408,
+      "sha256": "3c81834d80881e8c4da73ed4d91f1936feb0ee9397f16c3a93c595852e3de3d4"
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 2005,
-      "sha256": "ab8a96cd81ccc4a5505eb056fb3ccd6b8a31842532a3001aeb4248ece3858be6"
+      "bytes": 2728,
+      "sha256": "cfc837ab9000c05b344296775b30150f736edba882c4bb09be86e6d1c66a2ed6"
     },
     {
       "path": "docs/research_object_manifest.md",
-      "bytes": 2184,
-      "sha256": "5cd5ac77d2c5c698d36427f5003d011cfcb1f7eb58017f5cdcdadf0522d11aef"
+      "bytes": 2235,
+      "sha256": "8d152f1e40983fc5c551f93895c8f483ba3d33c6341ea5da17baf119a703838e"
     },
     {
       "path": "docs/research_opportunity_map.md",
-      "bytes": 5291,
-      "sha256": "182de963187bba3f0ee34669ce37eab75eea2bcd0872f629e8258cfdc564c6b7"
+      "bytes": 5465,
+      "sha256": "fbf07da866d932ab8129eb324051dce8cc30de09fe0b5d47e2740a02ecd86cfe"
+    },
+    {
+      "path": "docs/researcher_walkthrough.md",
+      "bytes": 9661,
+      "sha256": "3e820b2dfc2043b4d51f14c39039fb835574ce397c9103079d011ce434978998"
     },
     {
       "path": "docs/reviewer_tour.md",
-      "bytes": 4889,
-      "sha256": "9d1730688618edb20dcd003bf2654055670fd47d17c9bc2c1903dbc2ba4a5697"
+      "bytes": 3254,
+      "sha256": "e7091575ea0e88fec4dc26043a2df07e7baeefd32a60b4b1f0146e386243826e"
+    },
+    {
+      "path": "docs/submission_technical_appendix.md",
+      "bytes": 9441,
+      "sha256": "ec05b09e5be1c3ec316d8c7af4de251a38362f7c359a20978839950038a22b55"
+    },
+    {
+      "path": "docs/video_interview_pilot.md",
+      "bytes": 3301,
+      "sha256": "678d5d458135d02c3a3d1ffb1b013e191672f292a469f4b582f09e9169f450f9"
+    },
+    {
+      "path": "figures/README.md",
+      "bytes": 2216,
+      "sha256": "6225808b8a5b6e9e96913508dc0e00f98db9a283cdf99b777d009349f98af948"
     },
     {
       "path": "figures/figure_10_expanded_audio_robustness.png",
@@ -1222,9 +1639,9 @@
       "sha256": "ef0d926d4fbd9ee2c6d91b0128fc455e3446509c3962d2126a565dba21370a4e"
     },
     {
-      "path": "figures/figure_8_proximal_outcomes.png",
-      "bytes": 211301,
-      "sha256": "6af815b622f4bf240687581a613e5c9607b60cc6ca612826b0c99856d7eb883d"
+      "path": "figures/figure_8_earnings_call_market_outcomes.png",
+      "bytes": 235335,
+      "sha256": "de8cb9b5d35596d2481b89b6aedb5fee43b1d6bd321175c672ebdfab0debb011"
     },
     {
       "path": "figures/figure_9_expanded_audio_panel.png",
@@ -1232,19 +1649,54 @@
       "sha256": "67b886e33a62e6ca1e681786739226fe59059d9bfd1bfbe130738833eaedea4d"
     },
     {
+      "path": "figures/repeated_interviewer_production_sensitivity.png",
+      "bytes": 149263,
+      "sha256": "9209d3d855b805cb10114dfd283d1f41ed540c0c004f9c01415c2f00c5054fcb"
+    },
+    {
+      "path": "figures/submission_figure_1_architecture.png",
+      "bytes": 125127,
+      "sha256": "c6a5f05115de0a561269844db07074d90596165b2694d60450df40fa52e98425"
+    },
+    {
+      "path": "figures/submission_figure_2_answer_departures.png",
+      "bytes": 460936,
+      "sha256": "8af448da00212a8b0ce8f69ad5bec7c4506dd4920213368c810a80f0ee9f4332"
+    },
+    {
+      "path": "figures/submission_figure_3_repeated_interviewer.png",
+      "bytes": 104694,
+      "sha256": "63d87a5160b9e52e25d33753c27ed600311d820663cc30c6c1c6c8cae5dd035a"
+    },
+    {
+      "path": "scripts/build_submission_video_figure.py",
+      "bytes": 4444,
+      "sha256": "6f8585eeed00d5e26d67545a3c1093fad42f80123abc8fd5aadf3542384677a6"
+    },
+    {
+      "path": "scripts/score_earnings_answers.py",
+      "bytes": 37937,
+      "sha256": "22a6c4769f9f0e7b8cf5026b70119295f7837948d2b71232c111229e24d12904"
+    },
+    {
       "path": "scripts/summarize_pilot.py",
-      "bytes": 6356,
-      "sha256": "c5789ea3f515bd26543e4eef81678dd5cfd8edf9e94e0d8b8cccff17386043e8"
+      "bytes": 7159,
+      "sha256": "951c142fa1bd8bccd197474fce610ea44439312af469bb562c12136d47e050e8"
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11050,
-      "sha256": "641e01a2285003a0387ab8b46e24160cc388c7c779d6c97e47840dc6371c4dd1"
+      "bytes": 11820,
+      "sha256": "31bc49031b73d69f58b4c3847f7bab8d03ab40cf24a42ccd192526da0ffea096"
+    },
+    {
+      "path": "scripts/verify_submission_evidence.py",
+      "bytes": 5011,
+      "sha256": "a227f605fe79ed41183b1382390e044898f3c9c47b6c7abfdbfaca987a08872a"
     },
     {
       "path": "summary_check.json",
-      "bytes": 2227,
-      "sha256": "04120946c5f79ec438ffc89b409e8954ca99cd821572bac548606af9c0862071",
+      "bytes": 2816,
+      "sha256": "552b8ff0802534b669e6694cf568843cce4a2247a3d15403870300aefaee0460",
       "structure": {
         "top_level_type": "dict",
         "top_level_keys": [
@@ -1252,6 +1704,7 @@
           "continuous_video_analysis",
           "descriptive_variation",
           "earnings_audio",
+          "earnings_market_outcome_linkage",
           "event_aligned_video_analysis",
           "frames_during_speech",
           "interviews"
@@ -1265,8 +1718,8 @@
     },
     {
       "path": "tools/measure-specification-prototype/README.md",
-      "bytes": 1160,
-      "sha256": "ce0f6622bda7b5f1eafad5b47da55c3d34d6f1b92d98f3f27bc502d3bfac8699"
+      "bytes": 1461,
+      "sha256": "543b0e22e4f98eea7c4fb8358ceae425032ab1caabfb87ecd01a455ab9fbea56"
     },
     {
       "path": "tools/measure-specification-prototype/index.html",

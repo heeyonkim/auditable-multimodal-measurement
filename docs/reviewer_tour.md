@@ -1,65 +1,43 @@
 # Five-minute reviewer tour
 
-This repository is a proposal-stage demonstration of a general scientific workflow: converting recordings into inspectable evidence, allowing researchers to define and contest construct mappings, and retaining provenance and validation boundaries. It is not a finished substantive paper and does not depend on a single significant outcome.
+[Home](../README.md) / [Documentation](README.md) / Reviewer tour
 
-## Minute 1 — See the scientific object
+This proposal-stage prototype turns recordings into inspectable measures. The central contribution is a measurement architecture that preserves evidence and researcher choices, demonstrated through two pilots.
 
-Open `tools/measure-specification-prototype/index.html`. Choose among four worked recipes:
+## 1. Understand the workflow
 
-- conversational space;
-- personal-baseline behavioral deviation;
-- editorial responsiveness; and
-- delivery–text divergence.
+Read the [worked researcher example](researcher_walkthrough.md#a-worked-earnings-call-example). A researcher defines the question, chooses observations and a baseline, inspects evidence, and freezes a measurement recipe before analysis.
 
-Change the construct, evidence layers, operational rule, rivals, or validation tests. The interface updates the claim boundary and readiness assessment, then exports a versioned JSON recipe. The key design principle is visible: AI extracts observations; researchers remain responsible for defining constructs and evaluating validity.
+The [video preview](media/researcher_walkthrough.mp4) presents the workflow in two minutes. The author's voice recording is pending.
 
-## Minute 2 — Inspect scale and variation
+## 2. Inspect the earnings-call pilot
 
-Open `data/derived/pilot_summary_statistics.json`, `figures/figure_9_expanded_audio_panel.png`, and `figures/figure_10_expanded_audio_robustness.png`.
+Open the [earnings-call guide](earnings_call_pilot.md). The panel contains 286 calls, 12 executives, and 3,273 eligible answers. Of 177 answers with unusual delivery or timing and relatively typical transcript language, 172 retain support under at least two feature-family exclusions.
 
-- The earnings-call pilot contains 286 usable calls, 12 executives, and 3,273 eligible executive answers. The same prespecified recipe was applied throughout.
-- The video pilot contains 30 interviews, 8.6 hours of material, 1,208 speaker turns, and 360 aligned frame observations across four production formats.
+Follow the guide's direct links from coverage to answer scores and robustness. These are cases for investigation, not validated psychological labels.
 
-These pilots demonstrate that the workflow operates beyond hand-selected clips. The archive is still a feasibility sample, not a population estimate.
+## 3. Inspect the video-interview pilot
 
-## Minute 3 — Inspect measures a transcript cannot supply
+Open the [video-interview guide](video_interview_pilot.md). Thirty interviews across four production formats demonstrate the need to distinguish visible behavior from camera choices and unavailable observations.
 
-Open `figures/figure_11_event_aligned_production_responsiveness.png`, `data/derived/event_aligned_production_measures.csv`, and the two variable-recipe tables.
+The [event-aligned results](event_aligned_video_results.md) provide a detailed extension: 59 of 82 exact-window cuts changed broad composition class, while 23 preserved it. None of the 38 events without a detected cut changed class. Detecting a cut and detecting a composition change are different measurements.
 
-Examples include deviation from a speaker's own delivery baseline, response latency, vocal modulation, delivery–text divergence, framing, shot dynamics, and temporal coupling between camera cuts and changes in conversational floor. The event-aligned extension shows the distinction between detecting a cut and determining whether it changes the broad visible composition: 59 of 82 exact-window cuts changed composition class, whereas 23 preserved it. None of the 38 events without a detected cut changed class. Each recipe states possible uses, validation needs, and interpretations that the measure cannot support.
+## 4. Try a measurement recipe
 
-## Minute 4 — Inspect a worked bridge to outcomes
+Follow the [prototype opening instructions](../tools/measure-specification-prototype/README.md). Choose conversational space, personal-baseline behavioral deviation, editorial responsiveness, or delivery–text divergence. Change the observations, operational rule, rival explanations, or validation tests, then export a versioned recipe.
 
-Open `docs/proximal_outcome_pilot.md` and `data/derived/answer_space_robustness.csv`.
+The prototype illustrates measure specification. It does not process new recordings or validate a construct.
 
-Across 304 eligible question–answer pairs in 27 videos, longer questions, longer response latencies, and nearby camera cuts are associated with more subsequent conversational space within videos. The pooled directions survive alternative eligibility thresholds and leave-one-video-out checks, while format-specific estimates remain heterogeneous. The repository also retains held-out tests in which extra modalities did not improve prediction. This is a descriptive feasibility bridge, not a causal conclusion.
+## 5. Check what is reproducible and what remains
 
-## Minute 5 — Verify the object and examine its frontier
+Use the [verification instructions](reproducibility.md#verify-this-release) to reproduce shared summaries and check the release manifest. Read the [methods and limits](methods.md) and [roadmap](../ROADMAP.md) for remaining work on extraction accuracy, human validation, subgroup performance, and broader sampling.
 
-Run:
+The release supports derived-data verification. It excludes source recordings and transcripts and does not provide a complete credential-free media rerun.
 
-```bash
-python scripts/summarize_pilot.py --data-dir data/derived --output summary_check.json
-python scripts/verify_research_object.py --check
-```
+## Optional further reading
 
-Then read `docs/research_opportunity_map.md`. It shows how future researchers can connect the infrastructure to organizational outcomes and stronger designs without treating model labels as facts.
+- [Market-outcome linkage](earnings_call_market_outcome.md): an exploratory, imprecise, cohort-sensitive extension, not the central demonstration.
+- [Research opportunities](research_opportunity_map.md): possible future questions and designs.
+- [Complete data catalog](data_catalog.md): the detailed artifact inventory.
 
-## What the prototype establishes
-
-- **Novelty:** constructs can be specified as versioned, contestable recipes over multimodal evidence rather than fixed black-box labels.
-- **Feasibility and scale:** two dissimilar audiovisual corpora have been processed into analysis-ready, time-aligned measures.
-- **Auditability:** the release retains definitions, rivals, negative tests, provenance gaps, and per-file checksums.
-- **Adoption potential:** researchers can reuse the prototype and flat tables without committing to the authors' preferred construct.
-
-## What remains for Stage 2
-
-- pin all model and package versions in a full-pipeline release;
-- validate selected measures with trained human coders and external ground truth where available;
-- estimate reliability and measurement invariance across speakers, settings, recording systems, and relevant groups;
-- move from the deliberately varied repeated-speaker panel to a sampling design suitable for population claims; and
-- preregister a small number of theory-facing recipes before linking them to outcomes.
-
-## Nonclaims
-
-The prototype does not infer deception, emotion, confidence, intent, personality, cultural typicality, or editorial intention. Descriptive temporal associations do not establish causal effects. These boundaries are part of the artifact rather than caveats left to prose.
+The prototype does not establish emotion, confidence, deception, intent, personality, cultural typicality, editorial intention, or causal effects.

@@ -5,6 +5,17 @@
     "eligible_answers": 3273,
     "audio_interaction_review_flags": 177
   },
+  "earnings_market_outcome_linkage": {
+    "calls": 286,
+    "companies": 12,
+    "answer_level_calls": 274,
+    "outcome": "Signed company minus SPY log return over the response session",
+    "median_partial_spearman_rho": -0.10152011536496068,
+    "median_descriptive_p": 0.0935209617825769,
+    "median_standardized_coefficient_percentage_points": -0.5378454643483324,
+    "median_firm_clustered_p": 0.14211802977936766,
+    "interpretation": "Small directional association for answer-level deviation, but estimates are imprecise and do not establish a reliable or causal effect."
+  },
   "interviews": 30,
   "aligned_frame_rows": 360,
   "frames_during_speech": 355,

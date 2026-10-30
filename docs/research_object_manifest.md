@@ -1,5 +1,7 @@
 # Machine-verifiable research object
 
+[Home](../README.md) / [Documentation](README.md)
+
 This proposal-stage repository is packaged as a small research object rather than a folder of illustrative outputs. The root-level `research_object_manifest.json` records each released file's SHA-256 checksum, size, and lightweight structural metadata. It also records corpus scope, pipeline status, model provenance, known limitations, and prohibited interpretations.
 
 ## Verify the release

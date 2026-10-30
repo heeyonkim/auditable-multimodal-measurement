@@ -1,0 +1,60 @@
+{
+  "calls": 286,
+  "companies": 12,
+  "answer_level_n": 274,
+  "whole_call_n": 256,
+  "outcome": "Signed company minus SPY log return over the response session",
+  "p90": {
+    "rho": -0.07093755031466352,
+    "rho_p": 0.24186731688854418,
+    "beta": -0.3886218949611756,
+    "cluster_se": 0.3616413705021479,
+    "cluster_p": 0.3055578429290247,
+    "ci95": [
+      -1.184589184711605,
+      0.4073453947892539
+    ]
+  },
+  "median": {
+    "rho": -0.10152011536496068,
+    "rho_p": 0.0935209617825769,
+    "beta": -0.5378454643483324,
+    "cluster_se": 0.34013111899014514,
+    "cluster_p": 0.14211802977936766,
+    "ci95": [
+      -1.2864690097310052,
+      0.21077808103434037
+    ]
+  },
+  "median_2d": {
+    "rho": -0.09518834309875324,
+    "rho_p": 0.11594692932204476,
+    "beta": -0.5426107845348389,
+    "cluster_p": 0.12630704612500868
+  },
+  "whole_call": {
+    "rho": 0.02745121881437399,
+    "rho_p": 0.6620007991539669,
+    "beta": -0.02406750913504757,
+    "cluster_p": 0.9293826413382813
+  },
+  "permutation": {
+    "iterations": 10000,
+    "p90_observed_rho": -0.07093755031466352,
+    "p90": 0.2460753924607539,
+    "median_observed_rho": -0.10152011536496068,
+    "median": 0.0907909209079092
+  },
+  "cohort_sensitivity": {
+    "original_median_rho": 0.05964261413342837,
+    "added_median_rho": -0.2349876948318294,
+    "added_median_p": 0.0027799407598318,
+    "added_median_beta": -0.988676049591767,
+    "added_median_cluster_p": 0.0695215137944853,
+    "added_median_permutation_p": 0.0027997200279972004,
+    "added_p90_rho": -0.1537120590648072,
+    "added_p90_p": 0.052303781566535305,
+    "added_p90_permutation_p": 0.053094690530946904
+  },
+  "recommended_interpretation": "Small directional association for answer-level deviation, but estimates are imprecise and do not establish a reliable or causal effect."
+}

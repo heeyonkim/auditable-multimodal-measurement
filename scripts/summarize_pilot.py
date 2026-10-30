@@ -49,6 +49,9 @@ def main() -> None:
     audio_yield = read_rows(args.data_dir / "expanded_audio_measurement_yield.csv")
     audio_scores = read_rows(args.data_dir / "expanded_audio_answer_scores.csv")
     audio_examples = read_rows(args.data_dir / "expanded_audio_primary_examples_robustness.csv")
+    market_summary = json.loads(
+        (args.data_dir / "earnings_call_market_summary.json").read_text(encoding="utf-8")
+    )
     if len(audio_yield) != 12 or len(audio_scores) != 3273 or len(audio_examples) != 177:
         raise SystemExit(
             f"Unexpected audio row counts: yield={len(audio_yield)}, "
@@ -80,6 +83,17 @@ def main() -> None:
             "usable_calls": sum(int(row["usable_calls"]) for row in audio_yield),
             "eligible_answers": len(audio_scores),
             "audio_interaction_review_flags": len(audio_examples),
+        },
+        "earnings_market_outcome_linkage": {
+            "calls": market_summary["calls"],
+            "companies": market_summary["companies"],
+            "answer_level_calls": market_summary["answer_level_n"],
+            "outcome": market_summary["outcome"],
+            "median_partial_spearman_rho": market_summary["median"]["rho"],
+            "median_descriptive_p": market_summary["median"]["rho_p"],
+            "median_standardized_coefficient_percentage_points": market_summary["median"]["beta"],
+            "median_firm_clustered_p": market_summary["median"]["cluster_p"],
+            "interpretation": market_summary["recommended_interpretation"],
         },
         "interviews": len(interviews),
         "aligned_frame_rows": len(aligned),

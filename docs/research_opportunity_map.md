@@ -1,5 +1,7 @@
 # Research opportunities enabled by the measurement system
 
+[Home](../README.md) / [Documentation](README.md)
+
 The prototype is not a claim that one audio or video feature is intrinsically important. Its larger contribution is to make previously inaccessible behavioral evidence available for theory-driven research. The examples below show how researchers could move from an observable recipe to a substantive design while keeping constructs, rival explanations, and outcomes separate.
 
 | Research opportunity | Observable measure enabled by recordings | Illustrative outcome or comparison | Credible design direction | Critical boundary |
@@ -21,7 +23,7 @@ The prototype is not a claim that one audio or video feature is intrinsically im
 
 ## How outcomes should enter the proposal
 
-Outcomes establish scientific relevance, but the proposal need not produce a publishable causal result. The strongest Stage 1 use is a worked bridge: demonstrate that a new observable varies at scale, connect it to one proximal outcome, retain robustness and null results, and show how future researchers could attach theoretically appropriate outcomes. This avoids turning a general measurement infrastructure proposal into a single underpowered substantive paper.
+Outcomes establish scientific relevance, but the proposal need not produce a publishable causal result. The Stage 1 earnings-call analysis provides a worked bridge: a new observable varies at scale and can be linked to an external outcome while retaining imprecise estimates, cohort sensitivity, and null robustness results. Future research should preregister theoretically matched outcomes and stronger designs rather than treating this exploratory association as validation. This avoids turning a general measurement infrastructure proposal into a single underpowered substantive paper.
 
 ## Recommended Stage 2 expansion
 

@@ -1,5 +1,7 @@
 # Event-aligned video extension: descriptive results
 
+[Home](../README.md) / [Documentation](README.md)
+
 ## What was added
 
 The original pilot detected camera cuts continuously. This extension adds a

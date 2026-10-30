@@ -1,5 +1,7 @@
 # Measure-specification prototype
 
+[Home](../../README.md) / [Documentation](../../docs/README.md) / Measurement prototype
+
 This working prototype turns the project's central methodological claim into a researcher-facing workflow. A scholar selects or defines a construct, specifies the unit and setting, chooses observable evidence layers, records rival explanations and validation tests, and exports a versioned JSON recipe.
 
 The interface currently includes four worked examples from the completed pilots:
@@ -13,7 +15,7 @@ Every recipe distinguishes direct observations, derived measures, contextual evi
 
 ## Run locally
 
-Open `index.html` in a modern browser. The tool has no external dependencies and sends no data to a server.
+Download the repository using GitHub’s **Code → Download ZIP** button, extract it, then open [index.html](index.html) in a modern browser. The HTML file is a local interactive tool; GitHub’s file preview shows its source rather than running it. The tool has no external dependencies and sends no data to a server.
 
 ## Research status
 

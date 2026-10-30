@@ -1,0 +1,7 @@
+sample_id,francine_speaker_id,guest_speaker_id,original_role,reason
+F003,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment reversed interviewer and guest; manually corrected from transcript evidence
+F004,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment failed; manually corrected from transcript evidence
+F005,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment reversed interviewer and guest; manually corrected from transcript evidence
+F006,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment reversed interviewer and guest; manually corrected from transcript evidence
+F007,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment did not identify an interviewer; manually corrected from transcript evidence
+F008,SPEAKER_00,SPEAKER_01,Guest 1,Automatic functional-role assignment reversed interviewer and guest; manually corrected from transcript evidence

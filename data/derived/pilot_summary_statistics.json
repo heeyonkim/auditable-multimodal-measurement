@@ -87,5 +87,16 @@
       "p75": 0.5455,
       "max": 0.8182
     }
+  },
+  "earnings_market_outcome_linkage": {
+    "calls": 286,
+    "companies": 12,
+    "answer_level_calls": 274,
+    "outcome": "Signed company minus SPY log return over the response session",
+    "median_partial_spearman_rho": -0.10152011536496068,
+    "median_descriptive_p": 0.0935209617825769,
+    "median_standardized_coefficient_percentage_points": -0.5378454643483324,
+    "median_firm_clustered_p": 0.14211802977936766,
+    "interpretation": "Exploratory association; imprecise, cohort-sensitive, and noncausal"
   }
 }
