@@ -209,11 +209,11 @@
       <div class="brand-mark" aria-hidden="true">MR</div>
       <div>
         <h1>Measure-Specification Prototype</h1>
-        <p>Auditable multimodal measures for organizational research</p>
+        <p>Define and export a measure. This demonstration does not process recordings.</p>
       </div>
     </div>
     <div class="top-actions">
-      <span class="pilot-chip">Prototype · 2026 pilot corpus</span>
+      <a class="pilot-chip" href="https://github.com/heeyonkim/auditable-multimodal-measurement">Paper, data and guide</a>
       <button class="button button-secondary" id="resetButton" type="button">Reset</button>
       <button class="button button-primary" id="downloadTop" type="button">Export recipe</button>
     </div>
@@ -301,7 +301,7 @@
         </div>
         <div class="builder-actions">
           <button class="button button-ink" id="generateButton" type="button">Update recipe</button>
-          <button class="button button-quiet" id="loadEvidence" type="button">Load pilot evidence</button>
+          <button class="button button-quiet" id="loadEvidence" type="button">Load example recipe</button>
         </div>
       </div>
     </section>
@@ -369,8 +369,8 @@
         <h2 id="pilotHeading">Evidence that the measurement layer can operate at research scale</h2>
         <p>Completed audio and video pilots; figures are descriptive and every interpretive recipe remains revisable.</p>
       </div>
-      <div class="stat"><strong>118</strong><span>earnings calls</span></div>
-      <div class="stat"><strong>1,260</strong><span>eligible Q&amp;A answers</span></div>
+      <div class="stat"><strong>286</strong><span>earnings calls</span></div>
+      <div class="stat"><strong>3,273</strong><span>eligible Q&amp;A answers</span></div>
       <div class="stat"><strong>30</strong><span>heterogeneous videos</span></div>
       <div class="stat"><strong>1,178</strong><span>speaker transitions</span></div>
     </section>
@@ -395,11 +395,11 @@
       },
       deviation: {
         name: "Personal-baseline behavioral deviation",
-        construct: "How unusual an answer's observable delivery is relative to the same speaker's own historical pattern.",
+        construct: "How unusual an answer's observable delivery is relative to the same speaker's pattern across other calls.",
         setting: "Earnings call",
         unit: "Speaker turn",
         modalities: ["timing", "voice", "metadata"],
-        observation: "Within speaker, standardize response latency, speaking rate, pitch variability, and intensity variability against eligible historical Q&A answers; retain feature-level contributions.",
+        observation: "Center answer features within the call, then compare them with eligible answer residuals from the same executive's other calls, excluding the target call. The pilot uses earlier and later calls; retain feature-level contributions.",
         rivals: "Recording quality; call section; question topic; speaker misidentification; changes in microphone or platform",
         boundary: "Measures deviation from a personal behavioral baseline. It does not identify deception, anxiety, confidence, performance, or intent.",
         observed: "Vocal delivery",
@@ -425,7 +425,7 @@
         setting: "Earnings call",
         unit: "Speaker turn",
         modalities: ["words", "timing", "voice", "metadata"],
-        observation: "Estimate transcript-visible and audio-interaction deviation separately within speaker; retain continuous scores and flag only prespecified regions of the joint distribution.",
+        observation: "Estimate transcript-visible and audio-interaction deviation separately within speaker; retain continuous scores and document the score cutoffs used to select answers for inspection.",
         rivals: "ASR errors; low word count; recording artifacts; topic shifts; unstable speaker baselines",
         boundary: "Measures disagreement between two evidence layers. It does not establish concealment, deception, emotional leakage, or poor performance.",
         observed: "Words and delivery",
@@ -449,7 +449,7 @@
 
     const modalityInfo = {
       words: ["Words", "Content words, sequence, and transcript-visible markers", "direct"],
-      timing: ["Timing", "Turn boundaries, gaps, duration, and overlap", "direct"],
+      timing: ["Timing", "Turn boundaries, gaps and duration; overlap requires separate validation", "direct"],
       voice: ["Voice", "Speaking rate, pitch, intensity, and within-turn silence", "derived"],
       visible: ["Visible behavior", "Gaze, hand position, people count, and framing", "derived"],
       production: ["Production", "Shot boundaries, cuts, graphics, and camera context", "context"],
@@ -573,7 +573,7 @@
       loadPreset("conversational");
       setChecked(el("tests"), ["event", "construct", "robustness", "transport"]);
       renderRecipe();
-      notify("Loaded the 304-pair conversational-space worked example.");
+      notify("Loaded the conversational-space specification. No recordings or measurements were loaded.");
     }
 
     let toastTimer;

@@ -19,4 +19,4 @@ The 30-interview archive and the eight repeated-interviewer interviews are separ
 
 [Data catalog](data_catalog.md) · [Figure index](../figures/README.md) · [Verification instructions](reproducibility.md)
 
-The [event-aligned video specification](event_aligned_video_measurement.md) and [results](event_aligned_video_results.md) document a deeper production-measurement check. [Earlier pilot tables](../data/earlier_pilot/README.md) are clearly separated from the current expanded-panel evidence.
+The [event-aligned video specification](event_aligned_video_measurement.md) and [results](event_aligned_video_results.md) document a deeper production-measurement check.

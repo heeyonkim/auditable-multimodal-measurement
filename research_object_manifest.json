@@ -2,7 +2,7 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable submitted proposal research object",
-    "version": "0.6.4-submitted-proposal",
+    "version": "0.6.5-reader-navigation",
     "date": "2026-11-02",
     "status": "Stage 1 submitted proposal and derived-data research object",
     "submission": {
@@ -141,8 +141,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 1565,
-      "sha256": "cfb924e2f3e76a6af09055c09a5e83ebc6130325b301d86ffce6228f200f8d21"
+      "bytes": 1823,
+      "sha256": "2304f60f04f6ea55eb1c44f9e85588339cab503ca27fb20d472c22fb041dc930"
     },
     {
       "path": "LICENSE.md",
@@ -156,8 +156,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2474,
-      "sha256": "3a139e265fa2e85ce86ff30375fd880760badc679f7d2a332d432bcbe7100d55"
+      "bytes": 1553,
+      "sha256": "b1982632b8fe9a58250451d84d5e268b3dff05f1d215d56b21e91b7318c79957"
     },
     {
       "path": "ROADMAP.md",
@@ -166,8 +166,8 @@
     },
     {
       "path": "data/README.md",
-      "bytes": 689,
-      "sha256": "9287b7f5c68a0e47140b02b3b495f9a248d83cc2f69ca4f7b726c79fe96b0c0c"
+      "bytes": 738,
+      "sha256": "42373983fd49144e54ebb3db340f72cd5390e1b41f244f3cc08f372c9aa1120e"
     },
     {
       "path": "data/derived/earnings_call_market_cohort_sensitivity.csv",
@@ -1536,23 +1536,23 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 2077,
-      "sha256": "898f8ab872fbf6cfe53ee1078c5714367b45b91205b9cb654b668c2c94f8257c"
+      "bytes": 1957,
+      "sha256": "c7c6aa1c2fd3e65c080a98e5855c2f61ddb6b49a79b46c076f25a172b9b6dd64"
     },
     {
       "path": "docs/data_catalog.md",
-      "bytes": 9934,
-      "sha256": "5bb5cfdcd074502d68a1bb38e05aa1a724df48a28bbce40e2ac00b1a7e4c8b36"
+      "bytes": 11939,
+      "sha256": "072a84f48127a6b0715f49355878e99aac72bb16b0a329528e71db30493c383e"
     },
     {
       "path": "docs/earnings_call_market_outcome.md",
-      "bytes": 3046,
-      "sha256": "c4a5c987aa9abc5beef63c46b46429ad910a29720920e505ab8c5049996e2ef6"
+      "bytes": 3083,
+      "sha256": "c2952faeb647b99022c39d9d705e3149d771e86c6dab74a95b5182b9c0b213c4"
     },
     {
       "path": "docs/earnings_call_pilot.md",
-      "bytes": 4689,
-      "sha256": "177ddba1ebedc466271eba1a8d389f4397572c5bb9e18356419706c692e0ab67"
+      "bytes": 4491,
+      "sha256": "d47423f39ad7de50d19fedd16368702ff2f67f013420bb36751db8116066bfd3"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1561,8 +1561,8 @@
     },
     {
       "path": "docs/event_aligned_video_results.md",
-      "bytes": 2636,
-      "sha256": "9f70cc42ca16437093337b85c557acbd477a2e6e73f2e43fca35dcadbfa95503"
+      "bytes": 2626,
+      "sha256": "d1587c109495f4de9d11514de528bbd4ef62b6fd1f2ec6106fc3849a90eb3357"
     },
     {
       "path": "docs/media/researcher_walkthrough.mp4",
@@ -1676,8 +1676,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 12416,
-      "sha256": "a689aa8cfb8dea166e4f047b7ea1f843cb2af3c635f629fb6042d85bad49fdba"
+      "bytes": 12415,
+      "sha256": "79897cdb627799d2a1c5be793efc798c8e409a92b6a0a6309083dd394b966658"
     },
     {
       "path": "scripts/verify_submission_evidence.py",
@@ -1709,13 +1709,13 @@
     },
     {
       "path": "tools/measure-specification-prototype/README.md",
-      "bytes": 1461,
-      "sha256": "543b0e22e4f98eea7c4fb8358ceae425032ab1caabfb87ecd01a455ab9fbea56"
+      "bytes": 1467,
+      "sha256": "4502c579e5c720da8f85b97d584e819191a3d1b2995dc39e4561e8df7f946e96"
     },
     {
       "path": "tools/measure-specification-prototype/index.html",
-      "bytes": 32574,
-      "sha256": "494577aa1ee1d39e7bf05a1d10b9d3ac382cabb19a34f706302ddd2879fd38da",
+      "bytes": 32768,
+      "sha256": "1e5d102f2f9337f48f4988f788e5c0887e9f402c4eaf33935973c63c6b5ced7c",
       "structure": {
         "title": "Measure-Specification Prototype"
       }

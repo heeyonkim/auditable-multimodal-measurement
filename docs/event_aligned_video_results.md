@@ -33,7 +33,7 @@ focused single-person view, multiple-person view, or other composition.
   ambiguity in person count, shot type, or composition (0 notes).
   All flags are retained rather than silently discarded.
 
-## Defensible claim for the proposal
+## What the analysis shows
 
 This demonstrates a variable that transcripts cannot supply: how the produced
 visual field reorganizes around conversational events. The pipeline aligns

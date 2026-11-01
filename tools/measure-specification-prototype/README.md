@@ -2,7 +2,7 @@
 
 [Home](../../README.md) / [Documentation](../../docs/README.md) / Measurement prototype
 
-This working prototype turns the project's central methodological claim into a researcher-facing workflow. A scholar selects or defines a construct, specifies the unit and setting, chooses observable evidence layers, records rival explanations and validation tests, and exports a versioned JSON recipe.
+Use this prototype to define a measure before analyzing recordings. Choose an example or write your own construct, select the evidence to use, record alternative explanations and validation tests, and export your specification as JSON. The prototype does not process recordings or calculate new measurements.
 
 The interface currently includes four worked examples from the completed pilots:
 

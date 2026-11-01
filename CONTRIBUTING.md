@@ -4,7 +4,7 @@ This repository is a proposal-stage research object. Changes must preserve both 
 
 ## Before making a change
 
-1. Do not add source media, extracted frames, verbatim transcripts, credentials, cookies, tokens, or machine-specific paths.
+1. Do not add source media, extracted frames, verbatim transcripts, credentials, cookies, tokens, or machine-specific paths. The released worked-example video contains the one documented short excerpt and transcript; it does not authorize adding further source content.
 2. Treat files in `data/derived/` as released evidence. Document the source, transformation, unit of analysis, exclusions, and validation status for any new or replaced table.
 3. Describe observable properties rather than inferring emotion, confidence, intent, personality, cultural typicality, deception, editorial intention, or causal effects.
 4. Keep the public checks dependency-free unless a dependency is scientifically necessary and pinned.
@@ -24,7 +24,7 @@ python3 scripts/verify_research_object.py
 python3 scripts/verify_research_object.py --check
 ```
 
-The first command rewrites `research_object_manifest.json`. A passing checksum is not evidence that a scientific or privacy review has occurred, so review the release checklist and claim boundaries separately.
+The first command rewrites `research_object_manifest.json`. A passing checksum is not evidence that a scientific or privacy review has occurred, so also review the [technical appendix](docs/submission_technical_appendix.md), [reproduction and release guidance](docs/reproducibility.md), and [licensing status](LICENSE.md).
 
 ## Pull-request checklist
 
