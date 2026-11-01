@@ -2,9 +2,9 @@
 
 [Repository home](../README.md)
 
-Start with the three figures used in the proposal, then follow the guides to their data and measurement rules.
+[Read the proposal submitted to *Organization Science* on 1 November 2026](Making_Organizational_Behavior_Observable_Proposal.pdf). Start with its three figures, then follow the guides to their data and measurement rules. The PDF is the submitted file; the guides provide additional technical detail and supporting analyses.
 
-| Proposal component | Figure or result | Supporting guide |
+| Submitted proposal component | Figure or result | Supporting guide |
 | --- | --- | --- |
 | Narrated worked example | [84-second video](media/researcher_walkthrough.mp4) | [Example and measurement notes](researcher_walkthrough.md) |
 | Measurement architecture | [Figure 1](../figures/submission_figure_1_architecture.png) | [Technical appendix](submission_technical_appendix.md) |

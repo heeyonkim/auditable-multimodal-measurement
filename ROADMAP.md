@@ -1,5 +1,14 @@
 # Repository roadmap
 
+Aligned with Section 4 of the [proposal submitted on 1 November 2026](docs/Making_Organizational_Behavior_Observable_Proposal.pdf). Stage 2 will extend the working prototype into reusable measurement infrastructure through four areas:
+
+- **Technical benchmarking:** compare speaker identification, timing, vocal features, cuts, visibility, and facial movement with human-reviewed examples; report errors, unavailable evidence, correction needs, processing time, and cost across recording conditions.
+- **Measure validation:** evaluate construct measures separately from extraction accuracy, including agreement with human coding, sensitivity to measurement choices, added information beyond transcripts, and performance in new settings.
+- **Researcher use:** develop a guided interface for processing recordings, inspecting sources, correcting assignments, comparing specifications, and exporting results; assess independent use by researchers outside the project.
+- **Empirical expansion:** enlarge the executive panel, use prior-only personal baselines, define outcome tests in advance, and study repeated executives and interviewers across programs and time.
+
+The release and implementation tasks below support that plan.
+
 ## 1. Public foundation — complete
 
 - Promote the sanitized research object to a standalone repository.

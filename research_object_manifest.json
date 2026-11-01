@@ -1,10 +1,17 @@
 {
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
-    "name": "Making Organizational Behavior Observable proposal prototype",
-    "version": "0.6.3-worked-example",
-    "date": "2026-10-30",
-    "status": "proposal-stage derived-data research object"
+    "name": "Making Organizational Behavior Observable submitted proposal research object",
+    "version": "0.6.4-submitted-proposal",
+    "date": "2026-11-02",
+    "status": "Stage 1 submitted proposal and derived-data research object",
+    "submission": {
+      "title": "Making Organizational Behavior Observable: An Auditable Multimodal Infrastructure for Measuring Behavior from Audio and Video",
+      "journal": "Organization Science",
+      "date": "2026-11-01",
+      "document": "docs/Making_Organizational_Behavior_Observable_Proposal.pdf",
+      "document_status": "exact submitted PDF"
+    }
   },
   "corpora": {
     "earnings_calls": {
@@ -149,13 +156,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 2015,
-      "sha256": "656512550019c164786d36e56294db5902ae7fa2482a0a26640c27c69f1d5577"
+      "bytes": 2474,
+      "sha256": "3a139e265fa2e85ce86ff30375fd880760badc679f7d2a332d432bcbe7100d55"
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 1731,
-      "sha256": "dd9d2136df3dd066cdb7c0286958a11927fb4cff5382282f055da4d70d30dc70"
+      "bytes": 2957,
+      "sha256": "43f532cded10a82f9f9c1d82a244237f4f88a43293f20de10da7afada599c27f"
     },
     {
       "path": "data/README.md",
@@ -1524,13 +1531,13 @@
     },
     {
       "path": "docs/Making_Organizational_Behavior_Observable_Proposal.pdf",
-      "bytes": 857198,
-      "sha256": "17a2617dc216e29df3b3816773ec7cf41b51062599b096535c53fad2ace941f5"
+      "bytes": 856853,
+      "sha256": "b36c892fceb98c9104d671bb6769cec3909627bd77c7f2aef01c611462d3adbc"
     },
     {
       "path": "docs/README.md",
-      "bytes": 1853,
-      "sha256": "48a37bcec7f3f26d617e6202de2b0e5d075ff4a5c09b27bc37a15a643002c69b"
+      "bytes": 2077,
+      "sha256": "898f8ab872fbf6cfe53ee1078c5714367b45b91205b9cb654b668c2c94f8257c"
     },
     {
       "path": "docs/data_catalog.md",
@@ -1544,8 +1551,8 @@
     },
     {
       "path": "docs/earnings_call_pilot.md",
-      "bytes": 3604,
-      "sha256": "3e02e39d33ef7403cf9cefa51f0a919ab49bd189cafdf02e6a037eb13f97c604"
+      "bytes": 4689,
+      "sha256": "177ddba1ebedc466271eba1a8d389f4397572c5bb9e18356419706c692e0ab67"
     },
     {
       "path": "docs/event_aligned_video_measurement.md",
@@ -1579,8 +1586,8 @@
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 3828,
-      "sha256": "6a8b61f48c39f504ca28977c46d7af1db2cc0664cfd9f23b22904e0292a261db"
+      "bytes": 4930,
+      "sha256": "8c8db3a3948ec743a1d06ad0d62e5706c9b986dbdda45aa98d9108bfefc538d5"
     },
     {
       "path": "docs/researcher_walkthrough.md",
@@ -1589,18 +1596,18 @@
     },
     {
       "path": "docs/submission_technical_appendix.md",
-      "bytes": 10927,
-      "sha256": "a750b09da64a4766b412dd5b6627781df7f3ed338525a76c760772be4a1ef70b"
+      "bytes": 11200,
+      "sha256": "fe1a242fc48e6e8f27c073b4f598295de288a28fa045e5fddd03b6a3d3daca06"
     },
     {
       "path": "docs/video_interview_pilot.md",
-      "bytes": 3325,
-      "sha256": "e0d319ac9df38b404e2c25465011552a6d565c9621568d56031c5cfbfaefa1ea"
+      "bytes": 3519,
+      "sha256": "be5937dc1f378ef1070230c045ac543786b6902742d8643d54801896bd529a89"
     },
     {
       "path": "figures/README.md",
-      "bytes": 1346,
-      "sha256": "0d98584d55f2b096590f4894ff72325c3d04dee03e43265a242946e643abde81"
+      "bytes": 2677,
+      "sha256": "6a9c06680caffcbb290bd56988ac57dad2f5f2928dcbd2d99ef1d5f49e084323"
     },
     {
       "path": "figures/submission_figure_1_architecture.png",
@@ -1669,8 +1676,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 11945,
-      "sha256": "b0383d7b453446455c746272079f5bcfb0d3f8b3a48d1ca82f64de08386ab1f2"
+      "bytes": 12416,
+      "sha256": "a689aa8cfb8dea166e4f047b7ea1f843cb2af3c635f629fb6042d85bad49fdba"
     },
     {
       "path": "scripts/verify_submission_evidence.py",

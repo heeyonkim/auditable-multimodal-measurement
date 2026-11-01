@@ -8,7 +8,7 @@ The pilot examines what can be measured from produced interviews and how camera 
 
 **30 Bloomberg interviews, 8.6 hours, 1,208 speaker turns, and 360 sampled frame observations**, spanning studio, remote, stage/event, and panel formats. The [source manifest](../data/derived/sample_manifest.csv) identifies the interviews; the [pilot summary](../data/derived/pilot_summary_statistics.json) records the counts.
 
-Camera cuts often occur near changes in speaker. The released summaries report median two-second cut-transition coupling of .659, compared with .171 under within-video circular shifts. This pattern describes production timing; it does not establish an editor's intent or a participant's psychological state.
+In a typical interview, about two-thirds of speaker changes happened within two seconds before or after a camera cut, compared with about one-sixth expected by chance. The exact medians across interviews are 65.9% observed and 17.1% under randomly shifted transition times within the same videos. These are interview-level medians, not percentages pooled across all transitions. This pattern describes production timing; it does not establish an editor's intent or a participant's psychological state.
 
 ## Inspect the evidence
 

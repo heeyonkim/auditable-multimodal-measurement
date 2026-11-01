@@ -17,8 +17,8 @@ import sys
 from pathlib import Path
 
 
-RELEASE_VERSION = "0.6.3-worked-example"
-RELEASE_DATE = "2026-10-30"
+RELEASE_VERSION = "0.6.4-submitted-proposal"
+RELEASE_DATE = "2026-11-02"
 MANIFEST_NAME = "research_object_manifest.json"
 EXCLUDED_NAMES = {MANIFEST_NAME, ".DS_Store"}
 EXCLUDED_SUFFIXES = {".pyc", ".zip", ".tar", ".gz"}
@@ -120,10 +120,17 @@ def build_manifest(root: Path) -> dict:
     return {
         "schema": "auditable-multimodal-research-object/1.0",
         "release": {
-            "name": "Making Organizational Behavior Observable proposal prototype",
+            "name": "Making Organizational Behavior Observable submitted proposal research object",
             "version": RELEASE_VERSION,
             "date": RELEASE_DATE,
-            "status": "proposal-stage derived-data research object",
+            "status": "Stage 1 submitted proposal and derived-data research object",
+            "submission": {
+                "title": "Making Organizational Behavior Observable: An Auditable Multimodal Infrastructure for Measuring Behavior from Audio and Video",
+                "journal": "Organization Science",
+                "date": "2026-11-01",
+                "document": "docs/Making_Organizational_Behavior_Observable_Proposal.pdf",
+                "document_status": "exact submitted PDF",
+            },
         },
         "corpora": {
             "earnings_calls": {

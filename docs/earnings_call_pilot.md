@@ -6,13 +6,19 @@ The pilot asks whether an executive's vocal delivery and interaction timing can 
 
 ## What the released pilot contains
 
-**286 calls, 12 executives, and 3,273 eligible Q&A answers.** Each answer is compared with that executive's personal baseline. The released archive includes continuous scores and alternative specifications.
+**300 collected calls, 286 retained calls, 12 executives across seven sectors, approximately 313 hours of audio, and 3,273 eligible Q&A answers.** Each answer is compared with that executive's personal baseline. The released archive includes continuous scores and alternative specifications.
 
 - **177 answers** have unusual audio or interaction scores while transcript language is relatively typical.
 - **172 of those 177** remain unusual under at least two of three feature-family exclusions: timing and speaking rate, pitch, or vocal intensity.
 - These are examples for further investigation. Departures do not establish emotion, pressure, intent, truthfulness, or executive quality.
 
 These counts are recorded in the [pilot summary](../data/derived/pilot_summary_statistics.json) and can be regenerated using the [reproduction instructions](reproducibility.md).
+
+## Why compare audio with transcript features?
+
+The audio/interaction measure captures departures in how an answer is delivered and how the exchange unfolds, using speaking rate, response timing, pitch, and vocal intensity. The transcript measure uses answer length, filled pauses, discourse fillers, and adjacent repetitions. It does not analyze meaning or everything that text could reveal.
+
+At the same departure-score cutoff of 2.0, the audio/interaction measure flags **325 answers**, while the transcript measure flags **321**. Only **66** are flagged by both. Thus **259 of the 325 audio/interaction flags (80%)** are not flagged by the selected transcript features. The comparison uses the **3,233 answers with both scores**. It shows that the two approaches direct researchers toward different answers to inspect; it does not establish which measure is better. The 177 highlighted answers in Figure 2 are a stricter subset, additionally requiring transcript departure of no more than 1.25.
 
 [Watch one answer being inspected in the narrated worked example](researcher_walkthrough.md).
 

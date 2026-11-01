@@ -2,6 +2,14 @@
 
 [Home](../README.md) / [Documentation](README.md)
 
+## What you can run and reproduce
+
+- **Use the measurement-specification prototype:** download and extract the repository, then open `tools/measure-specification-prototype/index.html` in a browser. It lets you define and export measurement specifications without installing software or connecting to a server.
+- **Reproduce summaries and check reported results:** run the included scripts on the released derived tables, following the commands below. These checks do not require the original recordings or model credentials.
+- **Process new recordings:** the repository does not yet provide a complete guided processing system. A full extraction rerun also requires authorized source recordings, models, additional numeric inputs where specified, and a fully documented processing environment.
+
+The [submitted proposal](Making_Organizational_Behavior_Observable_Proposal.pdf) is preserved exactly as submitted on 1 November 2026. The guides distinguish current capabilities from the Stage 2 development plan.
+
 ## Verify this release
 
 Download and extract the repository, then open a terminal in its main folder. With Python 3.10 or newer installed, run:
@@ -50,7 +58,7 @@ Never commit API keys, Hugging Face tokens, `.env` files, browser cookies, or se
 
 ## Media and licensing
 
-Public availability does not itself authorize redistribution. The shareable package contains source URLs and derived measures but excludes full recordings, extracted audio, frames, and transcripts. A final public artifact should include only media whose redistribution is permitted, or use synthetic and legally shareable substitutes that exercise the same pipeline.
+Public availability does not itself authorize redistribution. The shareable package contains source URLs and derived measures. Apart from the short audio excerpt and transcript embedded in the worked-example video, it excludes recordings, extracted audio, frames, and verbatim transcripts. A final public artifact should include only media whose redistribution is permitted, or use synthetic and legally shareable substitutes that exercise the same pipeline.
 
 ## Model access
 

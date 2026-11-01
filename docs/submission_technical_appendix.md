@@ -2,7 +2,7 @@
 
 [Home](../README.md) / [Documentation](README.md) / Technical appendix
 
-This appendix describes the current proposal prototype and the limits of the shared research object. It distinguishes processed recordings, eligible observations, scored observations, and analyses that require additional inputs.
+This appendix supports the [proposal submitted to *Organization Science* on 1 November 2026](Making_Organizational_Behavior_Observable_Proposal.pdf) and describes the prototype and the limits of the shared research object. It distinguishes processed recordings, eligible observations, scored observations, and analyses that require additional inputs.
 
 ## Samples and exclusions
 
@@ -28,7 +28,7 @@ Audio/interaction features include speaking-rate change, response latency, long 
 
 Answer-level scores describe within-call departures against an executive's other calls. Within each call, features are centered at the call median; the target answer's residuals are compared with residuals from that executive's other calls. A robust median/MAD scale is used with a standard-deviation fallback when needed. Feature contributions are capped at five standardized units and combined by root mean square within the audio/interaction and transcript groups. Target-call exclusion applies to the personal reference, but current-call centering uses its eligible answers. The current design uses other calls from both before and after a target call; it is not a prospective forecasting design. Stage 2 proposes prior-only baselines.
 
-The paired-score table reproduces 325 audio/interaction flags and 321 transcript flags at cutoff 2.0, with 66 common flags. The 259 audio-only flags represent 79.7% of the 325. The stricter illustrative subset additionally requires transcript departure at most 1.25, yielding 177 answers. Of these, 172 remain flagged under at least two of three feature-family exclusions. The thresholds define review sets; they are not validated psychological boundaries. See the [answer scores](../data/derived/expanded_audio_answer_scores.csv), [177-case table](../data/derived/expanded_audio_primary_examples_robustness.csv), and [eligibility sensitivity](../data/derived/expanded_audio_eligibility_sensitivity.csv).
+The paired-score table reproduces 325 audio/interaction flags and 321 transcript flags at cutoff 2.0, with 66 common flags. The 259 audio-only flags represent 79.7% of the 325 (80% rounded, as reported in the submitted proposal). This compares the answers selected for inspection; it does not establish which measure is better. The stricter illustrative subset additionally requires transcript departure at most 1.25, yielding 177 answers. Of these, 172 remain flagged under at least two of three feature-family exclusions. The thresholds define review sets; they are not validated psychological boundaries. See the [answer scores](../data/derived/expanded_audio_answer_scores.csv), [177-case table](../data/derived/expanded_audio_primary_examples_robustness.csv), and [eligibility sensitivity](../data/derived/expanded_audio_eligibility_sensitivity.csv).
 
 ## Market-outcome extension
 
