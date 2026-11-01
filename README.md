@@ -8,7 +8,7 @@ This project turns observations from recordings into measures researchers can tr
 
 1. **[Read the paper](docs/Making_Organizational_Behavior_Observable_Proposal.pdf)** — submitted to *Organization Science* on 1 November 2026.
 2. **[Watch the example](docs/media/researcher_walkthrough.mp4)** — an 84-second demonstration following one answer from source audio to measurements. [Guide and captions](docs/researcher_walkthrough.md).
-3. **[Try the prototype](tools/measure-specification-prototype/README.md)** — download the repository and open the included page in your browser to define and export a measurement specification.
+3. **[Try defining a measure](https://auditable-measurement-prototype.cornell-rese-2689.chatgpt.site)** — choose an example, edit its rules, and export a specification in your browser. It does not process recordings. [Run locally](tools/measure-specification-prototype/README.md).
 
 ## Explore the evidence
 

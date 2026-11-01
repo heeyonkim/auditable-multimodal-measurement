@@ -2,7 +2,7 @@
   "schema": "auditable-multimodal-research-object/1.0",
   "release": {
     "name": "Making Organizational Behavior Observable submitted proposal research object",
-    "version": "0.6.5-reader-navigation",
+    "version": "0.6.6-public-measure-definition",
     "date": "2026-11-02",
     "status": "Stage 1 submitted proposal and derived-data research object",
     "submission": {
@@ -156,8 +156,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1553,
-      "sha256": "b1982632b8fe9a58250451d84d5e268b3dff05f1d215d56b21e91b7318c79957"
+      "bytes": 1639,
+      "sha256": "030f16771a0e0717750e9fe26ca75292c48b1a721c0c73ed3cc7c1b222cf7cca"
     },
     {
       "path": "ROADMAP.md",
@@ -1586,8 +1586,8 @@
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 4930,
-      "sha256": "8c8db3a3948ec743a1d06ad0d62e5706c9b986dbdda45aa98d9108bfefc538d5"
+      "bytes": 5047,
+      "sha256": "dcff83f61e5b373414cbeb17fd4de11f19445ac8de7c383bd0f7d7d0f1e8e9ce"
     },
     {
       "path": "docs/researcher_walkthrough.md",
@@ -1676,8 +1676,8 @@
     },
     {
       "path": "scripts/verify_research_object.py",
-      "bytes": 12415,
-      "sha256": "79897cdb627799d2a1c5be793efc798c8e409a92b6a0a6309083dd394b966658"
+      "bytes": 12423,
+      "sha256": "470fd1fe7dbf6d3f4a4b825a66eefa98f2827530f916f1df762e07772aef375f"
     },
     {
       "path": "scripts/verify_submission_evidence.py",
@@ -1709,8 +1709,8 @@
     },
     {
       "path": "tools/measure-specification-prototype/README.md",
-      "bytes": 1467,
-      "sha256": "4502c579e5c720da8f85b97d584e819191a3d1b2995dc39e4561e8df7f946e96"
+      "bytes": 1788,
+      "sha256": "b2b7173f1d4325f671e42ee3bb9f9e2f2a11b0ead2e4b5a5e4637308e52c4246"
     },
     {
       "path": "tools/measure-specification-prototype/index.html",

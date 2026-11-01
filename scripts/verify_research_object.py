@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 
-RELEASE_VERSION = "0.6.5-reader-navigation"
+RELEASE_VERSION = "0.6.6-public-measure-definition"
 RELEASE_DATE = "2026-11-02"
 MANIFEST_NAME = "research_object_manifest.json"
 EXCLUDED_NAMES = {MANIFEST_NAME, ".DS_Store"}

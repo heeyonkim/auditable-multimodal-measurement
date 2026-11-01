@@ -4,7 +4,7 @@
 
 ## What you can run and reproduce
 
-- **Use the measurement-specification prototype:** download and extract the repository, then open `tools/measure-specification-prototype/index.html` in a browser. It lets you define and export measurement specifications without installing software or connecting to a server.
+- **Use the measurement-specification prototype:** [try defining a measure in your browser](https://auditable-measurement-prototype.cornell-rese-2689.chatgpt.site), or download and extract the repository, then open `tools/measure-specification-prototype/index.html` in a browser. It lets you define and export measurement specifications without installing software or connecting to a server.
 - **Reproduce summaries and check reported results:** run the included scripts on the released derived tables, following the commands below. These checks do not require the original recordings or model credentials.
 - **Process new recordings:** the repository does not yet provide a complete guided processing system. A full extraction rerun also requires authorized source recordings, models, additional numeric inputs where specified, and a fully documented processing environment.
 
